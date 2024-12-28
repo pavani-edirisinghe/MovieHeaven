@@ -18,9 +18,12 @@ C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\D
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.AssemblyInfoInputs.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.AssemblyInfo.cs
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.CoreCompileInputs.cache
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.sourcelink.json
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop .9D7F5F95.Up2Date
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\refint\Desktop Applicaion.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.pdb
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.genruntimeconfig.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\ref\Desktop Applicaion.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AdminForm.resources
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.dashboardForm.resources

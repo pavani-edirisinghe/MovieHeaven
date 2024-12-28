@@ -109,6 +109,7 @@
             login_showPass.TabIndex = 6;
             login_showPass.Text = "Show Password";
             login_showPass.UseVisualStyleBackColor = true;
+            login_showPass.CheckedChanged += login_showPass_CheckedChanged;
             // 
             // login_btn
             // 
