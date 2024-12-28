@@ -1,0 +1,26 @@
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.exe
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.deps.json
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.runtimeconfig.json
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.pdb
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\System.Data.SqlClient.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.AssemblyReference.cache
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.Form1.resources
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.Properties.Resources.resources
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.RegForm.resources
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.GenerateResource.cache
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.AssemblyInfoInputs.cache
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.AssemblyInfo.cs
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.CoreCompileInputs.cache
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop .9D7F5F95.Up2Date
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\refint\Desktop Applicaion.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.pdb
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.genruntimeconfig.cache
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\ref\Desktop Applicaion.dll
