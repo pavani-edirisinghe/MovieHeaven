@@ -43,6 +43,7 @@
             label1 = new Label();
             panel3 = new Panel();
             dashboardForm1 = new dashboardForm();
+            addStaffsForm1 = new AddStaffsForm();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -205,6 +206,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(addStaffsForm1);
             panel3.Controls.Add(dashboardForm1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(250, 63);
@@ -218,6 +220,13 @@
             dashboardForm1.Name = "dashboardForm1";
             dashboardForm1.Size = new Size(1266, 794);
             dashboardForm1.TabIndex = 0;
+            // 
+            // addStaffsForm1
+            // 
+            addStaffsForm1.Location = new Point(0, 0);
+            addStaffsForm1.Name = "addStaffsForm1";
+            addStaffsForm1.Size = new Size(1266, 794);
+            addStaffsForm1.TabIndex = 1;
             // 
             // AdminForm
             // 
@@ -257,5 +266,6 @@
         private Button custormers_btn;
         private Button addMovie_btn;
         private dashboardForm dashboardForm1;
+        private AddStaffsForm addStaffsForm1;
     }
 }
