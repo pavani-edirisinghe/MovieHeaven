@@ -199,7 +199,7 @@ namespace Desktop_Applicaion
 
                             else
                             {
-                                string updateData = "UPDATE movie SET image_id = @movie_ID, movie_name = @movieName, genre = @genre" +
+                                string updateData = "UPDATE movies SET image_id = @movie_ID, movie_name = @movieName, genre = @genre" +
                                      ", price = @price, capacity = @capacity, status = @status, update_date = @updateDate WHERE id = @id";
 
                                 using (SqlCommand cmd = new SqlCommand(updateData, connect))

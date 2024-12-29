@@ -13,6 +13,9 @@
     <Compile Update="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="buyTicketForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="dashboardForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -20,6 +23,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="staffForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

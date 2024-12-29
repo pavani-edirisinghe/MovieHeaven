@@ -68,10 +68,21 @@ namespace Desktop_Applicaion
 
                         if (table.Rows.Count > 0)
                         {
+                            string role = table.Rows[0]["role"].ToString();
+                            
                             MessageBox.Show("Login successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            AdminForm aForm = new AdminForm();
-                            aForm.Show();
+                            if(role == "Admin")
+                            {
+
+                                AdminForm aForm = new AdminForm();
+                                aForm.Show();
+                            }
+                            else if(role == "Staff")
+                            {
+                                staffForm sfForm = new staffForm();
+                                sfForm.Show();
+                            }
 
                             this.Hide();
                         }

@@ -13,6 +13,4 @@
    delete_date DATE NULL
 )
 
-DROP TABLE movies
-
 SELECT * FROM movies
