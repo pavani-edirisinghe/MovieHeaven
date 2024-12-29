@@ -42,8 +42,9 @@
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
-            dashboardForm1 = new dashboardForm();
+            addMovieForm1 = new AddMovieForm();
             addStaffsForm1 = new AddStaffsForm();
+            dashboardForm1 = new dashboardForm();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -206,6 +207,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(addMovieForm1);
             panel3.Controls.Add(addStaffsForm1);
             panel3.Controls.Add(dashboardForm1);
             panel3.Dock = DockStyle.Fill;
@@ -214,12 +216,13 @@
             panel3.Size = new Size(1013, 635);
             panel3.TabIndex = 2;
             // 
-            // dashboardForm1
+            // addMovieForm1
             // 
-            dashboardForm1.Location = new Point(0, 0);
-            dashboardForm1.Name = "dashboardForm1";
-            dashboardForm1.Size = new Size(1266, 794);
-            dashboardForm1.TabIndex = 0;
+            addMovieForm1.Location = new Point(-12, 0);
+            addMovieForm1.Name = "addMovieForm1";
+            addMovieForm1.Size = new Size(1266, 794);
+            addMovieForm1.TabIndex = 2;
+            addMovieForm1.Load += addMovieForm1_Load;
             // 
             // addStaffsForm1
             // 
@@ -227,6 +230,13 @@
             addStaffsForm1.Name = "addStaffsForm1";
             addStaffsForm1.Size = new Size(1266, 794);
             addStaffsForm1.TabIndex = 1;
+            // 
+            // dashboardForm1
+            // 
+            dashboardForm1.Location = new Point(0, 0);
+            dashboardForm1.Name = "dashboardForm1";
+            dashboardForm1.Size = new Size(1266, 794);
+            dashboardForm1.TabIndex = 0;
             // 
             // AdminForm
             // 
@@ -267,5 +277,6 @@
         private Button addMovie_btn;
         private dashboardForm dashboardForm1;
         private AddStaffsForm addStaffsForm1;
+        private AddMovieForm addMovieForm1;
     }
 }

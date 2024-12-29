@@ -42,5 +42,10 @@ namespace Desktop_Applicaion
                 this.Hide();
             }
         }
+
+        private void addMovieForm1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
