@@ -60,7 +60,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 698);
+            panel1.Size = new Size(250, 800);
             panel1.TabIndex = 1;
             // 
             // button1
@@ -71,7 +71,7 @@
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 275);
+            button1.Location = new Point(12, 318);
             button1.Name = "button1";
             button1.Size = new Size(220, 49);
             button1.TabIndex = 6;
@@ -86,12 +86,13 @@
             logout_btn.ForeColor = Color.White;
             logout_btn.Image = Properties.Resources.icons8_logout_rounded_30;
             logout_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            logout_btn.Location = new Point(12, 596);
+            logout_btn.Location = new Point(12, 674);
             logout_btn.Name = "logout_btn";
             logout_btn.Size = new Size(220, 49);
             logout_btn.TabIndex = 5;
             logout_btn.Text = "LOG OUT";
             logout_btn.UseVisualStyleBackColor = true;
+            logout_btn.Click += logout_btn_Click;
             // 
             // custormers_btn
             // 
@@ -101,7 +102,7 @@
             custormers_btn.ForeColor = Color.White;
             custormers_btn.Image = Properties.Resources.user;
             custormers_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            custormers_btn.Location = new Point(12, 342);
+            custormers_btn.Location = new Point(12, 410);
             custormers_btn.Name = "custormers_btn";
             custormers_btn.Size = new Size(220, 49);
             custormers_btn.TabIndex = 4;
@@ -116,7 +117,7 @@
             dashboard_btn.ForeColor = Color.White;
             dashboard_btn.Image = (Image)resources.GetObject("dashboard_btn.Image");
             dashboard_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboard_btn.Location = new Point(12, 206);
+            dashboard_btn.Location = new Point(12, 228);
             dashboard_btn.Name = "dashboard_btn";
             dashboard_btn.Size = new Size(220, 49);
             dashboard_btn.TabIndex = 1;
@@ -142,13 +143,13 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(250, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1013, 63);
+            panel2.Size = new Size(1170, 63);
             panel2.TabIndex = 2;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.icons8_user_30;
-            pictureBox2.Location = new Point(714, 18);
+            pictureBox2.Location = new Point(886, 18);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.TabIndex = 2;
@@ -158,7 +159,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(750, 22);
+            label3.Location = new Point(934, 25);
             label3.Name = "label3";
             label3.Size = new Size(156, 17);
             label3.TabIndex = 1;
@@ -178,11 +179,12 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(980, 18);
+            label1.Location = new Point(1112, 22);
             label1.Name = "label1";
             label1.Size = new Size(21, 21);
             label1.TabIndex = 0;
             label1.Text = "X";
+            label1.Click += label1_Click;
             // 
             // panel3
             // 
@@ -190,21 +192,21 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(250, 63);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1013, 635);
+            panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 3;
             // 
             // buyTicketForm1
             // 
             buyTicketForm1.Location = new Point(0, 0);
             buyTicketForm1.Name = "buyTicketForm1";
-            buyTicketForm1.Size = new Size(1266, 794);
+            buyTicketForm1.Size = new Size(1462, 921);
             buyTicketForm1.TabIndex = 0;
             // 
             // staffForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1263, 698);
+            ClientSize = new Size(1420, 800);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);

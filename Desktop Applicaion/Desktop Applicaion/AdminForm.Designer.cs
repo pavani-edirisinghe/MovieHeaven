@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             panel3 = new Panel();
+            addMovieForm2 = new AddMovieForm();
+            addStaffsForm1 = new AddStaffsForm();
+            dashboardForm1 = new dashboardForm();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            addStaffsForm1 = new AddStaffsForm();
-            dashboardForm1 = new dashboardForm();
             pictureBox1 = new PictureBox();
             dashboard_btn = new Button();
             addStaff_btn = new Button();
@@ -44,7 +45,6 @@
             custormers_btn = new Button();
             logout_btn = new Button();
             panel1 = new Panel();
-            addMovieForm2 = new AddMovieForm();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
@@ -60,14 +60,35 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(250, 63);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1013, 635);
+            panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 2;
+            // 
+            // addMovieForm2
+            // 
+            addMovieForm2.Location = new Point(0, 0);
+            addMovieForm2.Name = "addMovieForm2";
+            addMovieForm2.Size = new Size(1462, 921);
+            addMovieForm2.TabIndex = 2;
+            // 
+            // addStaffsForm1
+            // 
+            addStaffsForm1.Location = new Point(0, 0);
+            addStaffsForm1.Name = "addStaffsForm1";
+            addStaffsForm1.Size = new Size(1462, 921);
+            addStaffsForm1.TabIndex = 1;
+            // 
+            // dashboardForm1
+            // 
+            dashboardForm1.Location = new Point(0, 0);
+            dashboardForm1.Name = "dashboardForm1";
+            dashboardForm1.Size = new Size(1462, 921);
+            dashboardForm1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(980, 18);
+            label1.Location = new Point(1115, 19);
             label1.Name = "label1";
             label1.Size = new Size(21, 21);
             label1.TabIndex = 0;
@@ -88,7 +109,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(750, 22);
+            label3.Location = new Point(914, 23);
             label3.Name = "label3";
             label3.Size = new Size(156, 17);
             label3.TabIndex = 1;
@@ -97,7 +118,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.icons8_user_30;
-            pictureBox2.Location = new Point(714, 18);
+            pictureBox2.Location = new Point(878, 19);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(30, 30);
             pictureBox2.TabIndex = 2;
@@ -113,22 +134,8 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(250, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1013, 63);
+            panel2.Size = new Size(1170, 63);
             panel2.TabIndex = 1;
-            // 
-            // addStaffsForm1
-            // 
-            addStaffsForm1.Location = new Point(0, 0);
-            addStaffsForm1.Name = "addStaffsForm1";
-            addStaffsForm1.Size = new Size(1266, 794);
-            addStaffsForm1.TabIndex = 1;
-            // 
-            // dashboardForm1
-            // 
-            dashboardForm1.Location = new Point(0, 0);
-            dashboardForm1.Name = "dashboardForm1";
-            dashboardForm1.Size = new Size(1266, 794);
-            dashboardForm1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -207,7 +214,7 @@
             logout_btn.ForeColor = Color.White;
             logout_btn.Image = Properties.Resources.icons8_logout_rounded_30;
             logout_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            logout_btn.Location = new Point(12, 596);
+            logout_btn.Location = new Point(12, 651);
             logout_btn.Name = "logout_btn";
             logout_btn.Size = new Size(220, 49);
             logout_btn.TabIndex = 5;
@@ -227,21 +234,14 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 698);
+            panel1.Size = new Size(250, 800);
             panel1.TabIndex = 0;
-            // 
-            // addMovieForm2
-            // 
-            addMovieForm2.Location = new Point(0, 0);
-            addMovieForm2.Name = "addMovieForm2";
-            addMovieForm2.Size = new Size(1266, 794);
-            addMovieForm2.TabIndex = 0;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1263, 698);
+            ClientSize = new Size(1420, 800);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -262,9 +262,6 @@
         #endregion
         private Panel panel3;
         private AddMovieForm addMovieForm1;
-        private AddMovieForm addMovieForm2;
-        private AddStaffsForm addStaffsForm1;
-        private dashboardForm dashboardForm1;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -277,5 +274,8 @@
         private Button custormers_btn;
         private Button logout_btn;
         private Panel panel1;
+        private dashboardForm dashboardForm1;
+        private AddStaffsForm addStaffsForm1;
+        private AddMovieForm addMovieForm2;
     }
 }

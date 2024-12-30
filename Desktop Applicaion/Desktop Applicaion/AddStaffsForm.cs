@@ -238,5 +238,10 @@ namespace Desktop_Applicaion
         {
 
         }
+
+        private void AddStaffsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

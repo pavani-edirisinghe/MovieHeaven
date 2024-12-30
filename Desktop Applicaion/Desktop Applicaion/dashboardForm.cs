@@ -16,5 +16,10 @@ namespace Desktop_Applicaion
         {
             InitializeComponent();
         }
+
+        private void dashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

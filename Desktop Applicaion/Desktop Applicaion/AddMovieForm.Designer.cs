@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             label4 = new Label();
@@ -62,11 +62,12 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(label4);
-            panel1.Location = new Point(12, 13);
+            panel1.Location = new Point(25, 23);
             panel1.Name = "panel1";
-            panel1.Size = new Size(983, 217);
+            panel1.Size = new Size(1117, 272);
             panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -74,26 +75,26 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle3.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(213, 10, 56);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(133, 19, 33);
+            dataGridViewCellStyle1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle4.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(213, 10, 56);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(133, 19, 33);
+            dataGridViewCellStyle2.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.White;
-            dataGridView1.Location = new Point(21, 54);
+            dataGridView1.Location = new Point(33, 59);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
@@ -102,7 +103,7 @@
             dataGridView1.RowTemplate.DefaultCellStyle.BackColor = Color.White;
             dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.FromArgb(128, 128, 255);
-            dataGridView1.Size = new Size(937, 145);
+            dataGridView1.Size = new Size(1058, 192);
             dataGridView1.TabIndex = 9;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -112,7 +113,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(21, 16);
+            label4.Location = new Point(34, 21);
             label4.Name = "label4";
             label4.Size = new Size(92, 20);
             label4.TabIndex = 5;
@@ -120,6 +121,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.White;
             panel2.Controls.Add(addMovie_status);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(panel3);
@@ -138,18 +140,18 @@
             panel2.Controls.Add(label1);
             panel2.Controls.Add(addMovie_movieID);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(12, 255);
+            panel2.Location = new Point(25, 315);
             panel2.Name = "panel2";
-            panel2.Size = new Size(983, 357);
+            panel2.Size = new Size(1117, 398);
             panel2.TabIndex = 1;
             // 
             // addMovie_status
             // 
             addMovie_status.FormattingEnabled = true;
             addMovie_status.Items.AddRange(new object[] { "Avaailable", "Unavailable", "Deleted" });
-            addMovie_status.Location = new Point(539, 150);
+            addMovie_status.Location = new Point(576, 163);
             addMovie_status.Name = "addMovie_status";
-            addMovie_status.Size = new Size(195, 28);
+            addMovie_status.Size = new Size(208, 28);
             addMovie_status.TabIndex = 28;
             // 
             // label7
@@ -157,7 +159,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(479, 151);
+            label7.Location = new Point(516, 164);
             label7.Name = "label7";
             label7.Size = new Size(53, 22);
             label7.TabIndex = 27;
@@ -166,9 +168,9 @@
             // panel3
             // 
             panel3.Controls.Add(pictureBox1);
-            panel3.Location = new Point(812, 35);
+            panel3.Location = new Point(906, 41);
             panel3.Name = "panel3";
-            panel3.Size = new Size(120, 120);
+            panel3.Size = new Size(150, 150);
             panel3.TabIndex = 26;
             // 
             // pictureBox1
@@ -176,7 +178,7 @@
             pictureBox1.BackColor = SystemColors.AppWorkspace;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(120, 120);
+            pictureBox1.Size = new Size(150, 150);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
@@ -190,9 +192,9 @@
             addMovie_clearBtn.FlatStyle = FlatStyle.Flat;
             addMovie_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
             addMovie_clearBtn.ForeColor = Color.White;
-            addMovie_clearBtn.Location = new Point(659, 263);
+            addMovie_clearBtn.Location = new Point(694, 274);
             addMovie_clearBtn.Name = "addMovie_clearBtn";
-            addMovie_clearBtn.Size = new Size(112, 37);
+            addMovie_clearBtn.Size = new Size(120, 47);
             addMovie_clearBtn.TabIndex = 25;
             addMovie_clearBtn.Text = "CLEAR";
             addMovie_clearBtn.UseVisualStyleBackColor = false;
@@ -207,9 +209,9 @@
             addMovie_deleteBtn.FlatStyle = FlatStyle.Flat;
             addMovie_deleteBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
             addMovie_deleteBtn.ForeColor = Color.White;
-            addMovie_deleteBtn.Location = new Point(515, 263);
+            addMovie_deleteBtn.Location = new Point(502, 274);
             addMovie_deleteBtn.Name = "addMovie_deleteBtn";
-            addMovie_deleteBtn.Size = new Size(112, 37);
+            addMovie_deleteBtn.Size = new Size(125, 46);
             addMovie_deleteBtn.TabIndex = 24;
             addMovie_deleteBtn.Text = "DELETE";
             addMovie_deleteBtn.UseVisualStyleBackColor = false;
@@ -224,9 +226,9 @@
             addMovie_updateBtn.FlatStyle = FlatStyle.Flat;
             addMovie_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
             addMovie_updateBtn.ForeColor = Color.White;
-            addMovie_updateBtn.Location = new Point(327, 263);
+            addMovie_updateBtn.Location = new Point(319, 274);
             addMovie_updateBtn.Name = "addMovie_updateBtn";
-            addMovie_updateBtn.Size = new Size(112, 37);
+            addMovie_updateBtn.Size = new Size(120, 47);
             addMovie_updateBtn.TabIndex = 23;
             addMovie_updateBtn.Text = "UPDATE";
             addMovie_updateBtn.UseVisualStyleBackColor = false;
@@ -241,9 +243,9 @@
             addMovie_addBtn.FlatStyle = FlatStyle.Flat;
             addMovie_addBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
             addMovie_addBtn.ForeColor = Color.White;
-            addMovie_addBtn.Location = new Point(183, 263);
+            addMovie_addBtn.Location = new Point(132, 274);
             addMovie_addBtn.Name = "addMovie_addBtn";
-            addMovie_addBtn.Size = new Size(112, 37);
+            addMovie_addBtn.Size = new Size(120, 42);
             addMovie_addBtn.TabIndex = 22;
             addMovie_addBtn.Text = "ADD";
             addMovie_addBtn.UseVisualStyleBackColor = false;
@@ -252,9 +254,9 @@
             // addMovie_capacity
             // 
             addMovie_capacity.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_capacity.Location = new Point(540, 106);
+            addMovie_capacity.Location = new Point(576, 98);
             addMovie_capacity.Name = "addMovie_capacity";
-            addMovie_capacity.Size = new Size(194, 27);
+            addMovie_capacity.Size = new Size(208, 27);
             addMovie_capacity.TabIndex = 21;
             addMovie_capacity.TextChanged += textBox4_TextChanged;
             // 
@@ -263,7 +265,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(465, 107);
+            label6.Location = new Point(502, 103);
             label6.Name = "label6";
             label6.Size = new Size(69, 22);
             label6.TabIndex = 20;
@@ -275,9 +277,9 @@
             addMovie_importBtn.FlatAppearance.BorderSize = 0;
             addMovie_importBtn.FlatStyle = FlatStyle.Flat;
             addMovie_importBtn.ForeColor = Color.White;
-            addMovie_importBtn.Location = new Point(812, 177);
+            addMovie_importBtn.Location = new Point(906, 214);
             addMovie_importBtn.Name = "addMovie_importBtn";
-            addMovie_importBtn.Size = new Size(120, 29);
+            addMovie_importBtn.Size = new Size(150, 36);
             addMovie_importBtn.TabIndex = 19;
             addMovie_importBtn.Text = "Import";
             addMovie_importBtn.UseVisualStyleBackColor = false;
@@ -286,9 +288,9 @@
             // addMovie_price
             // 
             addMovie_price.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_price.Location = new Point(540, 62);
+            addMovie_price.Location = new Point(577, 41);
             addMovie_price.Name = "addMovie_price";
-            addMovie_price.Size = new Size(194, 27);
+            addMovie_price.Size = new Size(207, 27);
             addMovie_price.TabIndex = 17;
             // 
             // label5
@@ -296,7 +298,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(487, 62);
+            label5.Location = new Point(524, 41);
             label5.Name = "label5";
             label5.Size = new Size(47, 22);
             label5.TabIndex = 16;
@@ -306,9 +308,9 @@
             // 
             addMovie_genre.FormattingEnabled = true;
             addMovie_genre.Items.AddRange(new object[] { "Educational", "Comedy", "Drama", "Action", "Horror" });
-            addMovie_genre.Location = new Point(164, 150);
+            addMovie_genre.Location = new Point(164, 163);
             addMovie_genre.Name = "addMovie_genre";
-            addMovie_genre.Size = new Size(195, 28);
+            addMovie_genre.Size = new Size(207, 28);
             addMovie_genre.TabIndex = 15;
             // 
             // label3
@@ -316,7 +318,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(72, 150);
+            label3.Location = new Point(72, 163);
             label3.Name = "label3";
             label3.Size = new Size(54, 22);
             label3.TabIndex = 14;
@@ -325,9 +327,9 @@
             // addMovie_movieName
             // 
             addMovie_movieName.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_movieName.Location = new Point(165, 106);
+            addMovie_movieName.Location = new Point(165, 97);
             addMovie_movieName.Name = "addMovie_movieName";
-            addMovie_movieName.Size = new Size(194, 27);
+            addMovie_movieName.Size = new Size(206, 27);
             addMovie_movieName.TabIndex = 13;
             // 
             // label1
@@ -335,7 +337,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(63, 107);
+            label1.Location = new Point(63, 98);
             label1.Name = "label1";
             label1.Size = new Size(97, 22);
             label1.TabIndex = 12;
@@ -344,9 +346,9 @@
             // addMovie_movieID
             // 
             addMovie_movieID.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_movieID.Location = new Point(165, 62);
+            addMovie_movieID.Location = new Point(165, 41);
             addMovie_movieID.Name = "addMovie_movieID";
-            addMovie_movieID.Size = new Size(194, 27);
+            addMovie_movieID.Size = new Size(206, 27);
             addMovie_movieID.TabIndex = 11;
             // 
             // label2
@@ -354,7 +356,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(72, 62);
+            label2.Location = new Point(72, 41);
             label2.Name = "label2";
             label2.Size = new Size(71, 22);
             label2.TabIndex = 10;
@@ -367,7 +369,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "AddMovieForm";
-            Size = new Size(1013, 635);
+            Size = new Size(1170, 737);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
