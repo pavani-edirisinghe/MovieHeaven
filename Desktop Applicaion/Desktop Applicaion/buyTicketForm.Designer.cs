@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buyTicketForm));
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
             label4 = new Label();
@@ -65,7 +66,7 @@
             buyTicket_availableChairs = new ComboBox();
             label13 = new Label();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
-            printDialog1 = new PrintDialog();
+            printPreviewDialog1 = new PrintPreviewDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
@@ -530,9 +531,15 @@
             printDocument1.BeginPrint += printDocument1_BeginPrint;
             printDocument1.PrintPage += printDocument1_PrintPage;
             // 
-            // printDialog1
+            // printPreviewDialog1
             // 
-            printDialog1.UseEXDialog = true;
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
             // 
             // buyTicketForm
             // 
@@ -593,6 +600,6 @@
         private TextBox buyTicket_amount;
         private Button buyTicket_calculateBtn;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private PrintDialog printDialog1;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }

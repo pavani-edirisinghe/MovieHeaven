@@ -1,11 +1,14 @@
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.exe
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.deps.json
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.runtimeconfig.json
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.dll
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.pdb
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\System.Data.SqlClient.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-x64\native\sni.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.AssemblyReference.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AddMovieForm.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AddStaffForm.resources
@@ -27,8 +30,5 @@ C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\D
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\refint\Desktop Applicaion.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.pdb
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.deps.json
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.runtimeconfig.json
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\Desktop Applicaion.pdb
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.genruntimeconfig.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\ref\Desktop Applicaion.dll

@@ -273,7 +273,7 @@ namespace Desktop_Applicaion
             }
             else
             {
-                using (SqlConnection connect = new SqlConnection(conn))
+                using (SqlConnection connect = new SqlConnection(conn))    
                 {
                     connect.Open();
 
@@ -325,97 +325,84 @@ namespace Desktop_Applicaion
             printDocument1.BeginPrint += new System.Drawing.Printing.PrintEventHandler(printDocument1_BeginPrint);
 
             printPreviewDialog1.Document = printDocument1;
-            PrintPreviewDialog1.ShowDialog();
-            
+            printPreviewDialog1.ShowDialog();
         }
 
         private int rowIndex = 0;
+
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            float y = 0;
-            int count = 0;
-            int colWidth = 120;
-            int headermargin = 10;
-            int tableMargin = 20;
+            float y = e.MarginBounds.Top;
+            int colWidth = 100;
+            int rowHeight = 25;
+            int tableMargin = 15;
 
-            Font font = new Font("Arial", 12);
-            Font bold = new Font("Arial", 12, FontStyle.Bold);
-            Font headerFont = new Font("Arial", 16, FontStyle.Bold);
-            Font labelFont = new Font("Arial", 14, FontStyle.Bold);
+            Font headerFont = new Font("Arial", 18, FontStyle.Bold);
+            Font boldFont = new Font("Arial", 12, FontStyle.Bold);
+            Font regularFont = new Font("Arial", 10);
+            Font footerFont = new Font("Arial", 14, FontStyle.Bold);
 
-            float margin = e.MarginBounds.Top;
 
-            StringFormat aligncenter = new StringFormat();
-            aligncenter.Alignment = StringAlignment.Center;
-            aligncenter.LineAlignment = StringAlignment.Center;
-
-            string headerText = "Marcon's Cinema";
-            y = (margin + count * headerFont.GetHeight(e.Graphics) + headermargin);
-            e.Graphics.DrawString(headerText, headerFont, Brushes.Black, e.MarginBounds.Left
-                + (dataGridView1.Columns.Count / 2) * colWidth, y, aligncenter);
-
-            count++;
-
-            y += tableMargin;
-
-            string[] header = { "ID", "MovieID", "MovieName", "Genre", "RegPrice" };
-
-            for (int i = 0; i < header.Length; i++)
+            StringFormat centerFormat = new StringFormat
             {
-                y = margin + count * bold.GetHeight(e.Graphics) + tableMargin;
-                e.Graphics.DrawString(header[1], bold, Brushes.Black, e.MarginBounds.Left + i * colWidth, y, aligncenter);
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            };
 
+            // Print Header
+            string headerText = "Marcon's Cinema";
+            y += tableMargin;
+            e.Graphics.DrawString(headerText, headerFont, Brushes.Black,
+                new RectangleF(e.MarginBounds.Left, y, e.MarginBounds.Width, headerFont.GetHeight()), centerFormat);
+            y += headerFont.GetHeight() + tableMargin;
+
+            // Print Column Headers
+            string[] headers = { "ID", "MovieID", "MovieName", "Genre", "RegPrice", "Capacity", "Status" };
+            for (int i = 0; i < headers.Length; i++)
+            {
+                e.Graphics.DrawString(headers[i], boldFont, Brushes.Black, e.MarginBounds.Left + (i * colWidth), y);
             }
+            y += boldFont.GetHeight() + rowHeight;
 
-            count++;
-
-            float rSpace = e.MarginBounds.Bottom - y;
-
+            // Print Table Rows
             while (rowIndex < dataGridView1.Rows.Count)
             {
                 DataGridViewRow row = dataGridView1.Rows[rowIndex];
 
-                for (int q = 0; q < dataGridView1.Columns.Count; q++)
+                for (int i = 0; i < dataGridView1.Columns.Count - 2; i++) // Adjusted for column count
                 {
-                    object cellValue = row.Cells[q].Value;
-                    string cell = (cellValue != null) ? cellValue.ToString() : string.Empty;
-
-                    y = margin + count * font.GetHeight(e.Graphics) + tableMargin;
-                    e.Graphics.DrawString(cell, font, Brushes.Black, e.MarginBounds.Left + id * colWidth, y, aligncenter);
+                    object cellValue = row.Cells[i].Value;
+                    string cellText = cellValue != null ? cellValue.ToString() : string.Empty;
+                    e.Graphics.DrawString(cellText, regularFont, Brushes.Black, e.MarginBounds.Left + (i * colWidth), y);
                 }
-                count++;
+
+                y += regularFont.GetHeight() + rowHeight;
                 rowIndex++;
 
-                if (y + font.GetHeight(e.Graphics) > e.MarginBounds.Bottom)
+                // Check if more pages are needed
+                if (y + regularFont.GetHeight() > e.MarginBounds.Bottom)
                 {
                     e.HasMorePages = true;
                     return;
                 }
-
-                int labelMargin = (int)Math.Min(rSpace, 200);
-
-                DateTime today = DateTime.Now;
-
-                float labelX = e.MarginBounds.Right - e.Graphics.MeasureString("---------------------", labelFont).Width;
-
-                y = e.MarginBounds.Bottom - labelMargin - labelFont.GetHeight(e.Graphics);
-                e.Graphics.DrawString("Total Price: \tRs." + getTotal.ToString("0.00") + "\nAmount: \tRs." + buyTicket_amount.Text
-                    + "\n\t\t========\nChange:\tRs." + buyTicket_change.Text, labelFont, Brushes.Black, labelX,y);
-
-                labelMargin = (int)Math.Min(rSpace, -40);
-
-                string labelText = today.ToString();
-
-                y = e.MarginBounds.Bottom - labelMargin - labelFont.GetHeight(e.Graphics);
-                e.Graphics.DrawString(labelText, labelFont, Brushes.Black
-                    , e.MarginBounds.Right - e.Graphics.MeasureString("---------------------", labelFont).Width, y);
             }
 
+            // Print Footer
+            y = e.MarginBounds.Bottom - 100;
+            DateTime today = DateTime.Now;
+            string footerText = $"Total Price: Rs. {getTotal.ToString("0.00")}\n" +
+                                $"Amount Paid: Rs. {buyTicket_amount.Text}\n" +
+                                $"Change: Rs. {buyTicket_change.Text}\n" +
+                                today.ToString("dd/MM/yyyy HH:mm:ss");
+
+            e.Graphics.DrawString(footerText, footerFont, Brushes.Black,
+                new RectangleF(e.MarginBounds.Left, y, e.MarginBounds.Width, 100));
         }
 
         private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             rowIndex = 0;
         }
+
     }
 }
