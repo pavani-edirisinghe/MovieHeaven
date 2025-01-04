@@ -28,3 +28,5 @@ SELECT COUNT(id) as totalStaff FROM users WHERE role = 'Staff' AND status = 'Act
 
 SELECT COUNT(id) as totalBuys FROM buy_tickets WHERE status = 'PAID'
 
+TRUNCATE TABLE buy_tickets;
+

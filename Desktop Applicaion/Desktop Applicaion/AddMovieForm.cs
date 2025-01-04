@@ -61,8 +61,6 @@ namespace Desktop_Applicaion
                     imagePath = file.FileName;
                     pictureBox1.ImageLocation = imagePath;
                 }
-
-
             }
 
             catch (Exception ex)
@@ -70,6 +68,79 @@ namespace Desktop_Applicaion
                 MessageBox.Show($"Error: {ex}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //private void addMovie_addBtn_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        using (SqlConnection connect = new SqlConnection(conn))
+        //        {
+        //            connect.Open();
+
+        //            string checkID = "SELECT movie_id FROM movies WHERE movie_id = @movieID";
+
+        //            using (SqlCommand cID = new SqlCommand(checkID, connect))
+        //            {
+        //                cID.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
+
+        //                SqlDataAdapter adapter = new SqlDataAdapter(cID);
+        //                DataTable table = new DataTable();
+
+        //                adapter.Fill(table);
+
+        //                if (table.Rows.Count > 0)
+        //                {
+        //                    MessageBox.Show($"Movie ID: " + addMovie_movieID.Text.Trim() + " is take already",
+        //                        "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                }
+
+        //                else
+        //                {
+        //                    string insertData = "INSERT INTO movies (movie_id, movie_name, genre, price, capacity, movie_image, status, created_at) " +
+        //                        "VALUES(@movieID, @movieName, @genre, @price, @capacity, @movieImage, @status, @date)";
+
+        //                    string path = Path.Combine(@"C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\Movie_Directory\"
+        //                           + addMovie_movieID.Text.Trim() + ".jpg");
+
+        //                    string directoryPath = Path.GetDirectoryName(path);
+
+        //                    if (!Directory.Exists(directoryPath))
+        //                    {
+        //                        Directory.CreateDirectory(directoryPath);
+        //                    }
+
+        //                    File.Copy(pictureBox1.ImageLocation, path, true);
+
+        //                    using (SqlCommand cmd = new SqlCommand(insertData, connect))
+        //                    {
+        //                        cmd.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
+        //                        cmd.Parameters.AddWithValue("@movieName", addMovie_movieName.Text.Trim());
+        //                        cmd.Parameters.AddWithValue("@genre", addMovie_genre.SelectedItem.ToString());
+        //                        cmd.Parameters.AddWithValue("@price", addMovie_price.Text.Trim());
+        //                        cmd.Parameters.AddWithValue("@capacity", addMovie_capacity.Text.Trim());
+        //                        cmd.Parameters.AddWithValue("@movieImage", path);
+        //                        cmd.Parameters.AddWithValue("@status", addMovie_status.SelectedItem.ToString());
+
+        //                        DateTime today = DateTime.Now;
+        //                        cmd.Parameters.AddWithValue("@date", today);
+
+        //                        cmd.ExecuteNonQuery();
+
+        //                        displayData();
+        //                        clearfields();
+
+        //                        MessageBox.Show("Added successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error: {ex}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void addMovie_addBtn_Click(object sender, EventArgs e)
         {
@@ -79,40 +150,46 @@ namespace Desktop_Applicaion
                 {
                     connect.Open();
 
+                    // Check if Movie ID already exists
                     string checkID = "SELECT movie_id FROM movies WHERE movie_id = @movieID";
-
                     using (SqlCommand cID = new SqlCommand(checkID, connect))
                     {
                         cID.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
-
                         SqlDataAdapter adapter = new SqlDataAdapter(cID);
                         DataTable table = new DataTable();
-
                         adapter.Fill(table);
 
                         if (table.Rows.Count > 0)
                         {
-                            MessageBox.Show($"Movie ID: " + addMovie_movieID.Text.Trim() + " is take already",
+                            MessageBox.Show($"Movie ID: " + addMovie_movieID.Text.Trim() + " is already taken",
                                 "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-
                         else
                         {
                             string insertData = "INSERT INTO movies (movie_id, movie_name, genre, price, capacity, movie_image, status, created_at) " +
                                 "VALUES(@movieID, @movieName, @genre, @price, @capacity, @movieImage, @status, @date)";
 
-                            string path = Path.Combine(@"C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\Movie_Directory\"
-                                   + addMovie_movieID.Text.Trim() + ".jpg");
-
+                            // Ensure the directory exists before copying the image
+                            string path = Path.Combine(@"C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\Movie_Directory\",
+                                                        addMovie_movieID.Text.Trim() + ".jpg");
                             string directoryPath = Path.GetDirectoryName(path);
-
                             if (!Directory.Exists(directoryPath))
                             {
                                 Directory.CreateDirectory(directoryPath);
                             }
 
-                            File.Copy(pictureBox1.ImageLocation, path, true);
+                            // Copy image if valid
+                            if (pictureBox1.Image != null)
+                            {
+                                File.Copy(pictureBox1.ImageLocation, path, true);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No image selected for the movie.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
 
+                            // Insert movie data
                             using (SqlCommand cmd = new SqlCommand(insertData, connect))
                             {
                                 cmd.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
@@ -122,17 +199,14 @@ namespace Desktop_Applicaion
                                 cmd.Parameters.AddWithValue("@capacity", addMovie_capacity.Text.Trim());
                                 cmd.Parameters.AddWithValue("@movieImage", path);
                                 cmd.Parameters.AddWithValue("@status", addMovie_status.SelectedItem.ToString());
-
                                 DateTime today = DateTime.Now;
                                 cmd.Parameters.AddWithValue("@date", today);
 
                                 cmd.ExecuteNonQuery();
-
                                 displayData();
                                 clearfields();
 
-                                MessageBox.Show("Added successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                                MessageBox.Show("Added successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
@@ -140,7 +214,7 @@ namespace Desktop_Applicaion
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -182,6 +256,69 @@ namespace Desktop_Applicaion
             }
         }
 
+        //private void addMovie_updateBtn_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (MessageBox.Show("Are you sure you want to update ID: " + addMovie_movieID.Text + "?",
+        //            "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //        {
+        //            using (SqlConnection connect = new SqlConnection(conn))
+        //            {
+        //                connect.Open();
+
+        //                // Check if another movie has the same movie_id
+        //                string checkID = "SELECT COUNT(id) FROM movies WHERE movie_id = @movieID AND id != @id";
+
+        //                using (SqlCommand cID = new SqlCommand(checkID, connect))
+        //                {
+        //                    cID.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
+        //                    cID.Parameters.AddWithValue("@id", id);
+
+        //                    int count = (int)cID.ExecuteScalar();
+
+        //                    if (count > 0)
+        //                    {
+        //                        MessageBox.Show($"Movie ID: {addMovie_movieID.Text.Trim()} is already taken by another record.",
+        //                            "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                        return;
+        //                    }
+        //                }
+
+        //                // Perform the update
+        //                string updateData = "UPDATE movies SET movie_id = @movieID, movie_name = @movieName, genre = @genre, " +
+        //                                    "price = @price, capacity = @capacity, status = @status, update_date = @updateDate " +
+        //                                    "WHERE id = @id";
+
+        //                using (SqlCommand cmd = new SqlCommand(updateData, connect))
+        //                {
+        //                    cmd.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
+        //                    cmd.Parameters.AddWithValue("@movieName", addMovie_movieName.Text.Trim());
+        //                    cmd.Parameters.AddWithValue("@genre", addMovie_genre.SelectedItem?.ToString() ?? "");
+        //                    cmd.Parameters.AddWithValue("@price", addMovie_price.Text.Trim());
+        //                    cmd.Parameters.AddWithValue("@capacity", addMovie_capacity.Text.Trim());
+        //                    cmd.Parameters.AddWithValue("@status", addMovie_status.SelectedItem?.ToString() ?? "");
+
+        //                    DateTime today = DateTime.Now;
+        //                    cmd.Parameters.AddWithValue("@updateDate", today);
+        //                    cmd.Parameters.AddWithValue("@id", id);
+
+        //                    cmd.ExecuteNonQuery();
+        //                }
+
+        //                displayData();
+        //                clearfields();
+
+        //                MessageBox.Show("Updated successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error: {ex.Message}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
         private void addMovie_updateBtn_Click(object sender, EventArgs e)
         {
             try
@@ -193,14 +330,12 @@ namespace Desktop_Applicaion
                     {
                         connect.Open();
 
-                        // Check if another movie has the same movie_id
+                        // Check if Movie ID exists for another record
                         string checkID = "SELECT COUNT(id) FROM movies WHERE movie_id = @movieID AND id != @id";
-
                         using (SqlCommand cID = new SqlCommand(checkID, connect))
                         {
                             cID.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
                             cID.Parameters.AddWithValue("@id", id);
-
                             int count = (int)cID.ExecuteScalar();
 
                             if (count > 0)
@@ -211,10 +346,19 @@ namespace Desktop_Applicaion
                             }
                         }
 
-                        // Perform the update
+                        // Update movie data
                         string updateData = "UPDATE movies SET movie_id = @movieID, movie_name = @movieName, genre = @genre, " +
-                                            "price = @price, capacity = @capacity, status = @status, update_date = @updateDate " +
+                                            "price = @price, capacity = @capacity, status = @status, update_date = @updateDate, movie_image = @movieImage " +
                                             "WHERE id = @id";
+
+                        // Handle image update
+                        string path = Path.Combine(@"C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\Movie_Directory\",
+                                                   addMovie_movieID.Text.Trim() + ".jpg");
+                        if (pictureBox1.Image != null)
+                        {
+                            // Copy new image to the path
+                            File.Copy(pictureBox1.ImageLocation, path, true);
+                        }
 
                         using (SqlCommand cmd = new SqlCommand(updateData, connect))
                         {
@@ -224,18 +368,17 @@ namespace Desktop_Applicaion
                             cmd.Parameters.AddWithValue("@price", addMovie_price.Text.Trim());
                             cmd.Parameters.AddWithValue("@capacity", addMovie_capacity.Text.Trim());
                             cmd.Parameters.AddWithValue("@status", addMovie_status.SelectedItem?.ToString() ?? "");
-
+                            cmd.Parameters.AddWithValue("@movieImage", path);
                             DateTime today = DateTime.Now;
                             cmd.Parameters.AddWithValue("@updateDate", today);
                             cmd.Parameters.AddWithValue("@id", id);
 
                             cmd.ExecuteNonQuery();
+                            displayData();
+                            clearfields();
+
+                            MessageBox.Show("Updated successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-
-                        displayData();
-                        clearfields();
-
-                        MessageBox.Show("Updated successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }

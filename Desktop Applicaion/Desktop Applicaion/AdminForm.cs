@@ -17,11 +17,6 @@ namespace Desktop_Applicaion
             InitializeComponent();
         }
 
-        private void AdminForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Are you sure you want to exit?", "Confirmation Message"
@@ -88,6 +83,11 @@ namespace Desktop_Applicaion
         }
 
         private void addMovieForm2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
         {
 
         }

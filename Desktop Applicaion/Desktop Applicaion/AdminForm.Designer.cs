@@ -86,10 +86,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(1115, 19);
             label1.Name = "label1";
-            label1.Size = new Size(21, 21);
+            label1.Size = new Size(26, 27);
             label1.TabIndex = 0;
             label1.Text = "X";
             label1.Click += label1_Click;
@@ -97,29 +97,30 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(19, 18);
             label2.Name = "label2";
-            label2.Size = new Size(287, 20);
+            label2.Size = new Size(390, 27);
             label2.TabIndex = 1;
             label2.Text = "Movie Ticket Management System";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(914, 23);
+            label3.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(903, 18);
             label3.Name = "label3";
-            label3.Size = new Size(156, 17);
+            label3.Size = new Size(194, 27);
             label3.TabIndex = 1;
-            label3.Text = "Welcome,MarcoMan";
+            label3.Text = "Welcome,Admin";
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources.icons8_user_30;
-            pictureBox2.Location = new Point(878, 19);
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(847, 7);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 30);
+            pictureBox2.Size = new Size(50, 50);
+            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
@@ -139,9 +140,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(71, 63);
+            pictureBox1.Location = new Point(41, 63);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.Size = new Size(128, 124);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -149,7 +151,7 @@
             // 
             dashboard_btn.FlatAppearance.BorderSize = 0;
             dashboard_btn.FlatStyle = FlatStyle.Flat;
-            dashboard_btn.Font = new Font("Arial Narrow", 12F);
+            dashboard_btn.Font = new Font("Arial Narrow", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dashboard_btn.ForeColor = Color.White;
             dashboard_btn.Image = (Image)resources.GetObject("dashboard_btn.Image");
             dashboard_btn.ImageAlign = ContentAlignment.MiddleLeft;
@@ -157,7 +159,7 @@
             dashboard_btn.Name = "dashboard_btn";
             dashboard_btn.Size = new Size(220, 49);
             dashboard_btn.TabIndex = 1;
-            dashboard_btn.Text = "DASHBOARD";
+            dashboard_btn.Text = "  DASHBOARD";
             dashboard_btn.UseVisualStyleBackColor = true;
             dashboard_btn.Click += dashboard_btn_Click;
             // 
@@ -165,7 +167,7 @@
             // 
             addStaff_btn.FlatAppearance.BorderSize = 0;
             addStaff_btn.FlatStyle = FlatStyle.Flat;
-            addStaff_btn.Font = new Font("Arial Narrow", 12F);
+            addStaff_btn.Font = new Font("Arial Narrow", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addStaff_btn.ForeColor = Color.White;
             addStaff_btn.Image = Properties.Resources.icons8_add_male_user_30;
             addStaff_btn.ImageAlign = ContentAlignment.MiddleLeft;
@@ -181,7 +183,7 @@
             // 
             addMovie_btn.FlatAppearance.BorderSize = 0;
             addMovie_btn.FlatStyle = FlatStyle.Flat;
-            addMovie_btn.Font = new Font("Arial Narrow", 12F);
+            addMovie_btn.Font = new Font("Arial Narrow", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_btn.ForeColor = Color.White;
             addMovie_btn.Image = Properties.Resources.icons8_movie_30;
             addMovie_btn.ImageAlign = ContentAlignment.MiddleLeft;
@@ -197,13 +199,13 @@
             // 
             logout_btn.FlatAppearance.BorderSize = 0;
             logout_btn.FlatStyle = FlatStyle.Flat;
-            logout_btn.Font = new Font("Arial Narrow", 12F);
+            logout_btn.Font = new Font("Arial Narrow", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             logout_btn.ForeColor = Color.White;
             logout_btn.Image = Properties.Resources.icons8_logout_rounded_30;
             logout_btn.ImageAlign = ContentAlignment.MiddleLeft;
             logout_btn.Location = new Point(12, 651);
             logout_btn.Name = "logout_btn";
-            logout_btn.Size = new Size(220, 49);
+            logout_btn.Size = new Size(200, 49);
             logout_btn.TabIndex = 5;
             logout_btn.Text = "LOG OUT";
             logout_btn.UseVisualStyleBackColor = true;

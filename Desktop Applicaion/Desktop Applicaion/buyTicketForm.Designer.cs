@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buyTicketForm));
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
@@ -89,23 +89,23 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(213, 10, 56);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(133, 19, 33);
+            dataGridViewCellStyle7.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle2.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(213, 10, 56);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(133, 19, 33);
+            dataGridViewCellStyle8.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.White;
             dataGridView1.Location = new Point(22, 60);
@@ -124,11 +124,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
             label4.Location = new Point(22, 23);
             label4.Name = "label4";
-            label4.Size = new Size(147, 20);
+            label4.Size = new Size(198, 27);
             label4.TabIndex = 6;
             label4.Text = "Available Movies";
             // 
@@ -159,7 +159,7 @@
             buyTicket_clear.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_clear.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_clear.FlatStyle = FlatStyle.Flat;
-            buyTicket_clear.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            buyTicket_clear.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_clear.ForeColor = Color.White;
             buyTicket_clear.Location = new Point(451, 293);
             buyTicket_clear.Name = "buyTicket_clear";
@@ -176,7 +176,7 @@
             buyTicket_selectMovie.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_selectMovie.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_selectMovie.FlatStyle = FlatStyle.Flat;
-            buyTicket_selectMovie.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            buyTicket_selectMovie.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_selectMovie.ForeColor = Color.White;
             buyTicket_selectMovie.Location = new Point(239, 293);
             buyTicket_selectMovie.Name = "buyTicket_selectMovie";
@@ -200,13 +200,13 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(252, 203);
+            label9.Location = new Point(231, 201);
             label9.Name = "label9";
-            label9.Size = new Size(102, 22);
+            label9.Size = new Size(117, 24);
             label9.TabIndex = 17;
-            label9.Text = "Regular Price:";
+            label9.Text = "Regular Price :";
             // 
             // buyTicket_genre
             // 
@@ -222,13 +222,13 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(295, 152);
+            label7.Location = new Point(278, 150);
             label7.Name = "label7";
-            label7.Size = new Size(54, 22);
+            label7.Size = new Size(65, 24);
             label7.TabIndex = 15;
-            label7.Text = "Genre:";
+            label7.Text = "Genre :";
             // 
             // buyTicket_movieName
             // 
@@ -244,13 +244,13 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(257, 99);
+            label5.Location = new Point(233, 99);
             label5.Name = "label5";
-            label5.Size = new Size(97, 22);
+            label5.Size = new Size(115, 24);
             label5.TabIndex = 13;
-            label5.Text = "Movie Name:";
+            label5.Text = "Movie Name :";
             // 
             // buyTicket_movieID
             // 
@@ -266,13 +266,13 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(278, 53);
+            label2.Location = new Point(261, 53);
             label2.Name = "label2";
-            label2.Size = new Size(71, 22);
+            label2.Size = new Size(87, 24);
             label2.TabIndex = 11;
-            label2.Text = "Movie ID:";
+            label2.Text = "Movie ID :";
             // 
             // panel4
             // 
@@ -325,7 +325,7 @@
             buyTicket_calculateBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_calculateBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_calculateBtn.FlatStyle = FlatStyle.Flat;
-            buyTicket_calculateBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            buyTicket_calculateBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_calculateBtn.ForeColor = Color.White;
             buyTicket_calculateBtn.Location = new Point(208, 234);
             buyTicket_calculateBtn.Name = "buyTicket_calculateBtn";
@@ -342,7 +342,7 @@
             buyTicket_clearFields.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_clearFields.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_clearFields.FlatStyle = FlatStyle.Flat;
-            buyTicket_clearFields.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            buyTicket_clearFields.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_clearFields.ForeColor = Color.White;
             buyTicket_clearFields.Location = new Point(53, 600);
             buyTicket_clearFields.Name = "buyTicket_clearFields";
@@ -359,7 +359,7 @@
             buyTicket_receiptBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_receiptBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_receiptBtn.FlatStyle = FlatStyle.Flat;
-            buyTicket_receiptBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            buyTicket_receiptBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_receiptBtn.ForeColor = Color.White;
             buyTicket_receiptBtn.Location = new Point(53, 524);
             buyTicket_receiptBtn.Name = "buyTicket_receiptBtn";
@@ -376,7 +376,7 @@
             buyTicket_buyBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_buyBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             buyTicket_buyBtn.FlatStyle = FlatStyle.Flat;
-            buyTicket_buyBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            buyTicket_buyBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_buyBtn.ForeColor = Color.White;
             buyTicket_buyBtn.Location = new Point(53, 459);
             buyTicket_buyBtn.Name = "buyTicket_buyBtn";
@@ -389,13 +389,13 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.Black;
-            label21.Location = new Point(100, 416);
+            label21.Location = new Point(87, 416);
             label21.Name = "label21";
-            label21.Size = new Size(65, 22);
+            label21.Size = new Size(77, 24);
             label21.TabIndex = 26;
-            label21.Text = "Change:";
+            label21.Text = "Change :";
             // 
             // buyTicket_change
             // 
@@ -422,33 +422,33 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.Black;
-            label19.Location = new Point(100, 367);
+            label19.Location = new Point(81, 370);
             label19.Name = "label19";
-            label19.Size = new Size(64, 22);
+            label19.Size = new Size(83, 24);
             label19.TabIndex = 23;
-            label19.Text = "Amount:";
+            label19.Text = "Amount : ";
             // 
             // buyTicket_totalPrice
             // 
             buyTicket_totalPrice.AutoSize = true;
-            buyTicket_totalPrice.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buyTicket_totalPrice.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_totalPrice.ForeColor = Color.Black;
             buyTicket_totalPrice.Location = new Point(170, 327);
             buyTicket_totalPrice.Name = "buyTicket_totalPrice";
-            buyTicket_totalPrice.Size = new Size(70, 20);
+            buyTicket_totalPrice.Size = new Size(78, 21);
             buyTicket_totalPrice.TabIndex = 22;
             buyTicket_totalPrice.Text = "Rs.0.00";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.Black;
-            label17.Location = new Point(61, 327);
+            label17.Location = new Point(53, 327);
             label17.Name = "label17";
-            label17.Size = new Size(103, 20);
+            label17.Size = new Size(112, 21);
             label17.TabIndex = 21;
             label17.Text = "Total Price:";
             // 
@@ -465,13 +465,13 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.Black;
-            label15.Location = new Point(94, 180);
+            label15.Location = new Point(80, 180);
             label15.Name = "label15";
-            label15.Size = new Size(51, 22);
+            label15.Size = new Size(65, 24);
             label15.TabIndex = 19;
-            label15.Text = "Drinks";
+            label15.Text = "Drinks :";
             // 
             // buyTicket_foods
             // 
@@ -486,22 +486,22 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.Black;
-            label16.Location = new Point(94, 142);
+            label16.Location = new Point(80, 142);
             label16.Name = "label16";
-            label16.Size = new Size(50, 22);
+            label16.Size = new Size(65, 24);
             label16.TabIndex = 17;
-            label16.Text = "Foods";
+            label16.Text = "Foods :";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.Black;
             label14.Location = new Point(43, 102);
             label14.Name = "label14";
-            label14.Size = new Size(140, 20);
+            label14.Size = new Size(164, 23);
             label14.TabIndex = 16;
             label14.Text = "Available Foods";
             // 
@@ -518,11 +518,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(28, 42);
+            label13.Location = new Point(19, 42);
             label13.Name = "label13";
-            label13.Size = new Size(114, 22);
+            label13.Size = new Size(126, 24);
             label13.TabIndex = 14;
             label13.Text = "Available Chairs";
             // 

@@ -63,9 +63,29 @@ namespace Desktop_Applicaion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1000270477_transformed_jpeg {
+            get {
+                object obj = ResourceManager.GetObject("1000270477-transformed.jpeg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_male_user_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-male-user-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bolivian_girl_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bolivian-girl-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

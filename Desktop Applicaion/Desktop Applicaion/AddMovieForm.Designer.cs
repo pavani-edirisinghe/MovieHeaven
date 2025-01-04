@@ -111,11 +111,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
             label4.Location = new Point(34, 21);
             label4.Name = "label4";
-            label4.Size = new Size(92, 20);
+            label4.Size = new Size(124, 27);
             label4.TabIndex = 5;
             label4.Text = "All Movies";
             // 
@@ -157,13 +157,13 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(516, 164);
+            label7.Location = new Point(503, 163);
             label7.Name = "label7";
-            label7.Size = new Size(53, 22);
+            label7.Size = new Size(67, 24);
             label7.TabIndex = 27;
-            label7.Text = "Status:";
+            label7.Text = "Status :";
             // 
             // panel3
             // 
@@ -190,9 +190,9 @@
             addMovie_clearBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addMovie_clearBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addMovie_clearBtn.FlatStyle = FlatStyle.Flat;
-            addMovie_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addMovie_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_clearBtn.ForeColor = Color.White;
-            addMovie_clearBtn.Location = new Point(694, 274);
+            addMovie_clearBtn.Location = new Point(704, 272);
             addMovie_clearBtn.Name = "addMovie_clearBtn";
             addMovie_clearBtn.Size = new Size(120, 47);
             addMovie_clearBtn.TabIndex = 25;
@@ -207,9 +207,9 @@
             addMovie_deleteBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addMovie_deleteBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addMovie_deleteBtn.FlatStyle = FlatStyle.Flat;
-            addMovie_deleteBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addMovie_deleteBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_deleteBtn.ForeColor = Color.White;
-            addMovie_deleteBtn.Location = new Point(502, 274);
+            addMovie_deleteBtn.Location = new Point(514, 273);
             addMovie_deleteBtn.Name = "addMovie_deleteBtn";
             addMovie_deleteBtn.Size = new Size(125, 46);
             addMovie_deleteBtn.TabIndex = 24;
@@ -224,9 +224,9 @@
             addMovie_updateBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addMovie_updateBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addMovie_updateBtn.FlatStyle = FlatStyle.Flat;
-            addMovie_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addMovie_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_updateBtn.ForeColor = Color.White;
-            addMovie_updateBtn.Location = new Point(319, 274);
+            addMovie_updateBtn.Location = new Point(323, 273);
             addMovie_updateBtn.Name = "addMovie_updateBtn";
             addMovie_updateBtn.Size = new Size(120, 47);
             addMovie_updateBtn.TabIndex = 23;
@@ -241,11 +241,11 @@
             addMovie_addBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addMovie_addBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addMovie_addBtn.FlatStyle = FlatStyle.Flat;
-            addMovie_addBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addMovie_addBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_addBtn.ForeColor = Color.White;
             addMovie_addBtn.Location = new Point(132, 274);
             addMovie_addBtn.Name = "addMovie_addBtn";
-            addMovie_addBtn.Size = new Size(120, 42);
+            addMovie_addBtn.Size = new Size(120, 47);
             addMovie_addBtn.TabIndex = 22;
             addMovie_addBtn.Text = "ADD";
             addMovie_addBtn.UseVisualStyleBackColor = false;
@@ -263,25 +263,26 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(502, 103);
+            label6.Location = new Point(486, 101);
             label6.Name = "label6";
-            label6.Size = new Size(69, 22);
+            label6.Size = new Size(84, 24);
             label6.TabIndex = 20;
-            label6.Text = "Capacity:";
+            label6.Text = "Capacity :";
             // 
             // addMovie_importBtn
             // 
             addMovie_importBtn.BackColor = Color.FromArgb(133, 19, 33);
             addMovie_importBtn.FlatAppearance.BorderSize = 0;
             addMovie_importBtn.FlatStyle = FlatStyle.Flat;
+            addMovie_importBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_importBtn.ForeColor = Color.White;
-            addMovie_importBtn.Location = new Point(906, 214);
+            addMovie_importBtn.Location = new Point(906, 208);
             addMovie_importBtn.Name = "addMovie_importBtn";
-            addMovie_importBtn.Size = new Size(150, 36);
+            addMovie_importBtn.Size = new Size(150, 42);
             addMovie_importBtn.TabIndex = 19;
-            addMovie_importBtn.Text = "Import";
+            addMovie_importBtn.Text = "IMPORT";
             addMovie_importBtn.UseVisualStyleBackColor = false;
             addMovie_importBtn.Click += addMovie_importBtn_Click;
             // 
@@ -296,13 +297,13 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(524, 41);
+            label5.Location = new Point(514, 41);
             label5.Name = "label5";
-            label5.Size = new Size(47, 22);
+            label5.Size = new Size(56, 24);
             label5.TabIndex = 16;
-            label5.Text = "Price:";
+            label5.Text = "Price :";
             // 
             // addMovie_genre
             // 
@@ -316,13 +317,13 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(72, 163);
+            label3.Location = new Point(93, 163);
             label3.Name = "label3";
-            label3.Size = new Size(54, 22);
+            label3.Size = new Size(65, 24);
             label3.TabIndex = 14;
-            label3.Text = "Genre:";
+            label3.Text = "Genre :";
             // 
             // addMovie_movieName
             // 
@@ -335,13 +336,13 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(63, 98);
+            label1.Location = new Point(43, 101);
             label1.Name = "label1";
-            label1.Size = new Size(97, 22);
+            label1.Size = new Size(115, 24);
             label1.TabIndex = 12;
-            label1.Text = "Movie Name:";
+            label1.Text = "Movie Name :";
             // 
             // addMovie_movieID
             // 
@@ -354,13 +355,13 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(72, 41);
+            label2.Location = new Point(76, 41);
             label2.Name = "label2";
-            label2.Size = new Size(71, 22);
+            label2.Size = new Size(87, 24);
             label2.TabIndex = 10;
-            label2.Text = "Movie ID:";
+            label2.Text = "Movie ID :";
             // 
             // AddMovieForm
             // 

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
             label4 = new Label();
@@ -65,23 +65,23 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(213, 10, 56);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(133, 19, 33);
+            dataGridViewCellStyle3.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle2.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(213, 10, 56);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(133, 19, 33);
+            dataGridViewCellStyle4.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.White;
             dataGridView1.Location = new Point(26, 87);
@@ -101,11 +101,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
             label4.Location = new Point(40, 27);
             label4.Name = "label4";
-            label4.Size = new Size(74, 20);
+            label4.Size = new Size(100, 27);
             label4.TabIndex = 4;
             label4.Text = "All Staff";
             // 
@@ -135,7 +135,7 @@
             addStaff_clearBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addStaff_clearBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addStaff_clearBtn.FlatStyle = FlatStyle.Flat;
-            addStaff_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addStaff_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addStaff_clearBtn.ForeColor = Color.White;
             addStaff_clearBtn.Location = new Point(188, 479);
             addStaff_clearBtn.Name = "addStaff_clearBtn";
@@ -152,7 +152,7 @@
             addStaff_deletBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addStaff_deletBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addStaff_deletBtn.FlatStyle = FlatStyle.Flat;
-            addStaff_deletBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addStaff_deletBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addStaff_deletBtn.ForeColor = Color.White;
             addStaff_deletBtn.Location = new Point(28, 479);
             addStaff_deletBtn.Name = "addStaff_deletBtn";
@@ -169,7 +169,7 @@
             addStaff_updateBtn.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             addStaff_updateBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             addStaff_updateBtn.FlatStyle = FlatStyle.Flat;
-            addStaff_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            addStaff_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addStaff_updateBtn.ForeColor = Color.White;
             addStaff_updateBtn.Location = new Point(188, 385);
             addStaff_updateBtn.Name = "addStaff_updateBtn";
@@ -186,7 +186,7 @@
             button1.FlatAppearance.CheckedBackColor = Color.FromArgb(213, 10, 56);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(213, 10, 56);
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial Rounded MT Bold", 10.2F);
+            button1.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Location = new Point(28, 385);
             button1.Name = "button1";
@@ -213,11 +213,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(39, 280);
+            label5.Location = new Point(39, 278);
             label5.Name = "label5";
-            label5.Size = new Size(48, 22);
+            label5.Size = new Size(57, 24);
             label5.TabIndex = 13;
             label5.Text = "Status";
             // 
@@ -234,11 +234,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(39, 208);
+            label3.Location = new Point(39, 206);
             label3.Name = "label3";
-            label3.Size = new Size(71, 22);
+            label3.Size = new Size(82, 24);
             label3.TabIndex = 11;
             label3.Text = "Password";
             // 
@@ -255,22 +255,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(39, 132);
+            label2.Location = new Point(39, 130);
             label2.Name = "label2";
-            label2.Size = new Size(77, 22);
+            label2.Size = new Size(86, 24);
             label2.TabIndex = 9;
             label2.Text = "Username";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(39, 47);
             label1.Name = "label1";
-            label1.Size = new Size(175, 20);
+            label1.Size = new Size(238, 27);
             label1.TabIndex = 8;
             label1.Text = "Fill Staff Information";
             // 

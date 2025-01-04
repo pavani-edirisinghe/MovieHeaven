@@ -42,6 +42,7 @@ namespace Desktop_Applicaion
         {
             dashboardForm1.Show();
             buyTicketForm1.Hide();
+            profileFrom1.Hide();
 
             dashboardForm dForm = dashboardForm1 as dashboardForm;
 
@@ -55,13 +56,28 @@ namespace Desktop_Applicaion
         {
             dashboardForm1.Hide();
             buyTicketForm1.Show();
+            profileFrom1.Hide();
 
             buyTicketForm bForm = buyTicketForm1 as buyTicketForm;
 
-            if(bForm != null)
+            if (bForm != null)
             {
                 bForm.refreshData();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Hide();
+            buyTicketForm1.Hide();
+            profileFrom1.Show();
+
+            profileFrom dForm = profileFrom1 as profileFrom;
+
+            //if (dForm != null)
+            //{
+            //    dForm.refreshData();
+            //}
         }
     }
 }

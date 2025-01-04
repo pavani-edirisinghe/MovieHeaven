@@ -16,3 +16,5 @@ INSERT INTO users (username, password, role, status, date_reg)
 VALUES ('admin', 'admin123', 'Admin', 'Active', '2024-12-28');
 
 SELECT * FROM users WHERE role = 'Staff'
+
+

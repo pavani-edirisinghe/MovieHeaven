@@ -18,3 +18,5 @@ CREATE TABLE customers
 )
 
 SELECT * FROM customers
+
+TRUNCATE TABLE customers;

@@ -14,3 +14,5 @@
 )
 
 SELECT * FROM movies
+
+TRUNCATE TABLE movies;
