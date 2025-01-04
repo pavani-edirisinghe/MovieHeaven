@@ -81,6 +81,7 @@
             addMovieForm2.Name = "addMovieForm2";
             addMovieForm2.Size = new Size(1462, 921);
             addMovieForm2.TabIndex = 0;
+            addMovieForm2.Load += addMovieForm2_Load;
             // 
             // label1
             // 

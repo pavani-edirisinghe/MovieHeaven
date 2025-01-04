@@ -167,14 +167,15 @@ namespace Desktop_Applicaion
                 }
 
                 double getFoodPrice = (buyTicket_foods.SelectedIndex == -1) ? 0 : 100;
-                double getDrinkPrice = (buyTicket_foods.SelectedIndex == -1) ? 0 : 150;
+
+                double getDrinkPrice = (buyTicket_drinks.SelectedIndex == -1) ? 0 : 150;
 
                 getTotal = (getPrice + getFoodPrice + getDrinkPrice);
 
                 buyTicket_totalPrice.Text = "Rs. " + getTotal.ToString("0.00");
-
             }
         }
+
 
         public void clearSelected()
         {
@@ -206,6 +207,74 @@ namespace Desktop_Applicaion
 
         }
 
+        //private void buyTicket_amount_Enter(object sender, EventArgs e)
+        //{
+        //    if (id == 0 && getTotal == 0)
+        //    {
+        //        MessageBox.Show("Please select movie and foods first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //    else
+        //    {
+        //        try
+        //        {
+        //            if (Convert.ToDouble(buyTicket_amount.Text) >= getTotal)
+        //            {
+        //                getChange = Convert.ToDouble(buyTicket_amount.Text) - getTotal;
+        //            }
+        //            else
+        //            {
+        //                getChange = 0;
+        //            }
+
+        //            buyTicket_change.Text = getChange.ToString("0.00");
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show("Please enter numbers only", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            buyTicket_amount.Text = "";
+        //        }
+        //    }
+        //}
+
+        double getChange = 0;
+        double getAmount = 0;
+
+        //private void buyTicket_amount_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        if (id == 0 && getTotal == 0)
+        //        {
+        //            MessageBox.Show("Please select movie and foods first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+        //        else
+        //        {
+        //            try
+        //            {
+        //                if (Convert.ToDouble(buyTicket_amount.Text) >= getTotal)
+        //                {
+        //                    getChange = Convert.ToDouble(buyTicket_amount.Text) - getTotal;
+        //                    getAmount = Convert.ToDouble(buyTicket_amount.Text);
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show("Error :3 should amount > total", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                    getChange = 0;
+        //                    getAmount = 0;
+        //                }
+
+        //                buyTicket_change.Text = "Rs." + getChange.ToString("0.00");
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("Please enter numbers only", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                buyTicket_amount.Text = "";
+        //                getAmount = 0;
+        //            }
+        //        }
+        //    }
+        //}
+
         private void buyTicket_amount_Enter(object sender, EventArgs e)
         {
             if (id == 0 && getTotal == 0)
@@ -214,29 +283,9 @@ namespace Desktop_Applicaion
             }
             else
             {
-                try
-                {
-                    if (Convert.ToDouble(buyTicket_amount.Text) >= getTotal)
-                    {
-                        getChange = Convert.ToDouble(buyTicket_amount.Text) - getTotal;
-                    }
-                    else
-                    {
-                        getChange = 0;
-                    }
-
-                    buyTicket_change.Text = getChange.ToString("0.00");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Please enter numbers only", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    buyTicket_amount.Text = "";
-                }
+                // Don't show error message on just clicking the textbox
             }
         }
-
-        double getChange = 0;
-        double getAmount = 0;
 
         private void buyTicket_amount_KeyDown(object sender, KeyEventArgs e)
         {
@@ -248,23 +297,24 @@ namespace Desktop_Applicaion
                 }
                 else
                 {
-                    try
+                    double inputAmount;
+                    // Use TryParse to handle invalid characters more gracefully
+                    if (double.TryParse(buyTicket_amount.Text, out inputAmount))
                     {
-                        if (Convert.ToDouble(buyTicket_amount.Text) >= getTotal)
+                        if (inputAmount >= getTotal)
                         {
-                            getChange = Convert.ToDouble(buyTicket_amount.Text) - getTotal;
-                            getAmount = Convert.ToDouble(buyTicket_amount.Text);
+                            getChange = inputAmount - getTotal;
+                            getAmount = inputAmount;
+                            buyTicket_change.Text = "Rs." + getChange.ToString("0.00");
                         }
                         else
                         {
-                            MessageBox.Show("Error :3 should amount > total", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Error: Amount should be greater than or equal to the total.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             getChange = 0;
                             getAmount = 0;
                         }
-
-                        buyTicket_change.Text = "Rs." + getChange.ToString("0.00");
                     }
-                    catch (Exception ex)
+                    else
                     {
                         MessageBox.Show("Please enter numbers only", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         buyTicket_amount.Text = "";
@@ -273,7 +323,6 @@ namespace Desktop_Applicaion
                 }
             }
         }
-
 
 
         private void buyTicket_buyBtn_Click(object sender, EventArgs e)
@@ -308,28 +357,14 @@ namespace Desktop_Applicaion
                         MessageBox.Show($"Successful! occupied: {buyTicket_availableChairs.Text}"
                             , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        clearSelected();
-                        clearFields();
                     }
                 }
             }
         }
 
-        public void clearFields()
-        {
-            buyTicket_availableChairs.SelectedIndex = -1;
-            buyTicket_foods.SelectedIndex = -1;
-            buyTicket_drinks.SelectedIndex = -1;
-            buyTicket_totalPrice.Text = "Rs.0.00";
-            buyTicket_amount.Text = "";
-            buyTicket_change.Text = "Rs.0.00";
-        }
+        
 
-        private void buyTicket_clearFields_Click(object sender, EventArgs e)
-        {
-            clearFields();
-        }
-
+        
         private void buyTicket_receiptBtn_Click(object sender, EventArgs e)
         {
             printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(printDocument1_PrintPage);
@@ -414,6 +449,18 @@ namespace Desktop_Applicaion
         {
             rowIndex = 0;
         }
-
+        private void buyTicket_clearFields_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
+        public void clearFields()
+        {
+            buyTicket_availableChairs.SelectedIndex = -1;
+            buyTicket_foods.SelectedIndex = -1;
+            buyTicket_drinks.SelectedIndex = -1;
+            buyTicket_totalPrice.Text = "Rs.0.00";
+            buyTicket_amount.Text = "";
+            buyTicket_change.Text = "Rs.0.00";
+        }
     }
 }

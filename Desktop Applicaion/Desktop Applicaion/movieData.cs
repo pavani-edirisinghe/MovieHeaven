@@ -67,7 +67,7 @@ namespace Desktop_Applicaion
             {
                 connect.Open();
 
-                string selectData = "SELECT * FROM movies WHERE status != 'Available' AND delete_date IS NULL";
+                string selectData = "SELECT * FROM movies WHERE status = 'Available' AND delete_date IS NULL";
 
                 using (SqlCommand cmd = new SqlCommand(selectData, connect))
                 {

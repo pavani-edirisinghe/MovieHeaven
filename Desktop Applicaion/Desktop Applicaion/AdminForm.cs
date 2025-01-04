@@ -87,5 +87,9 @@ namespace Desktop_Applicaion
             }
         }
 
+        private void addMovieForm2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
