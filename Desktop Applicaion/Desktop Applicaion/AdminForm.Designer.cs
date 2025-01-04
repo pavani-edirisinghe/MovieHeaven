@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             panel3 = new Panel();
-            addMovieForm2 = new AddMovieForm();
-            addStaffsForm1 = new AddStaffsForm();
             dashboardForm1 = new dashboardForm();
+            addStaffsForm1 = new AddStaffsForm();
+            addMovieForm2 = new AddMovieForm();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -42,7 +42,6 @@
             dashboard_btn = new Button();
             addStaff_btn = new Button();
             addMovie_btn = new Button();
-            custormers_btn = new Button();
             logout_btn = new Button();
             panel1 = new Panel();
             panel3.SuspendLayout();
@@ -54,21 +53,20 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(addMovieForm2);
-            panel3.Controls.Add(addStaffsForm1);
             panel3.Controls.Add(dashboardForm1);
-            panel3.Dock = DockStyle.Fill;
+            panel3.Controls.Add(addStaffsForm1);
+            panel3.Controls.Add(addMovieForm2);
             panel3.Location = new Point(250, 63);
             panel3.Name = "panel3";
             panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 2;
             // 
-            // addMovieForm2
+            // dashboardForm1
             // 
-            addMovieForm2.Location = new Point(0, 0);
-            addMovieForm2.Name = "addMovieForm2";
-            addMovieForm2.Size = new Size(1462, 921);
-            addMovieForm2.TabIndex = 2;
+            dashboardForm1.Location = new Point(0, 0);
+            dashboardForm1.Name = "dashboardForm1";
+            dashboardForm1.Size = new Size(1462, 921);
+            dashboardForm1.TabIndex = 2;
             // 
             // addStaffsForm1
             // 
@@ -77,12 +75,12 @@
             addStaffsForm1.Size = new Size(1462, 921);
             addStaffsForm1.TabIndex = 1;
             // 
-            // dashboardForm1
+            // addMovieForm2
             // 
-            dashboardForm1.Location = new Point(0, 0);
-            dashboardForm1.Name = "dashboardForm1";
-            dashboardForm1.Size = new Size(1462, 921);
-            dashboardForm1.TabIndex = 0;
+            addMovieForm2.Location = new Point(0, 0);
+            addMovieForm2.Name = "addMovieForm2";
+            addMovieForm2.Size = new Size(1462, 921);
+            addMovieForm2.TabIndex = 0;
             // 
             // label1
             // 
@@ -160,6 +158,7 @@
             dashboard_btn.TabIndex = 1;
             dashboard_btn.Text = "DASHBOARD";
             dashboard_btn.UseVisualStyleBackColor = true;
+            dashboard_btn.Click += dashboard_btn_Click;
             // 
             // addStaff_btn
             // 
@@ -175,6 +174,7 @@
             addStaff_btn.TabIndex = 2;
             addStaff_btn.Text = "ADD STAFF";
             addStaff_btn.UseVisualStyleBackColor = true;
+            addStaff_btn.Click += addStaff_btn_Click_1;
             // 
             // addMovie_btn
             // 
@@ -190,21 +190,7 @@
             addMovie_btn.TabIndex = 3;
             addMovie_btn.Text = "ADD MOVIE";
             addMovie_btn.UseVisualStyleBackColor = true;
-            // 
-            // custormers_btn
-            // 
-            custormers_btn.FlatAppearance.BorderSize = 0;
-            custormers_btn.FlatStyle = FlatStyle.Flat;
-            custormers_btn.Font = new Font("Arial Narrow", 12F);
-            custormers_btn.ForeColor = Color.White;
-            custormers_btn.Image = Properties.Resources.user;
-            custormers_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            custormers_btn.Location = new Point(12, 426);
-            custormers_btn.Name = "custormers_btn";
-            custormers_btn.Size = new Size(220, 49);
-            custormers_btn.TabIndex = 4;
-            custormers_btn.Text = " CUSTORMERS";
-            custormers_btn.UseVisualStyleBackColor = true;
+            addMovie_btn.Click += addMovie_btn_Click;
             // 
             // logout_btn
             // 
@@ -226,7 +212,6 @@
             // 
             panel1.BackColor = Color.FromArgb(133, 19, 33);
             panel1.Controls.Add(logout_btn);
-            panel1.Controls.Add(custormers_btn);
             panel1.Controls.Add(addMovie_btn);
             panel1.Controls.Add(addStaff_btn);
             panel1.Controls.Add(dashboard_btn);
@@ -271,7 +256,6 @@
         private Button dashboard_btn;
         private Button addStaff_btn;
         private Button addMovie_btn;
-        private Button custormers_btn;
         private Button logout_btn;
         private Panel panel1;
         private dashboardForm dashboardForm1;

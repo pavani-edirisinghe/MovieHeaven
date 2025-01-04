@@ -37,5 +37,31 @@ namespace Desktop_Applicaion
                 Application.Exit();
             }
         }
+
+        private void dashboard_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Show();
+            buyTicketForm1.Hide();
+
+            dashboardForm dForm = dashboardForm1 as dashboardForm;
+
+            if (dForm != null)
+            {
+                dForm.refreshData();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Hide();
+            buyTicketForm1.Show();
+
+            buyTicketForm bForm = buyTicketForm1 as buyTicketForm;
+
+            if(bForm != null)
+            {
+                bForm.refreshData();
+            }
+        }
     }
 }

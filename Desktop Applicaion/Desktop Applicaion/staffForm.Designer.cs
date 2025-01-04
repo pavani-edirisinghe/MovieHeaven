@@ -32,7 +32,6 @@
             panel1 = new Panel();
             button1 = new Button();
             logout_btn = new Button();
-            custormers_btn = new Button();
             dashboard_btn = new Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
@@ -41,6 +40,7 @@
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
+            dashboardForm1 = new dashboardForm();
             buyTicketForm1 = new buyTicketForm();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -54,7 +54,6 @@
             panel1.BackColor = Color.FromArgb(133, 19, 33);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(logout_btn);
-            panel1.Controls.Add(custormers_btn);
             panel1.Controls.Add(dashboard_btn);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
@@ -77,6 +76,7 @@
             button1.TabIndex = 6;
             button1.Text = "BUY TICKET";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // logout_btn
             // 
@@ -94,21 +94,6 @@
             logout_btn.UseVisualStyleBackColor = true;
             logout_btn.Click += logout_btn_Click;
             // 
-            // custormers_btn
-            // 
-            custormers_btn.FlatAppearance.BorderSize = 0;
-            custormers_btn.FlatStyle = FlatStyle.Flat;
-            custormers_btn.Font = new Font("Arial Narrow", 12F);
-            custormers_btn.ForeColor = Color.White;
-            custormers_btn.Image = Properties.Resources.user;
-            custormers_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            custormers_btn.Location = new Point(12, 410);
-            custormers_btn.Name = "custormers_btn";
-            custormers_btn.Size = new Size(220, 49);
-            custormers_btn.TabIndex = 4;
-            custormers_btn.Text = " CUSTORMERS";
-            custormers_btn.UseVisualStyleBackColor = true;
-            // 
             // dashboard_btn
             // 
             dashboard_btn.FlatAppearance.BorderSize = 0;
@@ -123,6 +108,7 @@
             dashboard_btn.TabIndex = 1;
             dashboard_btn.Text = "DASHBOARD";
             dashboard_btn.UseVisualStyleBackColor = true;
+            dashboard_btn.Click += dashboard_btn_Click;
             // 
             // pictureBox1
             // 
@@ -188,12 +174,20 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(dashboardForm1);
             panel3.Controls.Add(buyTicketForm1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(250, 63);
             panel3.Name = "panel3";
             panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 3;
+            // 
+            // dashboardForm1
+            // 
+            dashboardForm1.Location = new Point(0, 0);
+            dashboardForm1.Name = "dashboardForm1";
+            dashboardForm1.Size = new Size(1462, 921);
+            dashboardForm1.TabIndex = 1;
             // 
             // buyTicketForm1
             // 
@@ -227,7 +221,6 @@
 
         private Panel panel1;
         private Button logout_btn;
-        private Button custormers_btn;
         private Button dashboard_btn;
         private PictureBox pictureBox1;
         private Panel panel2;
@@ -238,5 +231,6 @@
         private Button button1;
         private Panel panel3;
         private buyTicketForm buyTicketForm1;
+        private dashboardForm dashboardForm1;
     }
 }

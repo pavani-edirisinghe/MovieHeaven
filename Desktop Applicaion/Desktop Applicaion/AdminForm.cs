@@ -43,9 +43,49 @@ namespace Desktop_Applicaion
             }
         }
 
-        private void addMovieForm1_Load(object sender, EventArgs e)
+
+        private void dashboard_btn_Click(object sender, EventArgs e)
         {
+            dashboardForm1.Show();
+            addStaffsForm1.Hide();
+            addMovieForm2.Hide();
+
+            dashboardForm dForm = dashboardForm1 as dashboardForm;
+
+            if (dForm != null)
+            {
+                dForm.refreshData();
+            }
 
         }
+
+        private void addStaff_btn_Click_1(object sender, EventArgs e)
+        {
+            dashboardForm1.Hide();
+            addStaffsForm1.Show();
+            addMovieForm2.Hide();
+
+            AddStaffsForm asForm = addStaffsForm1 as AddStaffsForm;
+
+            if (asForm != null)
+            {
+                asForm.refreshData();
+            }
+        }
+
+        private void addMovie_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Hide();
+            addStaffsForm1.Hide();
+            addMovieForm2.Show();
+
+            AddMovieForm amForm = addMovieForm1 as AddMovieForm;
+
+            if (amForm != null)
+            {
+                amForm.refreshData();
+            }
+        }
+
     }
 }

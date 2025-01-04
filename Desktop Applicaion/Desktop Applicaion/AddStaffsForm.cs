@@ -24,6 +24,17 @@ namespace Desktop_Applicaion
             displayData();
         }
 
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+
+            displayData();
+        }
+
         public void displayData()
         {
             staffData sData = new staffData();
@@ -130,6 +141,7 @@ namespace Desktop_Applicaion
 
         }
 
+
         private void addStaff_updateBtn_Click(object sender, EventArgs e)
         {
             if (isEmpty())
@@ -145,24 +157,26 @@ namespace Desktop_Applicaion
                     {
                         connect.Open();
 
-                        string selectUsername = "SELECT * FROM users WHERE username = @usern";
+                        // Modify query to exclude the current record being updated
+                        string selectUsername = "SELECT * FROM users WHERE username = @usern AND id != @id";
 
                         using (SqlCommand checkUsern = new SqlCommand(selectUsername, connect))
                         {
                             checkUsern.Parameters.AddWithValue("@usern", addStaff_username.Text.Trim());
+                            checkUsern.Parameters.AddWithValue("@id", getID); // Exclude current record
 
                             SqlDataAdapter adapter = new SqlDataAdapter(checkUsern);
                             DataTable tabe = new DataTable();
 
                             adapter.Fill(tabe);
 
+                            // Check if any other records with the same username exist
                             if (tabe.Rows.Count >= 2)
                             {
                                 MessageBox.Show(addStaff_username.Text.Substring(0, 1).ToUpper()
-                                   + addStaff_username.Text.Substring(1) + " is Existing Already"
+                                   + addStaff_username.Text.Substring(1) + " already exists."
                                    , "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-
                             else
                             {
                                 string updatedata = "UPDATE users SET username = @usern, password = @pass, status = @status WHERE id = @id";
@@ -171,12 +185,12 @@ namespace Desktop_Applicaion
                                 {
                                     cmd.Parameters.AddWithValue("@usern", addStaff_username.Text.Trim());
                                     cmd.Parameters.AddWithValue("@pass", addStaff_password.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@status", addStaff_status.SelectedText.ToString());
+                                    cmd.Parameters.AddWithValue("@status", addStaff_status.SelectedItem.ToString());
                                     cmd.Parameters.AddWithValue("@id", getID);
 
                                     cmd.ExecuteNonQuery();
 
-                                    MessageBox.Show("Updated Successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Updated Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     clearFields();
                                     displayData();
@@ -187,6 +201,7 @@ namespace Desktop_Applicaion
                 }
             }
         }
+
 
         public void clearFields()
         {

@@ -26,6 +26,18 @@ namespace Desktop_Applicaion
 
         }
 
+        public void refreshData()
+        {
+            if(InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+
+            displayData();
+        }
+
+
         public void displayData()
         {
             movieData mData = new movieData();
@@ -174,64 +186,62 @@ namespace Desktop_Applicaion
         {
             try
             {
-                if(MessageBox.Show("Are you sure you want to update ID: " + addMovie_movieID.Text + "?", "Confirmation Message",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to update ID: " + addMovie_movieID.Text + "?",
+                    "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     using (SqlConnection connect = new SqlConnection(conn))
                     {
                         connect.Open();
 
-                        string checkID = "SELECT COUNT(id) FROM movies WHERE movie_id = @movieID";
+                        // Check if another movie has the same movie_id
+                        string checkID = "SELECT COUNT(id) FROM movies WHERE movie_id = @movieID AND id != @id";
 
                         using (SqlCommand cID = new SqlCommand(checkID, connect))
                         {
                             cID.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
+                            cID.Parameters.AddWithValue("@id", id);
 
-                            SqlDataAdapter adapter = new SqlDataAdapter(cID);
-                            DataTable table = new DataTable();
+                            int count = (int)cID.ExecuteScalar();
 
-                            adapter.Fill(table);
-
-                            if (table.Rows.Count >= 2)
+                            if (count > 0)
                             {
-                                MessageBox.Show($"Movie ID: " + addMovie_movieID.Text.Trim() + " is take already",
+                                MessageBox.Show($"Movie ID: {addMovie_movieID.Text.Trim()} is already taken by another record.",
                                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-
-                            else
-                            {
-                                string updateData = "UPDATE movies SET image_id = @movie_ID, movie_name = @movieName, genre = @genre" +
-                                     ", price = @price, capacity = @capacity, status = @status, update_date = @updateDate WHERE id = @id";
-
-                                using (SqlCommand cmd = new SqlCommand(updateData, connect))
-                                {
-                                    cmd.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@movieName", addMovie_movieName.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@genre", addMovie_genre.SelectedItem.ToString());
-                                    cmd.Parameters.AddWithValue("@price", addMovie_price.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@capacity", addMovie_capacity.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@status", addMovie_status.SelectedItem.ToString());
-
-                                    DateTime today = DateTime.Today;
-                                    cmd.Parameters.AddWithValue("@updateDate", today);
-                                    cmd.Parameters.AddWithValue("@id", id);
-
-                                    cmd.ExecuteNonQuery();
-
-                                    displayData();
-                                    clearfields();
-
-                                    MessageBox.Show("Updated successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                }
+                                return;
                             }
                         }
-                    }
-                }              
-            }
 
+                        // Perform the update
+                        string updateData = "UPDATE movies SET movie_id = @movieID, movie_name = @movieName, genre = @genre, " +
+                                            "price = @price, capacity = @capacity, status = @status, update_date = @updateDate " +
+                                            "WHERE id = @id";
+
+                        using (SqlCommand cmd = new SqlCommand(updateData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@movieID", addMovie_movieID.Text.Trim());
+                            cmd.Parameters.AddWithValue("@movieName", addMovie_movieName.Text.Trim());
+                            cmd.Parameters.AddWithValue("@genre", addMovie_genre.SelectedItem?.ToString() ?? "");
+                            cmd.Parameters.AddWithValue("@price", addMovie_price.Text.Trim());
+                            cmd.Parameters.AddWithValue("@capacity", addMovie_capacity.Text.Trim());
+                            cmd.Parameters.AddWithValue("@status", addMovie_status.SelectedItem?.ToString() ?? "");
+
+                            DateTime today = DateTime.Now;
+                            cmd.Parameters.AddWithValue("@updateDate", today);
+                            cmd.Parameters.AddWithValue("@id", id);
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        displayData();
+                        clearfields();
+
+                        MessageBox.Show("Updated successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

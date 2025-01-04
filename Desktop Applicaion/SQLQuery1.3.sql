@@ -22,3 +22,9 @@ SELECT movies.capacity, buy_tickets. * FROM movies LEFT JOIN buy_tickets ON movi
 
 SELECT movie_id, price FROM movies
 
+SELECT COUNT(id) as avMovie FROM movies WHERE status = 'Available'
+
+SELECT COUNT(id) as totalStaff FROM users WHERE role = 'Staff' AND status = 'Active'
+
+SELECT COUNT(id) as totalBuys FROM buy_tickets WHERE status = 'PAID'
+

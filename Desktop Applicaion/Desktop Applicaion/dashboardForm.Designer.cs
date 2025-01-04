@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel6 = new Panel();
-            label7 = new Label();
+            dashbord_TI = new Label();
             pictureBox4 = new PictureBox();
             label8 = new Label();
             panel5 = new Panel();
-            label5 = new Label();
+            dashbord_TB = new Label();
             pictureBox3 = new PictureBox();
             label6 = new Label();
             panel4 = new Panel();
-            label3 = new Label();
+            dashbord_TS = new Label();
             pictureBox2 = new PictureBox();
             label4 = new Label();
             panel3 = new Panel();
-            label2 = new Label();
+            dashbord_AM = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
@@ -78,25 +79,25 @@
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(133, 19, 33);
-            panel6.Controls.Add(label7);
+            panel6.Controls.Add(dashbord_TI);
             panel6.Controls.Add(pictureBox4);
             panel6.Controls.Add(label8);
-            panel6.Location = new Point(842, 22);
+            panel6.Location = new Point(822, 22);
             panel6.Name = "panel6";
-            panel6.Size = new Size(239, 211);
+            panel6.Size = new Size(268, 211);
             panel6.TabIndex = 1;
             // 
-            // label7
+            // dashbord_TI
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(169, 25);
-            label7.Name = "label7";
-            label7.Size = new Size(26, 27);
-            label7.TabIndex = 8;
-            label7.Text = "0";
-            label7.TextAlign = ContentAlignment.MiddleRight;
+            dashbord_TI.AutoSize = true;
+            dashbord_TI.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dashbord_TI.ForeColor = Color.White;
+            dashbord_TI.Location = new Point(109, 38);
+            dashbord_TI.Name = "dashbord_TI";
+            dashbord_TI.Size = new Size(26, 27);
+            dashbord_TI.TabIndex = 8;
+            dashbord_TI.Text = "0";
+            dashbord_TI.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pictureBox4
             // 
@@ -110,36 +111,36 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(55, 125);
+            label8.Location = new Point(72, 142);
             label8.Name = "label8";
-            label8.Size = new Size(115, 20);
+            label8.Size = new Size(136, 23);
             label8.TabIndex = 7;
             label8.Text = "Total Income";
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(133, 19, 33);
-            panel5.Controls.Add(label5);
+            panel5.Controls.Add(dashbord_TB);
             panel5.Controls.Add(pictureBox3);
             panel5.Controls.Add(label6);
-            panel5.Location = new Point(558, 22);
+            panel5.Location = new Point(540, 22);
             panel5.Name = "panel5";
             panel5.Size = new Size(247, 211);
             panel5.TabIndex = 1;
             // 
-            // label5
+            // dashbord_TB
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(179, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(26, 27);
-            label5.TabIndex = 6;
-            label5.Text = "0";
-            label5.TextAlign = ContentAlignment.MiddleRight;
+            dashbord_TB.AutoSize = true;
+            dashbord_TB.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dashbord_TB.ForeColor = Color.White;
+            dashbord_TB.Location = new Point(174, 38);
+            dashbord_TB.Name = "dashbord_TB";
+            dashbord_TB.Size = new Size(26, 27);
+            dashbord_TB.TabIndex = 6;
+            dashbord_TB.Text = "0";
+            dashbord_TB.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pictureBox3
             // 
@@ -153,36 +154,36 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(44, 125);
+            label6.Location = new Point(70, 142);
             label6.Name = "label6";
-            label6.Size = new Size(137, 20);
+            label6.Size = new Size(112, 23);
             label6.TabIndex = 5;
-            label6.Text = "Today's Income";
+            label6.Text = "Total Buys";
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(133, 19, 33);
-            panel4.Controls.Add(label3);
+            panel4.Controls.Add(dashbord_TS);
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(label4);
-            panel4.Location = new Point(285, 22);
+            panel4.Location = new Point(278, 22);
             panel4.Name = "panel4";
             panel4.Size = new Size(233, 211);
             panel4.TabIndex = 1;
             // 
-            // label3
+            // dashbord_TS
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(165, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(26, 27);
-            label3.TabIndex = 4;
-            label3.Text = "0";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            dashbord_TS.AutoSize = true;
+            dashbord_TS.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dashbord_TS.ForeColor = Color.White;
+            dashbord_TS.Location = new Point(164, 38);
+            dashbord_TS.Name = "dashbord_TS";
+            dashbord_TS.Size = new Size(26, 27);
+            dashbord_TS.TabIndex = 4;
+            dashbord_TS.Text = "0";
+            dashbord_TS.TextAlign = ContentAlignment.MiddleRight;
             // 
             // pictureBox2
             // 
@@ -196,18 +197,18 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(56, 125);
+            label4.Location = new Point(42, 142);
             label4.Name = "label4";
-            label4.Size = new Size(94, 20);
+            label4.Size = new Size(110, 23);
             label4.TabIndex = 3;
             label4.Text = "Total Staff";
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(133, 19, 33);
-            panel3.Controls.Add(label2);
+            panel3.Controls.Add(dashbord_AM);
             panel3.Controls.Add(label1);
             panel3.Controls.Add(pictureBox1);
             panel3.Location = new Point(22, 22);
@@ -215,26 +216,26 @@
             panel3.Size = new Size(223, 211);
             panel3.TabIndex = 0;
             // 
-            // label2
+            // dashbord_AM
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(177, 25);
-            label2.Name = "label2";
-            label2.Size = new Size(26, 27);
-            label2.TabIndex = 2;
-            label2.Text = "0";
-            label2.TextAlign = ContentAlignment.MiddleRight;
+            dashbord_AM.AutoSize = true;
+            dashbord_AM.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dashbord_AM.ForeColor = Color.White;
+            dashbord_AM.Location = new Point(165, 38);
+            dashbord_AM.Name = "dashbord_AM";
+            dashbord_AM.Size = new Size(26, 27);
+            dashbord_AM.TabIndex = 2;
+            dashbord_AM.Text = "0";
+            dashbord_AM.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(42, 125);
+            label1.Location = new Point(19, 142);
             label1.Name = "label1";
-            label1.Size = new Size(147, 20);
+            label1.Size = new Size(172, 23);
             label1.TabIndex = 1;
             label1.Text = "Available Moveis";
             // 
@@ -261,18 +262,26 @@
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(133, 19, 33);
-            dataGridViewCellStyle1.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(213, 10, 56);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Arial Narrow", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.CornflowerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Enabled = false;
             dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(22, 76);
+            dataGridView1.Location = new Point(22, 54);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
@@ -287,9 +296,9 @@
             label9.ForeColor = Color.Black;
             label9.Location = new Point(31, 31);
             label9.Name = "label9";
-            label9.Size = new Size(107, 20);
+            label9.Size = new Size(147, 20);
             label9.TabIndex = 5;
-            label9.Text = "New Movies";
+            label9.Text = "Available Movies";
             // 
             // dashboardForm
             // 
@@ -332,13 +341,13 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label1;
-        private Label label7;
+        private Label dashbord_TI;
         private Label label8;
-        private Label label5;
+        private Label dashbord_TB;
         private Label label6;
-        private Label label3;
+        private Label dashbord_TS;
         private Label label4;
-        private Label label2;
+        private Label dashbord_AM;
         private DataGridView dataGridView1;
         private Label label9;
     }

@@ -148,7 +148,7 @@
             // addMovie_status
             // 
             addMovie_status.FormattingEnabled = true;
-            addMovie_status.Items.AddRange(new object[] { "Avaailable", "Unavailable", "Deleted" });
+            addMovie_status.Items.AddRange(new object[] { "Available", "Unavailable", "Deleted" });
             addMovie_status.Location = new Point(576, 163);
             addMovie_status.Name = "addMovie_status";
             addMovie_status.Size = new Size(208, 28);

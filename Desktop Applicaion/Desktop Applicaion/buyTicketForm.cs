@@ -26,6 +26,17 @@ namespace Desktop_Applicaion
             displayAvailableSeats();
         }
 
+        public void refreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)refreshData);
+                return;
+            }
+
+            displayAvailableMovies();
+        }
+
         public void displayAvailableMovies()
         {
             movieData mData = new movieData();
@@ -388,7 +399,7 @@ namespace Desktop_Applicaion
             }
 
             // Print Footer
-            y = e.MarginBounds.Bottom - 100;
+            y = e.MarginBounds.Bottom - 400;
             DateTime today = DateTime.Now;
             string footerText = $"Total Price: Rs. {getTotal.ToString("0.00")}\n" +
                                 $"Amount Paid: Rs. {buyTicket_amount.Text}\n" +
