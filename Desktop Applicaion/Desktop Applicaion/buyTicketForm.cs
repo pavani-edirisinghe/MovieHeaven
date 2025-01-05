@@ -207,73 +207,8 @@ namespace Desktop_Applicaion
 
         }
 
-        //private void buyTicket_amount_Enter(object sender, EventArgs e)
-        //{
-        //    if (id == 0 && getTotal == 0)
-        //    {
-        //        MessageBox.Show("Please select movie and foods first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    else
-        //    {
-        //        try
-        //        {
-        //            if (Convert.ToDouble(buyTicket_amount.Text) >= getTotal)
-        //            {
-        //                getChange = Convert.ToDouble(buyTicket_amount.Text) - getTotal;
-        //            }
-        //            else
-        //            {
-        //                getChange = 0;
-        //            }
-
-        //            buyTicket_change.Text = getChange.ToString("0.00");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show("Please enter numbers only", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            buyTicket_amount.Text = "";
-        //        }
-        //    }
-        //}
-
         double getChange = 0;
         double getAmount = 0;
-
-        //private void buyTicket_amount_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.Enter)
-        //    {
-        //        if (id == 0 && getTotal == 0)
-        //        {
-        //            MessageBox.Show("Please select movie and foods first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //        else
-        //        {
-        //            try
-        //            {
-        //                if (Convert.ToDouble(buyTicket_amount.Text) >= getTotal)
-        //                {
-        //                    getChange = Convert.ToDouble(buyTicket_amount.Text) - getTotal;
-        //                    getAmount = Convert.ToDouble(buyTicket_amount.Text);
-        //                }
-        //                else
-        //                {
-        //                    MessageBox.Show("Error :3 should amount > total", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                    getChange = 0;
-        //                    getAmount = 0;
-        //                }
-
-        //                buyTicket_change.Text = "Rs." + getChange.ToString("0.00");
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                MessageBox.Show("Please enter numbers only", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                buyTicket_amount.Text = "";
-        //                getAmount = 0;
-        //            }
-        //        }
-        //    }
-        //}
 
         private void buyTicket_amount_Enter(object sender, EventArgs e)
         {
@@ -283,7 +218,7 @@ namespace Desktop_Applicaion
             }
             else
             {
-                // Don't show error message on just clicking the textbox
+               
             }
         }
 
@@ -298,7 +233,7 @@ namespace Desktop_Applicaion
                 else
                 {
                     double inputAmount;
-                    // Use TryParse to handle invalid characters more gracefully
+
                     if (double.TryParse(buyTicket_amount.Text, out inputAmount))
                     {
                         if (inputAmount >= getTotal)
@@ -323,22 +258,31 @@ namespace Desktop_Applicaion
                 }
             }
         }
-
+        private string lastMovieID;
+        private string lastSeatNum;
+        private string lastPrice;
+        private string lastAmountPaid;
+        private string lastChange;
+        private string lastStatus;
 
         private void buyTicket_buyBtn_Click(object sender, EventArgs e)
         {
             if (movie_id == null || getTotal == 0)
             {
-                MessageBox.Show("Please select movie first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a movie first", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (getAmount <= 0 || getAmount < getTotal)
+            {
+                MessageBox.Show("Error: Please enter a valid amount that is greater than or equal to the total.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                using (SqlConnection connect = new SqlConnection(conn))    
+                using (SqlConnection connect = new SqlConnection(conn))
                 {
                     connect.Open();
 
                     string insertData = "INSERT INTO buy_tickets (movie_id, seat_number, price, amount, change, status, created_at) " +
-                        "VALUES(@movieID, @seatNum, @price, @amount, @change, @status, @date)";
+                                        "VALUES(@movieID, @seatNum, @price, @amount, @change, @status, @date)";
 
                     using (SqlCommand cmd = new SqlCommand(insertData, connect))
                     {
@@ -354,40 +298,66 @@ namespace Desktop_Applicaion
 
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show($"Successful! occupied: {buyTicket_availableChairs.Text}"
-                            , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lastMovieID = movie_id;
+                        lastSeatNum = buyTicket_availableChairs.Text;
+                        lastPrice = getTotal.ToString("0.00");
+                        lastAmountPaid = getAmount.ToString("0.00");
+                        lastChange = getChange.ToString("0.00");
+                        lastStatus = "PAID";
 
+                        MessageBox.Show($"Successful! Occupied: {buyTicket_availableChairs.Text}",
+                            "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
         }
 
-        
-
-        
-        private void buyTicket_receiptBtn_Click(object sender, EventArgs e)
-        {
-            printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(printDocument1_PrintPage);
-            printDocument1.BeginPrint += new System.Drawing.Printing.PrintEventHandler(printDocument1_BeginPrint);
-
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
-        }
 
         private int rowIndex = 0;
+
+        
+
+        private void buyTicket_receiptBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(lastMovieID) || string.IsNullOrEmpty(lastSeatNum))
+            {
+                MessageBox.Show("No purchase details available to print.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("CustomSize", 600, 300); 
+            printDocument1.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(40, 40, 30, 10); 
+
+            printPreviewDialog1.Document = printDocument1;
+
+            try
+            {
+                printPreviewDialog1.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while previewing the document: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            rowIndex = 0;
+
+            printDocument1.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(40, 40, 30, 10);
+        }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             float y = e.MarginBounds.Top;
-            int colWidth = 100;
-            int rowHeight = 25;
-            int tableMargin = 15;
+            int tableMargin = 5;
 
-            Font headerFont = new Font("Arial", 18, FontStyle.Bold);
-            Font boldFont = new Font("Arial", 12, FontStyle.Bold);
-            Font regularFont = new Font("Arial", 10);
-            Font footerFont = new Font("Arial", 14, FontStyle.Bold);
+            int[] colWidths = { 90, 120, 120, 110, 80 };
 
+            Font headerFont = new Font("Arial", 14, FontStyle.Bold);
+            Font boldFont = new Font("Arial", 10, FontStyle.Bold);
+            Font regularFont = new Font("Arial", 8);
+            Font footerFont = new Font("Arial", 10, FontStyle.Bold);
 
             StringFormat centerFormat = new StringFormat
             {
@@ -395,60 +365,80 @@ namespace Desktop_Applicaion
                 LineAlignment = StringAlignment.Center
             };
 
-            // Print Header
-            string headerText = "Marcon's Cinema";
+            string logoPath = @"C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\Assets\1000270477-transfrmedjhgjh.jpeg.JPG"; // Replace with the actual path to your logo
+
+            int logoWidth = 50;  
+            int logoHeight = 60; 
+            int logoX = e.MarginBounds.Left + 120; 
+
+            try
+            {
+                Image logo = Image.FromFile(logoPath);
+
+                float headerHeight = Math.Max(logoHeight, headerFont.GetHeight(e.Graphics));
+                float logoY = y + (headerHeight - logoHeight) / 2;
+
+                
+                e.Graphics.DrawImage(logo, new Rectangle(logoX, (int)logoY, logoWidth, logoHeight));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading logo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            float headerTextX = logoX + logoWidth + 10; 
+            float headerTextY = y; 
+
+            string headerText = "MOVIE HEAVEN";
+
             y += tableMargin;
             e.Graphics.DrawString(headerText, headerFont, Brushes.Black,
                 new RectangleF(e.MarginBounds.Left, y, e.MarginBounds.Width, headerFont.GetHeight()), centerFormat);
             y += headerFont.GetHeight() + tableMargin;
 
-            // Print Column Headers
-            string[] headers = { "ID", "MovieID", "MovieName", "Genre", "RegPrice", "Capacity", "Status" };
+            int extraSpace = 20;
+            y += extraSpace;
+
+            // Print headers
+            string[] headers = { "MovieID", "Movie Name", "Seat Number", "Food Items", "Drink Items" };
+            float x = e.MarginBounds.Left;
             for (int i = 0; i < headers.Length; i++)
             {
-                e.Graphics.DrawString(headers[i], boldFont, Brushes.Black, e.MarginBounds.Left + (i * colWidth), y);
+                e.Graphics.DrawString(headers[i], boldFont, Brushes.Black, x + tableMargin, y);
+                x += colWidths[i]; // Move to the next column position
             }
-            y += boldFont.GetHeight() + rowHeight;
 
-            // Print Table Rows
-            while (rowIndex < dataGridView1.Rows.Count)
+            y += boldFont.GetHeight() + tableMargin;
+
+            // Print user-selected values
+            string movieID = movie_id;
+            string movieName = buyTicket_movieName.Text;
+            string seatNum = buyTicket_availableChairs.Text;
+            string food = buyTicket_foods.Text;
+            string drinks = buyTicket_drinks.Text;
+
+            string[] userSelectedValues = { movieID, movieName, seatNum, food, drinks };
+            x = e.MarginBounds.Left;
+            for (int i = 0; i < userSelectedValues.Length; i++)
             {
-                DataGridViewRow row = dataGridView1.Rows[rowIndex];
-
-                for (int i = 0; i < dataGridView1.Columns.Count - 2; i++) // Adjusted for column count
-                {
-                    object cellValue = row.Cells[i].Value;
-                    string cellText = cellValue != null ? cellValue.ToString() : string.Empty;
-                    e.Graphics.DrawString(cellText, regularFont, Brushes.Black, e.MarginBounds.Left + (i * colWidth), y);
-                }
-
-                y += regularFont.GetHeight() + rowHeight;
-                rowIndex++;
-
-                // Check if more pages are needed
-                if (y + regularFont.GetHeight() > e.MarginBounds.Bottom)
-                {
-                    e.HasMorePages = true;
-                    return;
-                }
+                string valueToPrint = string.IsNullOrEmpty(userSelectedValues[i]) ? "---------------------" : userSelectedValues[i];
+                e.Graphics.DrawString(valueToPrint, regularFont, Brushes.Black, x + tableMargin, y);
+                x += colWidths[i]; 
             }
 
-            // Print Footer
-            y = e.MarginBounds.Bottom - 400;
+            y += 35; 
+
+            y = e.MarginBounds.Bottom - 100;
             DateTime today = DateTime.Now;
-            string footerText = $"Total Price: Rs. {getTotal.ToString("0.00")}\n" +
-                                $"Amount Paid: Rs. {buyTicket_amount.Text}\n" +
-                                $"Change: Rs. {buyTicket_change.Text}\n" +
-                                today.ToString("dd/MM/yyyy HH:mm:ss");
+            string footerText = $"Total Price    : Rs. {getTotal.ToString("0.00")}\n" +
+                                $"Amount Paid: Rs. {buyTicket_amount.Text}.00\n" +
+                                $"Change         :  {buyTicket_change.Text}\n" +
+                                today.ToString("dd/MM/yyyy     HH:mm:ss");
 
             e.Graphics.DrawString(footerText, footerFont, Brushes.Black,
                 new RectangleF(e.MarginBounds.Left, y, e.MarginBounds.Width, 100));
         }
 
-        private void printDocument1_BeginPrint(object sender, System.Drawing.Printing.PrintEventArgs e)
-        {
-            rowIndex = 0;
-        }
+
         private void buyTicket_clearFields_Click(object sender, EventArgs e)
         {
             clearFields();
@@ -461,6 +451,11 @@ namespace Desktop_Applicaion
             buyTicket_totalPrice.Text = "Rs.0.00";
             buyTicket_amount.Text = "";
             buyTicket_change.Text = "Rs.0.00";
+        }
+
+        private void buyTicket_foods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

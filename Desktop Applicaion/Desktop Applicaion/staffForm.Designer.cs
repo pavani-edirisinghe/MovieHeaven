@@ -41,9 +41,9 @@
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
-            profileFrom1 = new profileFrom();
-            buyTicketForm1 = new buyTicketForm();
             dashboardForm1 = new dashboardForm();
+            buyTicketForm1 = new buyTicketForm();
+            profileFrom1 = new profileFrom();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
@@ -155,7 +155,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.icons8_bolivian_girl_40;
-            pictureBox2.Location = new Point(862, 12);
+            pictureBox2.Location = new Point(847, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 40);
             pictureBox2.TabIndex = 2;
@@ -165,7 +165,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(908, 18);
+            label3.Location = new Point(893, 18);
             label3.Name = "label3";
             label3.Size = new Size(198, 27);
             label3.TabIndex = 1;
@@ -203,12 +203,12 @@
             panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 3;
             // 
-            // profileFrom1
+            // dashboardForm1
             // 
-            profileFrom1.Location = new Point(0, 0);
-            profileFrom1.Name = "profileFrom1";
-            profileFrom1.Size = new Size(1462, 921);
-            profileFrom1.TabIndex = 2;
+            dashboardForm1.Location = new Point(0, 0);
+            dashboardForm1.Name = "dashboardForm1";
+            dashboardForm1.Size = new Size(1462, 921);
+            dashboardForm1.TabIndex = 4;
             // 
             // buyTicketForm1
             // 
@@ -217,12 +217,12 @@
             buyTicketForm1.Size = new Size(1462, 921);
             buyTicketForm1.TabIndex = 3;
             // 
-            // dashboardForm1
+            // profileFrom1
             // 
-            dashboardForm1.Location = new Point(0, 0);
-            dashboardForm1.Name = "dashboardForm1";
-            dashboardForm1.Size = new Size(1462, 921);
-            dashboardForm1.TabIndex = 4;
+            profileFrom1.Location = new Point(0, 0);
+            profileFrom1.Name = "profileFrom1";
+            profileFrom1.Size = new Size(1462, 921);
+            profileFrom1.TabIndex = 2;
             // 
             // staffForm
             // 

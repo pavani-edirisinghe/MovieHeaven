@@ -87,7 +87,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(1115, 19);
+            label1.Location = new Point(1123, 17);
             label1.Name = "label1";
             label1.Size = new Size(26, 27);
             label1.TabIndex = 0;
@@ -108,7 +108,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(903, 18);
+            label3.Location = new Point(896, 18);
             label3.Name = "label3";
             label3.Size = new Size(194, 27);
             label3.TabIndex = 1;
@@ -117,7 +117,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(847, 7);
+            pictureBox2.Location = new Point(840, 7);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(50, 50);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
