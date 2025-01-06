@@ -41,9 +41,9 @@
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
-            profileFrom1 = new profileFrom();
-            buyTicketForm1 = new buyTicketForm();
             dashboardForm1 = new dashboardForm();
+            buyTicketForm1 = new buyTicketForm();
+            profileFrom1 = new profileFrom();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
@@ -203,13 +203,12 @@
             panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 3;
             // 
-            // profileFrom1
+            // dashboardForm1
             // 
-            profileFrom1.Location = new Point(0, 0);
-            profileFrom1.Name = "profileFrom1";
-            profileFrom1.Size = new Size(1462, 921);
-            profileFrom1.TabIndex = 2;
-            profileFrom1.Load += profileFrom1_Load;
+            dashboardForm1.Location = new Point(0, 0);
+            dashboardForm1.Name = "dashboardForm1";
+            dashboardForm1.Size = new Size(1462, 921);
+            dashboardForm1.TabIndex = 4;
             // 
             // buyTicketForm1
             // 
@@ -218,12 +217,13 @@
             buyTicketForm1.Size = new Size(1462, 921);
             buyTicketForm1.TabIndex = 3;
             // 
-            // dashboardForm1
+            // profileFrom1
             // 
-            dashboardForm1.Location = new Point(0, 0);
-            dashboardForm1.Name = "dashboardForm1";
-            dashboardForm1.Size = new Size(1462, 921);
-            dashboardForm1.TabIndex = 4;
+            profileFrom1.Location = new Point(0, 0);
+            profileFrom1.Name = "profileFrom1";
+            profileFrom1.Size = new Size(1462, 921);
+            profileFrom1.TabIndex = 2;
+            profileFrom1.Load += profileFrom1_Load;
             // 
             // staffForm
             // 

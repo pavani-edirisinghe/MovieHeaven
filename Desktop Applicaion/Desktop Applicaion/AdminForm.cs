@@ -45,7 +45,7 @@ namespace Desktop_Applicaion
             addStaffsForm1.Hide();
             addMovieForm3.Hide();
 
-            dashboardForm dForm = dashboardForm1 as dashboardForm;
+            dashboardForm dForm = dashboardForm2 as dashboardForm;
 
             if (dForm != null)
             {
@@ -74,7 +74,7 @@ namespace Desktop_Applicaion
             addStaffsForm1.Hide();
             addMovieForm3.Show();
 
-            AddMovieForm amForm = addMovieForm1 as AddMovieForm;
+            AddMovieForm amForm = addMovieForm3 as AddMovieForm;
 
             if (amForm != null)
             {
