@@ -79,5 +79,10 @@ namespace Desktop_Applicaion
             //    dForm.refreshData();
             //}
         }
+
+        private void profileFrom1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

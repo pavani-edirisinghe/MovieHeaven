@@ -41,9 +41,9 @@ namespace Desktop_Applicaion
 
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
-            dashboardForm1.Show();
+            dashboardForm2.Show();
             addStaffsForm1.Hide();
-            addMovieForm2.Hide();
+            addMovieForm3.Hide();
 
             dashboardForm dForm = dashboardForm1 as dashboardForm;
 
@@ -56,9 +56,9 @@ namespace Desktop_Applicaion
 
         private void addStaff_btn_Click_1(object sender, EventArgs e)
         {
-            dashboardForm1.Hide();
+            dashboardForm2.Hide();
             addStaffsForm1.Show();
-            addMovieForm2.Hide();
+            addMovieForm3.Hide();
 
             AddStaffsForm asForm = addStaffsForm1 as AddStaffsForm;
 
@@ -70,9 +70,9 @@ namespace Desktop_Applicaion
 
         private void addMovie_btn_Click(object sender, EventArgs e)
         {
-            dashboardForm1.Hide();
+            dashboardForm2.Hide();
             addStaffsForm1.Hide();
-            addMovieForm2.Show();
+            addMovieForm3.Show();
 
             AddMovieForm amForm = addMovieForm1 as AddMovieForm;
 
@@ -88,6 +88,16 @@ namespace Desktop_Applicaion
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboardForm2_Load(object sender, EventArgs e)
         {
 
         }

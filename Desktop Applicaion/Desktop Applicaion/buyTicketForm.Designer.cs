@@ -35,6 +35,10 @@
             dataGridView1 = new DataGridView();
             label4 = new Label();
             panel2 = new Panel();
+            buyTicket_capacity = new Label();
+            label6 = new Label();
+            buyTicket_showTime = new Label();
+            label3 = new Label();
             buyTicket_clear = new Button();
             buyTicket_selectMovie = new Button();
             buyTicket_regularPrice = new Label();
@@ -135,6 +139,10 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(buyTicket_capacity);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(buyTicket_showTime);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(buyTicket_clear);
             panel2.Controls.Add(buyTicket_selectMovie);
             panel2.Controls.Add(buyTicket_regularPrice);
@@ -151,6 +159,51 @@
             panel2.Size = new Size(729, 386);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
+            // 
+            // buyTicket_capacity
+            // 
+            buyTicket_capacity.AutoSize = true;
+            buyTicket_capacity.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buyTicket_capacity.ForeColor = Color.Black;
+            buyTicket_capacity.Location = new Point(344, 204);
+            buyTicket_capacity.Name = "buyTicket_capacity";
+            buyTicket_capacity.Size = new Size(40, 22);
+            buyTicket_capacity.TabIndex = 28;
+            buyTicket_capacity.Text = "------";
+            buyTicket_capacity.Click += buyTicket_capacity_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(259, 204);
+            label6.Name = "label6";
+            label6.Size = new Size(84, 24);
+            label6.TabIndex = 27;
+            label6.Text = "Capacity :";
+            // 
+            // buyTicket_showTime
+            // 
+            buyTicket_showTime.AutoSize = true;
+            buyTicket_showTime.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buyTicket_showTime.ForeColor = Color.Black;
+            buyTicket_showTime.Location = new Point(344, 162);
+            buyTicket_showTime.Name = "buyTicket_showTime";
+            buyTicket_showTime.Size = new Size(40, 22);
+            buyTicket_showTime.TabIndex = 26;
+            buyTicket_showTime.Text = "------";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(239, 162);
+            label3.Name = "label3";
+            label3.Size = new Size(104, 24);
+            label3.TabIndex = 25;
+            label3.Text = "Show Time :";
             // 
             // buyTicket_clear
             // 
@@ -191,29 +244,31 @@
             buyTicket_regularPrice.AutoSize = true;
             buyTicket_regularPrice.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_regularPrice.ForeColor = Color.Black;
-            buyTicket_regularPrice.Location = new Point(349, 203);
+            buyTicket_regularPrice.Location = new Point(344, 241);
             buyTicket_regularPrice.Name = "buyTicket_regularPrice";
             buyTicket_regularPrice.Size = new Size(40, 22);
             buyTicket_regularPrice.TabIndex = 18;
             buyTicket_regularPrice.Text = "------";
+            buyTicket_regularPrice.Click += buyTicket_regularPrice_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(231, 201);
+            label9.Location = new Point(226, 239);
             label9.Name = "label9";
             label9.Size = new Size(117, 24);
             label9.TabIndex = 17;
             label9.Text = "Regular Price :";
+            label9.Click += label9_Click;
             // 
             // buyTicket_genre
             // 
             buyTicket_genre.AutoSize = true;
             buyTicket_genre.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_genre.ForeColor = Color.Black;
-            buyTicket_genre.Location = new Point(344, 152);
+            buyTicket_genre.Location = new Point(344, 120);
             buyTicket_genre.Name = "buyTicket_genre";
             buyTicket_genre.Size = new Size(40, 22);
             buyTicket_genre.TabIndex = 16;
@@ -224,7 +279,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(278, 150);
+            label7.Location = new Point(278, 118);
             label7.Name = "label7";
             label7.Size = new Size(65, 24);
             label7.TabIndex = 15;
@@ -235,18 +290,19 @@
             buyTicket_movieName.AutoSize = true;
             buyTicket_movieName.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_movieName.ForeColor = Color.Black;
-            buyTicket_movieName.Location = new Point(349, 99);
+            buyTicket_movieName.Location = new Point(344, 78);
             buyTicket_movieName.Name = "buyTicket_movieName";
             buyTicket_movieName.Size = new Size(40, 22);
             buyTicket_movieName.TabIndex = 14;
             buyTicket_movieName.Text = "------";
+            buyTicket_movieName.Click += buyTicket_movieName_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(233, 99);
+            label5.Location = new Point(228, 78);
             label5.Name = "label5";
             label5.Size = new Size(115, 24);
             label5.TabIndex = 13;
@@ -257,7 +313,7 @@
             buyTicket_movieID.AutoSize = true;
             buyTicket_movieID.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_movieID.ForeColor = Color.Black;
-            buyTicket_movieID.Location = new Point(349, 53);
+            buyTicket_movieID.Location = new Point(344, 32);
             buyTicket_movieID.Name = "buyTicket_movieID";
             buyTicket_movieID.Size = new Size(40, 22);
             buyTicket_movieID.TabIndex = 12;
@@ -268,7 +324,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(261, 53);
+            label2.Location = new Point(256, 32);
             label2.Name = "label2";
             label2.Size = new Size(87, 24);
             label2.TabIndex = 11;
@@ -278,7 +334,7 @@
             // 
             panel4.BackColor = SystemColors.Control;
             panel4.Controls.Add(pictureBox1);
-            panel4.Location = new Point(22, 56);
+            panel4.Location = new Point(22, 43);
             panel4.Name = "panel4";
             panel4.Size = new Size(171, 207);
             panel4.TabIndex = 0;
@@ -602,5 +658,9 @@
         private Button buyTicket_calculateBtn;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
+        private Label buyTicket_showTime;
+        private Label label3;
+        private Label buyTicket_capacity;
+        private Label label6;
     }
 }

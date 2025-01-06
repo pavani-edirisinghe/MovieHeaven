@@ -34,6 +34,8 @@
             dataGridView1 = new DataGridView();
             label4 = new Label();
             panel2 = new Panel();
+            addMovie_showTime = new ComboBox();
+            label8 = new Label();
             addMovie_status = new ComboBox();
             label7 = new Label();
             panel3 = new Panel();
@@ -122,6 +124,8 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(addMovie_showTime);
+            panel2.Controls.Add(label8);
             panel2.Controls.Add(addMovie_status);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(panel3);
@@ -145,11 +149,32 @@
             panel2.Size = new Size(1117, 398);
             panel2.TabIndex = 1;
             // 
+            // addMovie_showTime
+            // 
+            addMovie_showTime.FormattingEnabled = true;
+            addMovie_showTime.Items.AddRange(new object[] { "8.30 AM  - 11.30 AM", "12.30 PM - 3.30  PM", "6.00 PM   - 9.00  PM" });
+            addMovie_showTime.Location = new Point(576, 146);
+            addMovie_showTime.Name = "addMovie_showTime";
+            addMovie_showTime.Size = new Size(208, 28);
+            addMovie_showTime.TabIndex = 30;
+            addMovie_showTime.SelectedIndexChanged += addMovie_showTime_SelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(466, 146);
+            label8.Name = "label8";
+            label8.Size = new Size(104, 24);
+            label8.TabIndex = 29;
+            label8.Text = "Show Time :";
+            // 
             // addMovie_status
             // 
             addMovie_status.FormattingEnabled = true;
             addMovie_status.Items.AddRange(new object[] { "Available", "Unavailable", "Deleted" });
-            addMovie_status.Location = new Point(576, 163);
+            addMovie_status.Location = new Point(576, 198);
             addMovie_status.Name = "addMovie_status";
             addMovie_status.Size = new Size(208, 28);
             addMovie_status.TabIndex = 28;
@@ -159,7 +184,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(503, 163);
+            label7.Location = new Point(503, 198);
             label7.Name = "label7";
             label7.Size = new Size(67, 24);
             label7.TabIndex = 27;
@@ -192,7 +217,7 @@
             addMovie_clearBtn.FlatStyle = FlatStyle.Flat;
             addMovie_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_clearBtn.ForeColor = Color.White;
-            addMovie_clearBtn.Location = new Point(704, 272);
+            addMovie_clearBtn.Location = new Point(704, 291);
             addMovie_clearBtn.Name = "addMovie_clearBtn";
             addMovie_clearBtn.Size = new Size(120, 47);
             addMovie_clearBtn.TabIndex = 25;
@@ -209,7 +234,7 @@
             addMovie_deleteBtn.FlatStyle = FlatStyle.Flat;
             addMovie_deleteBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_deleteBtn.ForeColor = Color.White;
-            addMovie_deleteBtn.Location = new Point(514, 273);
+            addMovie_deleteBtn.Location = new Point(514, 292);
             addMovie_deleteBtn.Name = "addMovie_deleteBtn";
             addMovie_deleteBtn.Size = new Size(125, 46);
             addMovie_deleteBtn.TabIndex = 24;
@@ -226,7 +251,7 @@
             addMovie_updateBtn.FlatStyle = FlatStyle.Flat;
             addMovie_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_updateBtn.ForeColor = Color.White;
-            addMovie_updateBtn.Location = new Point(323, 273);
+            addMovie_updateBtn.Location = new Point(323, 292);
             addMovie_updateBtn.Name = "addMovie_updateBtn";
             addMovie_updateBtn.Size = new Size(120, 47);
             addMovie_updateBtn.TabIndex = 23;
@@ -243,7 +268,7 @@
             addMovie_addBtn.FlatStyle = FlatStyle.Flat;
             addMovie_addBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_addBtn.ForeColor = Color.White;
-            addMovie_addBtn.Location = new Point(132, 274);
+            addMovie_addBtn.Location = new Point(132, 293);
             addMovie_addBtn.Name = "addMovie_addBtn";
             addMovie_addBtn.Size = new Size(120, 47);
             addMovie_addBtn.TabIndex = 22;
@@ -254,7 +279,7 @@
             // addMovie_capacity
             // 
             addMovie_capacity.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_capacity.Location = new Point(576, 98);
+            addMovie_capacity.Location = new Point(576, 93);
             addMovie_capacity.Name = "addMovie_capacity";
             addMovie_capacity.Size = new Size(208, 27);
             addMovie_capacity.TabIndex = 21;
@@ -265,7 +290,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(486, 101);
+            label6.Location = new Point(486, 96);
             label6.Name = "label6";
             label6.Size = new Size(84, 24);
             label6.TabIndex = 20;
@@ -309,7 +334,7 @@
             // 
             addMovie_genre.FormattingEnabled = true;
             addMovie_genre.Items.AddRange(new object[] { "Educational", "Comedy", "Drama", "Action", "Horror" });
-            addMovie_genre.Location = new Point(164, 163);
+            addMovie_genre.Location = new Point(164, 198);
             addMovie_genre.Name = "addMovie_genre";
             addMovie_genre.Size = new Size(207, 28);
             addMovie_genre.TabIndex = 15;
@@ -319,7 +344,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(93, 163);
+            label3.Location = new Point(93, 198);
             label3.Name = "label3";
             label3.Size = new Size(65, 24);
             label3.TabIndex = 14;
@@ -328,7 +353,7 @@
             // addMovie_movieName
             // 
             addMovie_movieName.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_movieName.Location = new Point(165, 97);
+            addMovie_movieName.Location = new Point(165, 120);
             addMovie_movieName.Name = "addMovie_movieName";
             addMovie_movieName.Size = new Size(206, 27);
             addMovie_movieName.TabIndex = 13;
@@ -338,7 +363,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(43, 101);
+            label1.Location = new Point(43, 124);
             label1.Name = "label1";
             label1.Size = new Size(115, 24);
             label1.TabIndex = 12;
@@ -371,6 +396,7 @@
             Controls.Add(panel1);
             Name = "AddMovieForm";
             Size = new Size(1170, 737);
+            Load += AddMovieForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -406,5 +432,7 @@
         private Panel panel3;
         private ComboBox addMovie_status;
         private Label label7;
+        private ComboBox addMovie_showTime;
+        private Label label8;
     }
 }

@@ -18,9 +18,11 @@ namespace Desktop_Applicaion
         public string Genre {  get; set; }//3
         public string Price { get; set; }//4
         public string Capacity {  get; set; }//5
-        public string Status { get; set; }//6
-        public string Image {  get; set; }//7
-        public string Date { get; set; }//8
+
+        public string ShowTime { get; set; }//6
+        public string Status { get; set; }//7
+        public string Image {  get; set; }//8
+        public string Date { get; set; }//9
 
         public List<movieData> movieListData()
         {
@@ -46,6 +48,7 @@ namespace Desktop_Applicaion
                         mData.Genre = reader["genre"].ToString();
                         mData.Price = reader["price"].ToString();
                         mData.Capacity = reader["capacity"].ToString();
+                        mData.ShowTime = reader["show_time"].ToString();
                         mData.Status = reader["status"].ToString();
                         mData.Image = reader["movie_image"].ToString();
                         mData.Date = reader["created_at"].ToString();
@@ -83,6 +86,7 @@ namespace Desktop_Applicaion
                         mData.Genre = reader["genre"].ToString();
                         mData.Price = reader["price"].ToString();
                         mData.Capacity = reader["capacity"].ToString();
+                        mData.ShowTime = reader["show_time"].ToString();
                         mData.Status = reader["status"].ToString();
                         mData.Image = reader["movie_image"].ToString();
                         mData.Date = reader["created_at"].ToString();

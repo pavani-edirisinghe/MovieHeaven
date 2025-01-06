@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             panel3 = new Panel();
-            dashboardForm1 = new dashboardForm();
+            dashboardForm2 = new dashboardForm();
+            addMovieForm3 = new AddMovieForm();
             addStaffsForm1 = new AddStaffsForm();
-            addMovieForm2 = new AddMovieForm();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -53,20 +53,29 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(dashboardForm1);
+            panel3.Controls.Add(dashboardForm2);
+            panel3.Controls.Add(addMovieForm3);
             panel3.Controls.Add(addStaffsForm1);
-            panel3.Controls.Add(addMovieForm2);
             panel3.Location = new Point(250, 63);
             panel3.Name = "panel3";
             panel3.Size = new Size(1170, 737);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
             // 
-            // dashboardForm1
+            // dashboardForm2
             // 
-            dashboardForm1.Location = new Point(0, 0);
-            dashboardForm1.Name = "dashboardForm1";
-            dashboardForm1.Size = new Size(1462, 921);
-            dashboardForm1.TabIndex = 2;
+            dashboardForm2.Location = new Point(0, 0);
+            dashboardForm2.Name = "dashboardForm2";
+            dashboardForm2.Size = new Size(1462, 921);
+            dashboardForm2.TabIndex = 3;
+            dashboardForm2.Load += dashboardForm2_Load;
+            // 
+            // addMovieForm3
+            // 
+            addMovieForm3.Location = new Point(0, 0);
+            addMovieForm3.Name = "addMovieForm3";
+            addMovieForm3.Size = new Size(1462, 921);
+            addMovieForm3.TabIndex = 2;
             // 
             // addStaffsForm1
             // 
@@ -74,14 +83,6 @@
             addStaffsForm1.Name = "addStaffsForm1";
             addStaffsForm1.Size = new Size(1462, 921);
             addStaffsForm1.TabIndex = 1;
-            // 
-            // addMovieForm2
-            // 
-            addMovieForm2.Location = new Point(0, 0);
-            addMovieForm2.Name = "addMovieForm2";
-            addMovieForm2.Size = new Size(1462, 921);
-            addMovieForm2.TabIndex = 0;
-            addMovieForm2.Load += addMovieForm2_Load;
             // 
             // label1
             // 
@@ -264,5 +265,7 @@
         private dashboardForm dashboardForm1;
         private AddStaffsForm addStaffsForm1;
         private AddMovieForm addMovieForm2;
+        private dashboardForm dashboardForm2;
+        private AddMovieForm addMovieForm3;
     }
 }

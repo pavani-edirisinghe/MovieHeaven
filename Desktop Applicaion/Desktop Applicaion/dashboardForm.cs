@@ -16,6 +16,7 @@ namespace Desktop_Applicaion
     {
         string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\PAVANI EDIRISINGHE\Documents\movie.mdf"";Integrated Security=True;Connect Timeout=30";
 
+
         public dashboardForm()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Desktop_Applicaion
             displayTotalIncome();
 
             displayAMTable();
+            refreshData();
         }
 
         private void dashboardForm_Load(object sender, EventArgs e)
@@ -44,7 +46,7 @@ namespace Desktop_Applicaion
             displayTotalStaffs();
             displayTotalBuys();
             displayTotalIncome();
-            displayAMTable(); 
+            displayAMTable();
         }
 
         public void displayAMTable()
@@ -54,21 +56,23 @@ namespace Desktop_Applicaion
             List<movieData> listData = mData.movieAvailableListData();
 
             dataGridView1.DataSource = listData;
+
         }
+
 
         public void displayAvailableMovies()
         {
-            using(SqlConnection connect = new SqlConnection(conn))
+            using (SqlConnection connect = new SqlConnection(conn))
             {
                 connect.Open();
 
                 string selectData = "SELECT COUNT(id) as avMovie FROM movies WHERE status = 'Available'";
 
-                using(SqlCommand cmd = new SqlCommand(selectData, connect))
+                using (SqlCommand cmd = new SqlCommand(selectData, connect))
                 {
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    if(reader.Read())
+                    if (reader.Read())
                     {
                         if (reader["avMovie"] != DBNull.Value)
                         {
@@ -130,7 +134,7 @@ namespace Desktop_Applicaion
                 }
             }
         }
-       
+
         public void displayTotalIncome()
         {
             using (SqlConnection connect = new SqlConnection(conn))
@@ -154,6 +158,16 @@ namespace Desktop_Applicaion
                     }
                 }
             }
+        }
+
+        private void dashbord_TS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashbord_AM_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

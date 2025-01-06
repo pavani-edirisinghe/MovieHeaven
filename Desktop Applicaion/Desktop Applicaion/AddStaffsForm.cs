@@ -93,6 +93,7 @@ namespace Desktop_Applicaion
                                 MessageBox.Show("Added Successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 clearFields();
+                                displayData();
                             }
 
                         }
@@ -193,7 +194,8 @@ namespace Desktop_Applicaion
                                     MessageBox.Show("Updated Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     clearFields();
-                                    displayData();
+                                    displayData(); 
+                                    
                                 }
                             }
                         }
@@ -207,7 +209,7 @@ namespace Desktop_Applicaion
         {
             addStaff_username.Text = "";
             addStaff_password.Text = "";
-            addStaff_status.SelectedIndex = -1; // Clear selection in the ComboBox
+            addStaff_status.SelectedIndex = -1; 
         }
 
         private void addStaff_deletBtn_Click(object sender, EventArgs e)
@@ -238,6 +240,7 @@ namespace Desktop_Applicaion
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             clearFields();
+                            displayData();
                         }
                     }
                 }

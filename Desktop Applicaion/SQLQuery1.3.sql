@@ -1,6 +1,4 @@
-﻿SELECT * FROM movies
-
-CREATE TABLE buy_tickets
+﻿CREATE TABLE buy_tickets
 (
 	id INT PRIMARY KEY IDENTITY(1,1),
 	movie_id VARCHAR(MAX) NULL,
@@ -8,11 +6,10 @@ CREATE TABLE buy_tickets
 	price FLOAT,
 	amount FLOAT,
 	change FLOAT,
+	show_time VARCHAR(MAX) NULL,
 	status VARCHAR(MAX) NULL,
 	created_at DATETIME
 )
-
-DROP TABLE buy_tickets
 
 SELECT * FROM buy_tickets
 
@@ -28,5 +25,4 @@ SELECT COUNT(id) as totalStaff FROM users WHERE role = 'Staff' AND status = 'Act
 
 SELECT COUNT(id) as totalBuys FROM buy_tickets WHERE status = 'PAID'
 
-TRUNCATE TABLE buy_tickets;
-
+SELECT COUNT(id) FROM movies WHERE movie_id = @movieID AND id != @id

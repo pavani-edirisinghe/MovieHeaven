@@ -58,9 +58,12 @@ namespace Desktop_Applicaion
                 buyTicket_movieID.Text = row.Cells[1].Value.ToString();
                 buyTicket_movieName.Text = row.Cells[2].Value.ToString();
                 buyTicket_genre.Text = row.Cells[3].Value.ToString();
+                buyTicket_showTime.Text = row.Cells[6].Value.ToString();
+                buyTicket_capacity.Text = row.Cells[5].Value.ToString();
+
                 buyTicket_regularPrice.Text = row.Cells[4].Value.ToString();
 
-                pictureBox1.ImageLocation = row.Cells[7].Value.ToString();
+                pictureBox1.ImageLocation = row.Cells[8].Value.ToString();
             }
         }
 
@@ -143,7 +146,6 @@ namespace Desktop_Applicaion
             }
         }
 
-
         double getTotal = 0;
         private void buyTicket_calculateBtn_Click(object sender, EventArgs e)
         {
@@ -176,13 +178,13 @@ namespace Desktop_Applicaion
             }
         }
 
-
         public void clearSelected()
         {
             id = 0;
             buyTicket_movieID.Text = "";
             buyTicket_movieName.Text = "";
             buyTicket_genre.Text = "";
+            buyTicket_showTime.Text = "";
             buyTicket_regularPrice.Text = "";
 
             pictureBox1.ImageLocation = null;
@@ -218,7 +220,7 @@ namespace Desktop_Applicaion
             }
             else
             {
-               
+
             }
         }
 
@@ -312,10 +314,7 @@ namespace Desktop_Applicaion
             }
         }
 
-
         private int rowIndex = 0;
-
-        
 
         private void buyTicket_receiptBtn_Click(object sender, EventArgs e)
         {
@@ -325,8 +324,8 @@ namespace Desktop_Applicaion
                 return;
             }
 
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("CustomSize", 600, 300); 
-            printDocument1.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(40, 40, 30, 10); 
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("CustomSize", 600, 300);
+            printDocument1.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(40, 40, 30, 10);
 
             printPreviewDialog1.Document = printDocument1;
 
@@ -367,9 +366,9 @@ namespace Desktop_Applicaion
 
             string logoPath = @"C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\Assets\1000270477-transfrmedjhgjh.jpeg.JPG"; // Replace with the actual path to your logo
 
-            int logoWidth = 50;  
-            int logoHeight = 60; 
-            int logoX = e.MarginBounds.Left + 120; 
+            int logoWidth = 50;
+            int logoHeight = 60;
+            int logoX = e.MarginBounds.Left + 120;
 
             try
             {
@@ -378,15 +377,15 @@ namespace Desktop_Applicaion
                 float headerHeight = Math.Max(logoHeight, headerFont.GetHeight(e.Graphics));
                 float logoY = y + (headerHeight - logoHeight) / 2;
 
-                
                 e.Graphics.DrawImage(logo, new Rectangle(logoX, (int)logoY, logoWidth, logoHeight));
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading logo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            float headerTextX = logoX + logoWidth + 10; 
-            float headerTextY = y; 
+
+            float headerTextX = logoX + logoWidth + 10;
+            float headerTextY = y;
 
             string headerText = "MOVIE HEAVEN";
 
@@ -398,18 +397,16 @@ namespace Desktop_Applicaion
             int extraSpace = 20;
             y += extraSpace;
 
-            // Print headers
             string[] headers = { "MovieID", "Movie Name", "Seat Number", "Food Items", "Drink Items" };
             float x = e.MarginBounds.Left;
             for (int i = 0; i < headers.Length; i++)
             {
                 e.Graphics.DrawString(headers[i], boldFont, Brushes.Black, x + tableMargin, y);
-                x += colWidths[i]; // Move to the next column position
+                x += colWidths[i];
             }
 
             y += boldFont.GetHeight() + tableMargin;
 
-            // Print user-selected values
             string movieID = movie_id;
             string movieName = buyTicket_movieName.Text;
             string seatNum = buyTicket_availableChairs.Text;
@@ -422,10 +419,10 @@ namespace Desktop_Applicaion
             {
                 string valueToPrint = string.IsNullOrEmpty(userSelectedValues[i]) ? "---------------------" : userSelectedValues[i];
                 e.Graphics.DrawString(valueToPrint, regularFont, Brushes.Black, x + tableMargin, y);
-                x += colWidths[i]; 
+                x += colWidths[i];
             }
 
-            y += 35; 
+            y += 35;
 
             y = e.MarginBounds.Bottom - 100;
             DateTime today = DateTime.Now;
@@ -436,8 +433,18 @@ namespace Desktop_Applicaion
 
             e.Graphics.DrawString(footerText, footerFont, Brushes.Black,
                 new RectangleF(e.MarginBounds.Left, y, e.MarginBounds.Width, 100));
-        }
 
+
+            Rectangle receiptArea = new Rectangle(
+                e.MarginBounds.Left - 18,
+                e.MarginBounds.Top - 10,
+                e.MarginBounds.Width + 35,
+                e.MarginBounds.Height + 5
+            );
+
+            Pen borderPen = new Pen(Color.Black, 2);
+            e.Graphics.DrawRectangle(borderPen, receiptArea);
+        }
 
         private void buyTicket_clearFields_Click(object sender, EventArgs e)
         {
@@ -454,6 +461,26 @@ namespace Desktop_Applicaion
         }
 
         private void buyTicket_foods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buyTicket_regularPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buyTicket_movieName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buyTicket_capacity_Click(object sender, EventArgs e)
         {
 
         }

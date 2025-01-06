@@ -11,6 +11,7 @@ CREATE TABLE customers
 	totalPrice FLOAT NULL,
 	foods VARCHAR(MAX) NULL,
 	drinks VARCHAR(MAX) NULL,
+	show_time VARCHAR(MAX) NULL,
 	amount FLOAT NULL,
 	change FLOAT NULL,
 	status VARCHAR(MAX) NULL,
@@ -18,5 +19,3 @@ CREATE TABLE customers
 )
 
 SELECT * FROM customers
-
-TRUNCATE TABLE customers;
