@@ -136,9 +136,7 @@ namespace Desktop_Applicaion
                 addStaff_password.Text = row.Cells[2].Value.ToString();
                 addStaff_status.SelectedItem = row.Cells[4].Value.ToString();
 
-
             }
-
 
         }
 

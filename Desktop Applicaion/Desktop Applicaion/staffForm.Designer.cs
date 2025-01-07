@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staffForm));
             panel1 = new Panel();
-            button2 = new Button();
             pictureBox3 = new PictureBox();
             button1 = new Button();
             logout_btn = new Button();
@@ -43,7 +42,6 @@
             panel3 = new Panel();
             dashboardForm1 = new dashboardForm();
             buyTicketForm1 = new buyTicketForm();
-            profileFrom1 = new profileFrom();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
@@ -54,7 +52,6 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(133, 19, 33);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(logout_btn);
@@ -64,22 +61,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 800);
             panel1.TabIndex = 1;
-            // 
-            // button2
-            // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Arial Narrow", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(12, 398);
-            button2.Name = "button2";
-            button2.Size = new Size(220, 49);
-            button2.TabIndex = 8;
-            button2.Text = "  EDIT PROFILE";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // pictureBox3
             // 
@@ -99,7 +80,7 @@
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 318);
+            button1.Location = new Point(12, 355);
             button1.Name = "button1";
             button1.Size = new Size(220, 49);
             button1.TabIndex = 6;
@@ -131,7 +112,7 @@
             dashboard_btn.ForeColor = Color.White;
             dashboard_btn.Image = (Image)resources.GetObject("dashboard_btn.Image");
             dashboard_btn.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboard_btn.Location = new Point(12, 228);
+            dashboard_btn.Location = new Point(12, 265);
             dashboard_btn.Name = "dashboard_btn";
             dashboard_btn.Size = new Size(220, 49);
             dashboard_btn.TabIndex = 1;
@@ -196,7 +177,6 @@
             // 
             panel3.Controls.Add(dashboardForm1);
             panel3.Controls.Add(buyTicketForm1);
-            panel3.Controls.Add(profileFrom1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(250, 63);
             panel3.Name = "panel3";
@@ -216,14 +196,6 @@
             buyTicketForm1.Name = "buyTicketForm1";
             buyTicketForm1.Size = new Size(1462, 921);
             buyTicketForm1.TabIndex = 3;
-            // 
-            // profileFrom1
-            // 
-            profileFrom1.Location = new Point(0, 0);
-            profileFrom1.Name = "profileFrom1";
-            profileFrom1.Size = new Size(1462, 921);
-            profileFrom1.TabIndex = 2;
-            profileFrom1.Load += profileFrom1_Load;
             // 
             // staffForm
             // 
@@ -259,8 +231,7 @@
         private Panel panel3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private Button button2;
-        private profileFrom profileFrom1;
+        
         private dashboardForm dashboardForm1;
         private buyTicketForm buyTicketForm1;
     }

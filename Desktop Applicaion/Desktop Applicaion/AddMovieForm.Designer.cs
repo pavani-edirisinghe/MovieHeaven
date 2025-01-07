@@ -152,7 +152,7 @@
             // addMovie_showTime
             // 
             addMovie_showTime.FormattingEnabled = true;
-            addMovie_showTime.Items.AddRange(new object[] { "8.30 AM  - 11.30 AM", "12.30 PM - 3.30  PM", "6.00 PM   - 9.00  PM" });
+            addMovie_showTime.Items.AddRange(new object[] { "8.30AM - 11.30AM", "12.30PM- 3.30PM", "6.00 PM - 9.00PM" });
             addMovie_showTime.Location = new Point(576, 146);
             addMovie_showTime.Name = "addMovie_showTime";
             addMovie_showTime.Size = new Size(208, 28);

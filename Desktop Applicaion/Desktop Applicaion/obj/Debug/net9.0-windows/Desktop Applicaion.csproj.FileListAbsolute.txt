@@ -11,15 +11,12 @@ C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\D
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.AssemblyReference.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AddMovieForm.resources
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AddStaffForm.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AddStaffsForm.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AdminForm.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.buyTicketForm.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.Form1.resources
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.profileFrom.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.Properties.Resources.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.RegForm.resources
-C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.staffForm.resources
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.csproj.GenerateResource.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.AssemblyInfoInputs.cache
@@ -33,3 +30,5 @@ C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\D
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop Applicaion.genruntimeconfig.cache
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\ref\Desktop Applicaion.dll
 C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.dashboardForm.resources
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.AddStaffForm.resources
+C:\Users\PAVANI EDIRISINGHE\Desktop\Gui Project\MovieHeaven\Desktop Applicaion\Desktop Applicaion\obj\Debug\net9.0-windows\Desktop_Applicaion.staffForm.resources

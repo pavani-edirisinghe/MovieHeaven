@@ -351,7 +351,7 @@ namespace Desktop_Applicaion
             float y = e.MarginBounds.Top;
             int tableMargin = 5;
 
-            int[] colWidths = { 90, 120, 120, 110, 80 };
+            int[] colWidths = { 70, 93, 110, 100, 68, 70 };
 
             Font headerFont = new Font("Arial", 14, FontStyle.Bold);
             Font boldFont = new Font("Arial", 10, FontStyle.Bold);
@@ -397,7 +397,7 @@ namespace Desktop_Applicaion
             int extraSpace = 20;
             y += extraSpace;
 
-            string[] headers = { "MovieID", "Movie Name", "Seat Number", "Food Items", "Drink Items" };
+            string[] headers = { "MovieID", "Movie Name", "Show Time", "Seat Number", "Foods", "Drinks" };
             float x = e.MarginBounds.Left;
             for (int i = 0; i < headers.Length; i++)
             {
@@ -409,15 +409,16 @@ namespace Desktop_Applicaion
 
             string movieID = movie_id;
             string movieName = buyTicket_movieName.Text;
+            string showTime = buyTicket_showTime.Text;
             string seatNum = buyTicket_availableChairs.Text;
             string food = buyTicket_foods.Text;
             string drinks = buyTicket_drinks.Text;
 
-            string[] userSelectedValues = { movieID, movieName, seatNum, food, drinks };
+            string[] userSelectedValues = { movieID, movieName, showTime, seatNum, food, drinks };
             x = e.MarginBounds.Left;
             for (int i = 0; i < userSelectedValues.Length; i++)
             {
-                string valueToPrint = string.IsNullOrEmpty(userSelectedValues[i]) ? "---------------------" : userSelectedValues[i];
+                string valueToPrint = string.IsNullOrEmpty(userSelectedValues[i]) ? "-------------------" : userSelectedValues[i];
                 e.Graphics.DrawString(valueToPrint, regularFont, Brushes.Black, x + tableMargin, y);
                 x += colWidths[i];
             }
