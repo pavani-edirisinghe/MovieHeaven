@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\staffdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\SQLQuery1.2sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.2sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\SQLQuery1.3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\staffform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\staffdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\desktop applicaion\\addmovieform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\addmovieform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\addstaffsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,8 +31,12 @@
       "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\addstaffsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\desktop applicaion\\addmovieform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\addmovieform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\staffform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\addmovieform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,14 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\sqlquery1.1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|solutionrelative:desktop applicaion\\sqlquery1.1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\SQLQuery1.2sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.2sql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\SQLQuery1.3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16E1D2A9-0B28-40ED-9E99-24B0094E0E67}|Desktop Applicaion\\Desktop Applicaion.csproj|c:\\users\\pavani edirisinghe\\desktop\\gui project\\movieheaven\\desktop applicaion\\desktop applicaion\\moviedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,82 +118,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "staffForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffForm.Designer.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\staffForm.Designer.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffForm.Designer.cs",
               "RelativeToolTip": "Desktop Applicaion\\staffForm.Designer.cs",
-              "ViewState": "AgIAANoAAAAAAAAAAAD4v+kAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T06:03:30.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-07T06:03:30.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "AddMovieForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddMovieForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\AddMovieForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddMovieForm.cs [Design]",
               "RelativeToolTip": "Desktop Applicaion\\AddMovieForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T04:44:07.808Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-29T04:44:07.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AddStaffsForm.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddStaffsForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\AddStaffsForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddStaffsForm.cs",
               "RelativeToolTip": "Desktop Applicaion\\AddStaffsForm.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAAAHIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T08:25:52.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AddStaffsForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddStaffsForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\AddStaffsForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddStaffsForm.cs [Design]",
               "RelativeToolTip": "Desktop Applicaion\\AddStaffsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T00:19:57.828Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-29T00:19:57.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "staffForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\staffForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffForm.cs [Design]",
               "RelativeToolTip": "Desktop Applicaion\\staffForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T14:40:38.548Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-29T14:40:38.548Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "staffData.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffData.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\staffData.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffData.cs",
               "RelativeToolTip": "Desktop Applicaion\\staffData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-29T01:24:27.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "staffForm.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\staffForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\staffForm.cs",
@@ -201,12 +197,11 @@
               "RelativeToolTip": "Desktop Applicaion\\staffForm.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAMwEYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T15:00:59.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T15:00:59.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "AddMovieForm.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AddMovieForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\AddMovieForm.cs",
@@ -214,24 +209,22 @@
               "RelativeToolTip": "Desktop Applicaion\\AddMovieForm.cs",
               "ViewState": "AgIAALgAAAAAAAAAAAAwwPkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T05:14:41.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T05:14:41.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "dashboardForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\dashboardForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\dashboardForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\dashboardForm.cs [Design]",
               "RelativeToolTip": "Desktop Applicaion\\dashboardForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T17:47:33.393Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-28T17:47:33.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "dashboardForm.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\dashboardForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\dashboardForm.cs",
@@ -239,24 +232,22 @@
               "RelativeToolTip": "Desktop Applicaion\\dashboardForm.cs",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAkwK4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T06:45:29.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T06:45:29.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "buyTicketForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\buyTicketForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\buyTicketForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\buyTicketForm.cs [Design]",
               "RelativeToolTip": "Desktop Applicaion\\buyTicketForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T16:21:46.348Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-29T16:21:46.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "buyTicketForm.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\buyTicketForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\buyTicketForm.cs",
@@ -264,25 +255,24 @@
               "RelativeToolTip": "Desktop Applicaion\\buyTicketForm.cs",
               "ViewState": "AgIAAFYBAAAAAAAAAAAowGEBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T04:29:46.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T04:29:46.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AdminForm.cs",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AdminForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\AdminForm.cs",
               "ToolTip": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AdminForm.cs",
               "RelativeToolTip": "Desktop Applicaion\\AdminForm.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAkwEkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T07:50:20.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "AdminForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\AdminForm.cs",
               "RelativeDocumentMoniker": "Desktop Applicaion\\AdminForm.cs",
@@ -293,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 2,
               "Title": "SQLQuery1.3.sql",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\SQLQuery1.3.sql",
               "RelativeDocumentMoniker": "SQLQuery1.3.sql",
@@ -304,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "SQLQuery1.1.sql",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\Desktop Applicaion\\SQLQuery1.1.sql",
               "RelativeDocumentMoniker": "Desktop Applicaion\\SQLQuery1.1.sql",
@@ -315,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "SQLQuery1.2sql.sql",
               "DocumentMoniker": "C:\\Users\\PAVANI EDIRISINGHE\\Desktop\\Gui Project\\MovieHeaven\\Desktop Applicaion\\SQLQuery1.2sql.sql",
               "RelativeDocumentMoniker": "SQLQuery1.2sql.sql",
@@ -405,8 +395,7 @@
               "RelativeToolTip": "Desktop Applicaion\\AddMovieForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-29T05:16:17.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-29T05:16:17.407Z"
             }
           ]
         }
