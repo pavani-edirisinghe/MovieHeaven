@@ -1,7 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0 ;
+  padding: 0 0 0 0 ;
   text-align: center;
 }
 
@@ -46,12 +45,12 @@ body {
   background-color: #280000;
   color: #fff;
   position: relative;
+  margin: 0%;
 }
 
 body::before {
   content: "";
   position: fixed;
-  /* background: #040404 url("../img/.jpg") top right no-repeat; */
   background-size: cover;
   left: 0;
   right: 0;

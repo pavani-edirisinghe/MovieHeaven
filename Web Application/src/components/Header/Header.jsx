@@ -4,9 +4,9 @@ import "./Header.css";
 function Header() {
   const [isActive, setIsActive] = useState(false);
 
-  // const toggleMenu = () => {
-  //   setIsActive(!isActive);
-  // };
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
 
   return (
     <header id="header" className="fixed-top header-inner-pages">
@@ -16,9 +16,9 @@ function Header() {
         <nav id="navbar" className="navbar">
           <ul>
             <li><a className="nav-link scrollto" href="index.html">Home</a></li>
-            <li><a className="nav-link scrollto" href="index.html">About Us</a></li>
             <li><a className="nav-link scrollto" href="index.html">Movies</a></li>
-            <li><a className="nav-link scrollto" href="index.html">Sign In</a></li>
+            <li><a className="nav-link scrollto" href="index.html">About Us</a></li>           
+            <li><a className="nav-link scrollto" href="index.html">Log In</a></li>
             <li><a className="nav-link scrollto" href="index.html">Contact Us</a></li>
           </ul>
           {/* <i className="bi bi-list mobile-nav-toggle" onClick={toggleMenu}></i> */}
