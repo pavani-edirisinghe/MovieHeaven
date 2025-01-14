@@ -38,10 +38,10 @@
 
 #hero h3 {
   position: absolute;
-  top: 22%; /* You can adjust this value to control how far up it goes */
+  top: 30%; 
   left: 50%;
   transform: translateX(-50%);
-  font-size: 88px; /* Keep the font size or adjust it if needed */
+  font-size: 88px; 
   color: #fff;
 }
 

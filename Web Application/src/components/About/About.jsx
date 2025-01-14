@@ -1,75 +1,60 @@
 import React from "react";
 import "./About.css";
+import 'remixicon/fonts/remixicon.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 const AboutSection = () => {
   return (
     <>
-      {/* About Section */}
+    <Header />
       <section id="about" className="about">
-        <div className="container">
+        <div className="container-1">
           <div className="section-title">
-            <h2>About us</h2>
+            
             <h3>
-              We are <span>Salon Liyasara</span>
+              We are <span>Movie Heaven</span>
             </h3>
-            <p>Professional in Hair Care and Beauty</p>
-          </div>
-
-          <div className="row content">
-            <div className="col-lg-6">
-              <p>
-                Salon Liyasara network is a pioneer in its industry for more
-                than a decade and now provides the best quality services to its
-                customers. Mrs. Edirisinghe is the founder of the salon Liyasara
-                network which started as a small-scale business organization and
-                gradually developed to the position it is now. The salon provides
-                services such as Skin Care, hair care, Nail care, dressmaking, and
-                fashion designing.
-              </p>
-            </div>
-            <div className="col-lg-6 pt-4 pt-lg-0">
-              <u>
-                <h3 >Vision</h3>
-              </u>
-              <p>
-                To establish as the best salon network in the globe and to
-                discover the true beauty of our clients by providing quality
-                services
-              </p>
-
-              <u>
-                <h3>Mission & Our Values</h3>
-              </u>
-
-              <ul>
-                <li>
-                  <i className="ri-check-double-line"></i> We are passionate
-                  about our work
-                </li>
-                <li>
-                  <i className="ri-check-double-line"></i> We are Customer
-                  focused
-                </li>
-                <li>
-                  <i className="ri-check-double-line"></i> We ensure the quality
-                  of the work
-                </li>
-                <li>
-                  <i className="ri-check-double-line"></i> We uplift our
-                  employees
-                </li>
-                <li>
-                  <i className="ri-check-double-line"></i> We are eager to
-                  engage totally with the latest technologies
-                </li>
-              </ul>
-            </div>
+            <h4>The Ultimate Destination for Movie Lovers</h4>
           </div>
         </div>
-      </section>
-      {/* End About Section */}
 
-      {/* Counts Section */}
+        <div class="row content">
+  <div class="col-left">
+    <p>
+      Movie Heaven is a renowned movie theater that has been delighting movie lovers for over a decade. Founded by Ms. Edirisinghe, 
+      Movie Heaven started as a small cinema and has grown into a state-of-the-art entertainment hub. The theater offers a wide variety of films,
+      from the latest blockbusters to classic favorites, ensuring there's something for everyone. With luxurious seating, cutting-edge sound and
+      projection systems, and top-tier customer service, Movie Heaven provides an unforgettable movie-watching experience.
+      Whether you're here for a casual outing or a special movie night, Movie Heaven is your go-to destination for all things cinema.
+    </p>
+  </div>
+  <div class="col-right">
+    
+      <h3>Vision</h3>
+    
+    <p>
+      To become the ultimate movie destination worldwide, 
+      offering an unparalleled cinematic experience that brings stories to life and creates lasting memories for all movie enthusiasts.
+    </p>
+
+   
+      <h3>Mission & Our Values</h3>
+   
+
+    <ul>
+      <li><i class="ri-check-double-line"></i> We are passionate about film and entertainment</li>
+      <li><i class="ri-check-double-line"></i> We prioritize our customers' enjoyment and satisfaction</li>
+      <li><i class="ri-check-double-line"></i> We ensure the highest quality in every screening, sound, and visual experience</li>
+      <li><i class="ri-check-double-line"></i> We support and empower our employees, fostering a creative and dedicated team</li>
+      <li><i class="ri-check-double-line"></i> We embrace the latest technologies to continuously enhance our theater experience</li>
+    </ul>
+  </div>
+</div>
+
+      </section>
+
       <div className="counts container">
         <div className="row">
           <div className="col-lg-3 col-md-6">
@@ -115,9 +100,21 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      {/* End Counts Section */}
+
+      <div className="map-container">
+  <iframe
+    title="Google Map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63480.8374898179!2d80.17697731341235!3d6.055975780910134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173bb6932fce3%3A0x4a35b903f9c64c03!2sGalle!5e0!3m2!1sen!2slk!4v1669952452895!5m2!1sen!2slk"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+<Footer />
     </>
   );
 };
+
 
 export default AboutSection;

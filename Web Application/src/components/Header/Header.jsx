@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./Header.css";
+import About from "../About/About.jsx";
+import Contact from "../About/About.jsx";
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -16,12 +19,11 @@ function Header() {
         <nav id="navbar" className="navbar">
           <ul>
             <li><a className="nav-link scrollto" href="index.html">Home</a></li>
-            <li><a className="nav-link scrollto" href="index.html">Movies</a></li>
-            <li><a className="nav-link scrollto" href="index.html">About Us</a></li>           
+            <li><a className="nav-link scrollto" to="/about">Movies</a></li>
+            <li><a className="nav-link scrollto" href="About.jsx">About Us</a></li>           
             <li><a className="nav-link scrollto" href="index.html">Log In</a></li>
             <li><a className="nav-link scrollto" href="index.html">Contact Us</a></li>
           </ul>
-          {/* <i className="bi bi-list mobile-nav-toggle" onClick={toggleMenu}></i> */}
         </nav>
       </div>
     </header>

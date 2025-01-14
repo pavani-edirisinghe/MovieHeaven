@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section id="hero">
       <div className="hero-container">
-        
+        <br />
         <h3>Welcome  </h3>
         <h2>The ultimate destination for movie lovers. Explore Now..</h2>
         <br />
