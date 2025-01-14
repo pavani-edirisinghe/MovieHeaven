@@ -1,0 +1,16 @@
+.movie-details-page {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .movie-details-page h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .movie-details-page p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  

@@ -2,13 +2,10 @@ import React from "react";
 import "./About.css";
 import 'remixicon/fonts/remixicon.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import Header from "../Header/Header.jsx";
-import Footer from "../Footer/Footer.jsx";
 
 const AboutSection = () => {
   return (
     <>
-    <Header />
       <section id="about" className="about">
         <div className="container-1">
           <div className="section-title">

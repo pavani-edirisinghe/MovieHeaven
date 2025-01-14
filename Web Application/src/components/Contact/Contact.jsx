@@ -1,11 +1,7 @@
 import React from "react";
 import "./Contact.css";
-import Header from "../Header/Header.jsx";
-import Footer from "../Footer/Footer.jsx";
 
 const ContactSection = () => {
-
-    <Header />
 
   return (
     <section id="contact" className="contact">
