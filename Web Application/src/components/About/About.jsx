@@ -14,7 +14,7 @@ const AboutSection = () => {
           <div className="section-title">
             
             <h3>
-              We are <span>Movie Heaven</span>
+              We are &nbsp; <span>Movie Heaven</span>
             </h3>
             <h4>The Ultimate Destination for Movie Lovers</h4>
           </div>
@@ -111,7 +111,6 @@ const AboutSection = () => {
   ></iframe>
 </div>
 
-<Footer />
     </>
   );
 };

@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import {Routes,Route} from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 import Header from "./components/Header/Header.jsx";
 import HeroSection from './components/Hero/Hero.jsx';
@@ -12,19 +10,24 @@ import 'boxicons/css/boxicons.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'remixicon/fonts/remixicon.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
+    
+    <Router>
       <Header/>
-      <HeroSection/>
-      <AboutSection />
-      <ContactSection />
+      <Routes>
+      <Route path="/" element={<HeroSection />} />
+        <Route path="/about-us" element={<AboutSection />} />
+        <Route path="/contact" element={<ContactSection />} />
+      </Routes>
+     
       <Footer/>
-  </div>
+      </Router>
+  
   );
 }
 

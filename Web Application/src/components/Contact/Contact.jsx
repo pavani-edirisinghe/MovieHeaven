@@ -12,7 +12,7 @@ const ContactSection = () => {
   <div className="container-1">
     <div className="section-title">
       <h3>Got a&nbsp;<span> Question?</span></h3>
-      <p>We’re Here to Help! </p>
+      <p>We’re Here to Help! </p> 
       <h5>The Art of Visual Effects in Today’s Movies</h5>
    </div>
 </div>
@@ -79,7 +79,7 @@ const ContactSection = () => {
 
 
 </div>
-  <Footer />
+ 
 </section>
 
 

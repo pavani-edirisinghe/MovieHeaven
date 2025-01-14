@@ -4,6 +4,7 @@
   flex-direction: column; 
   padding: 0 15px;        
   box-sizing: border-box; 
+  margin-top: 100px;
 }
 
 .section {
@@ -21,6 +22,7 @@
   justify-content: center;
   text-align: center;
   padding-bottom: 30px;
+  padding-top: 90px;
 }
 
 
