@@ -10,6 +10,7 @@ const MovieDetails = () => {
     2: { title: "Moana", description: "A Disney animated adventure", releaseDate: "2016" },
     3: { title: "Moana", description: "A Disney animated adventure", releaseDate: "2017" },
     // Add more movies as needed
+    
   };
 
   const movie = movieDetails[id];

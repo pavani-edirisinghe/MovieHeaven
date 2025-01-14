@@ -61,61 +61,83 @@ const MovieGallery = () => {
 
   return (
     <section id="movie-gallery" className="movie-gallery-section">
-      <div className="movie-gallery-container">
-        <h2
-          className="gallery-heading"
+  <div className="movie-gallery-container">
+    <div
+      className="gallery-header"
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: "40px",
+      }}
+    >
+      <h2
+        className="gallery-heading"
+        style={{
+          fontSize: "2rem",
+          fontWeight: 500,
+          color: "white",
+        }}
+      >
+        Explore Movies
+      </h2>
+      {/* Dropdown menu for categories */}
+      <div>
+        <label
+          htmlFor="category-select"
           style={{
-            fontSize: "2rem",
-            fontWeight: 500,
-            marginBottom: "40px",
+            marginRight: "10px",
             color: "white",
-            textAlign: "left",
+            fontSize: "1.4rem",
           }}
         >
-          Explore Movies
-        </h2>
-
-        {/* Dropdown menu for categories */}
-        <div style={{ marginBottom: "20px", textAlign: "left" }}>
-          <label htmlFor="category-select" style={{ marginRight: "10px", color: "white" }}>
-            Filter by Category:
-          </label>
-          <select
-            id="category-select"
-            value={selectedCategory}
-            onChange={handleCategoryChange}
-            style={{
-              padding: "8px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              outline: "none",
-            }}
-          >
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Movie gallery */}
-        <div className="movie-gallery">
-          {filteredMovies.map((movie) => (
-            <div className="movie-item" key={movie.id}>
-              <Link to={`/movie/${movie.id}`}>
-                <img src={movie.imageUrl} alt={movie.title} width="220px" height="330px" />
-              </Link>
-              <div className="movie-details">
-                <h4>{movie.title}</h4>
-                <p>Release Date: {movie.releaseDate}</p>
-              </div>
-            </div>
+          Select Genre:
+        </label>
+        <select
+          id="category-select"
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+          style={{
+            padding: "8px",
+            borderRadius: "10px",
+            border: "1px solid #ccc",
+            outline: "none",
+            color: "black",
+            width:"160px",
+          }}
+        >
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
           ))}
-        </div>
+        </select>
       </div>
-      <br /> <br />
-    </section>
+    </div>
+
+    {/* Movie gallery */}
+    <div className="movie-gallery">
+      {filteredMovies.map((movie) => (
+        <div className="movie-item" key={movie.id}>
+          <Link to={`/movie/${movie.id}`}>
+            <img
+              src={movie.imageUrl}
+              alt={movie.title}
+              width="220px"
+              height="330px"
+            />
+          </Link>
+          <div className="movie-details">
+            <h4>{movie.title}</h4>
+            <p>Release Date: {movie.releaseDate}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <br /> <br />
+</section>
+
   );
 };
 
