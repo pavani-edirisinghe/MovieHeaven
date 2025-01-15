@@ -23,7 +23,11 @@ const HeroSection = () => {
   <div className="movie-gallery-container">
     <div className="movie-gallery">
       <div className="movie-item">
+
+     
         <img src="/movies/Wicked.jpg" alt="Movie 1" width="220px" height="330px" />
+       
+        
         <div className="movie-details">
           <h4>Wicked</h4>
           <p>Release Date: 2023</p>
