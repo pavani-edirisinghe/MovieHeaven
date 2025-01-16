@@ -27,34 +27,90 @@ const movies = [
   { id: 23, title: "Ferry 2", releaseDate: "2024", genre: "Adventure", imageUrl: "/movies/Ferry2.jpg" },
   { id: 24, title: "The Return", releaseDate: "2024", genre: "Family", imageUrl: "/movies/The Return.jpg" },
   { id: 25, title: "Joker", releaseDate: "2024", genre: "Adventure", imageUrl: "/movies/Joker.jpg" },
-
 ];
 
-const MovieGallery = () => {
-  const [selectedMovie, setSelectedMovie] = useState(null);
+const genres = ["All Movies", "Adventure", "Animation", "Family", "Romance"];
 
-  const handleMovieClick = (movieId) => {
-    setSelectedMovie(movieId); 
+const MovieGallery = () => {
+  const [selectedGenre, setSelectedGenre] = useState("All");
+
+  const handleGenreChange = (event) => {
+    setSelectedGenre(event.target.value);
   };
+
+  const filteredMovies = selectedGenre === "All" 
+    ? movies 
+    : movies.filter((movie) => movie.genre === selectedGenre);
 
   return (
     <section id="movie-gallery" className="movie-gallery-section">
-      <div className="movie-gallery-container">
-        
-      <div className="gallery-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "40px" }}>
-          <h2 className="gallery-heading" style={{ fontSize: "2rem", fontWeight: 500, color: "white",  paddingTop: "90px"}}>
-            Explore Movies
-          </h2>
-        </div>
+     <div className="movie-gallery-container">
+  <div
+    className="gallery-header"
+    style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "40px",
+      paddingTop: "100px",
+    }}
+  >
+
+    <h2
+      className="gallery-heading"
+      style={{
+        fontSize: "2rem",
+        fontWeight: 500,
+        color: "white",
+        margin: 0, 
+      }}
+    >
+      Explore Movies
+    </h2>
+
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px", // Space between "Select Genre" and dropdown
+      }}
+    >
+
+    <span
+        style={{
+          fontSize: "1.5rem",
+          color: "white",
+          fontWeight: "300px",
+        }}
+      >
+        Select Genre :
+      </span>
+
+    <select
+      onChange={handleGenreChange}
+      value={selectedGenre}
+      style={{
+        padding: "5px",
+        fontSize: "1rem",
+        borderRadius: "15px",
+        outline: "none",
+        width:"140px",
+      }}
+    >
+      {genres.map((genre) => (
+        <option key={genre} value={genre}>
+          {genre}
+        </option>
+      ))}
+    </select>
+  </div>
+  </div>
 
         <div className="movie-gallery">
-          {movies.map((movie) => (
+          {filteredMovies.map((movie) => (
             <div className="movie-item" key={movie.id}>
-              <Link 
-                to={`/movies/${movie.id}`} 
-                onClick={() => handleMovieClick(movie.id)} 
-              >
-               <img
+              <Link to={`/movies/${movie.id}`}>
+                <img
                   src={movie.imageUrl}
                   alt={movie.title}
                   width="220px"
@@ -65,12 +121,10 @@ const MovieGallery = () => {
                     transition: "transform 0.3s ease",
                   }}
                 />
-
               </Link>
-              <div className="movie-details" style={{ marginTop: "10px", textAlign:"left" }}>
-                <h4 style={{ fontSize: "1.2rem", color: "white"}}>{movie.title}</h4>
+              <div className="movie-details" style={{ marginTop: "10px", textAlign: "left" }}>
+                <h4 style={{ fontSize: "1.2rem", color: "white" }}>{movie.title}</h4>
                 <p style={{ color: "#ccc" }}>Release Year: {movie.releaseDate}</p>
-
               </div>
             </div>
           ))}

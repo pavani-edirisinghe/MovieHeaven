@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import "./Footer.css";
 import SocialLinks from './SocialLinks';
 
@@ -30,10 +31,31 @@ const Footer = () => {
               <br />
               <h4>Useful Links</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-                <li><i className="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-                <li><i className="bx bx-chevron-right"></i> <a href="terms.html">Terms of service</a></li>
-                <li><i className="bx bx-chevron-right"></i> <a href="privacy.html">Privacy policy</a></li>
+                <li><i className="bx bx-chevron-right"></i>  <NavLink 
+                                to="/" 
+                                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                              >
+                                Home
+                              </NavLink></li>
+                <li><i className="bx bx-chevron-right"></i>   <NavLink 
+                                to="/contact" 
+                                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                              >
+                                Contact Us
+                              </NavLink></li>  
+                              
+                               <li><i className="bx bx-chevron-right"></i>  <NavLink 
+                                to="/" 
+                                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                              >
+                                Term of Service
+                              </NavLink></li>
+                <li><i className="bx bx-chevron-right"></i>  <NavLink 
+                                to="/about-us" 
+                                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                              >
+                                Privacy Policy
+                              </NavLink></li>
               </ul>
             </div>
           </div>

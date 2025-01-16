@@ -1,5 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
+
+// Movie data
+const trendingMovies = [
+  { id: 1, title: 'Wicked', releaseDate: '2023', image: '/movies/Wicked.jpg' },
+  { id: 4, title: 'Moana 2', releaseDate: '2024', image: '/movies/Moana 2.jpg' },
+  { id: 7, title: 'Squid Game', releaseDate: '2021', image: '/movies/Squid Game.jpg' },
+  { id: 5, title: 'Goosebumps', releaseDate: '2023', image: '/movies/Goosebumps.jpg' },
+  { id: 14, title: 'American Primeval', releaseDate: '2022', image: '/movies/American Primeval.jpg' },
+];
+
+const popularMovies = [
+  { id: 2, title: 'Gladiator II', releaseDate: '2025', image: '/movies/Gladiator II.jpg' },
+  { id: 8, title: 'The Wild Robot ', releaseDate: '2023', image: '/movies/The Wild Robot.jpg' },
+  { id: 6, title: 'The Lord of the Rings', releaseDate: '2022', image: '/movies/The Lord of the Rings.jpg' },
+  { id: 20, title: 'Werewolves', releaseDate: '2024', image: '/movies/Werewolves.jpg' },
+  { id: 15, title: 'Your Fault', releaseDate: '2022', image: '/movies/Your Fault.jpg' },
+];
+
+const topRatedMovies = [
+  { id: 10, title: 'Spirited Away', releaseDate: '2023', image: '/movies/Spirited Away.jpg' },
+  { id: 12, title: 'Your Name', releaseDate: '2024', image: '/movies/Your Name.jpg' },
+  { id: 18, title: 'The Green Mile', releaseDate: '2022', image: '/movies/The Green Mile.jpg' },
+  { id: 22, title: 'The Dark Knight', releaseDate: '2025', image: '/movies/The Dark Knight.jpg' },
+  { id: 17, title: 'Grave of the Fireflies', releaseDate: '2022', image: '/movies/Grave of the Fireflies.jpg' },
+];
 
 const HeroSection = () => {
   return (
@@ -7,163 +33,94 @@ const HeroSection = () => {
       <section id="hero">
         <div className="hero-container">
           <br />
-          <h3>Welcome  </h3>
+          <h3>Welcome</h3>
           <h2>The ultimate destination for movie lovers. Explore Now..</h2>
           <br />
           <a href="#features" className="btn-get-started scrollto">Get Started</a>
         </div>
       </section>
-      <section id="features" className="features-section">
+
+      <section id="trending-movies" className="features-section"> 
+        <div className="features-container">
+          <h2>Trending</h2>
+          <br />
+        </div>
+      </section>
+
+      <section id="trending-movie-gallery" className="movie-gallery-section"> 
+        <div className="movie-gallery-container">
+          <div className="movie-gallery">
+            {trendingMovies.map((movie) => (
+              <div className="movie-item" key={movie.id}>
+                <Link to={`/movies/${movie.id}`}>
+                  <img src={movie.image} alt={movie.title} width="220px" height="330px" />
+                </Link>
+                <div className="movie-details">
+                  <h4>{movie.title}</h4>
+                  <p>Release Date: {movie.releaseDate}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+          
+          <br /><br /><br /> <br /> <br /><br />
+
+      <section id="popular-movies" className="features-section"> 
+        <div className="features-container">
+          <h2>What's Popular</h2>
+          <br />
+        </div>
+      </section>
+
+      <section id="movie-gallery" className="movie-gallery-section"> 
+        <div className="movie-gallery-container">
+          <div className="movie-gallery">
+            {popularMovies.map((movie) => (
+              <div className="movie-item" key={movie.id}>
+                <Link to={`/movies/${movie.id}`}>
+                  <img src={movie.image} alt={movie.title} width="220px" height="330px" />
+                </Link>
+                <div className="movie-details">
+                  <h4>{movie.title}</h4>
+                  <p>Release Date: {movie.releaseDate}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+         
+      <br /><br /><br /> <br /> <br />
+
+<section id="popular-movies" className="features-section"> 
   <div className="features-container">
-    <h2>Trending</h2> <br />
+    <h2>Top Rated</h2>
+    <br />
   </div>
 </section>
 
-<section id="movie-gallery" className="movie-gallery-section">
+<section id="movie-gallery" className="movie-gallery-section"> 
   <div className="movie-gallery-container">
     <div className="movie-gallery">
-      <div className="movie-item">
-
-     
-        <img src="/movies/Wicked.jpg" alt="Movie 1" width="220px" height="330px" />
-       
-        
-        <div className="movie-details">
-          <h4>Wicked</h4>
-          <p>Release Date: 2023</p>
+      {topRatedMovies.map((movie) => (
+        <div className="movie-item" key={movie.id}>
+          <Link to={`/movies/${movie.id}`}>
+            <img src={movie.image} alt={movie.title} width="220px" height="330px" />
+          </Link>
+          <div className="movie-details">
+            <h4>{movie.title}</h4>
+            <p>Release Date: {movie.releaseDate}</p>
+          </div>
         </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Moana 2.jpg" alt="Movie 2" />
-        <div className="movie-details">
-          <h4>Moana 2</h4>
-          <p>Release Date: 2024</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Squid Game.jpg" alt="Movie 3" />
-        <div className="movie-details">
-          <h4>Squid Game</h4>
-          <p>Release Date: 2021</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Goosebumps.jpg" alt="Movie 4" />
-        <div className="movie-details">
-          <h4>Goosebumps</h4>
-          <p>Release Date: 2023</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/American Primeval.jpg" alt="Movie 5" />
-        <div className="movie-details">
-          <h4>American Primeval</h4>
-          <p>Release Date: 2022</p>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </section>
 
-<section id="features" className="features-section-1">
-  <div className="features-container-1">
-    <h2>What's Popular</h2> <br />
-  </div>
-</section>
-
-<section id="movie-gallery" className="movie-gallery-section">
-  <div className="movie-gallery-container">
-    <div className="movie-gallery">
-      <div className="movie-item">
-        <img src="/movies/Gladiator II.jpg" alt="Movie 1" width="220px" height="330px" />
-        <div className="movie-details">
-          <h4>Gladiator II</h4>
-          <p>Release Date: 2025</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/The Wild Robot.jpg" alt="Movie 2" />
-        <div className="movie-details">
-          <h4>The Wild Robot</h4>
-          <p>Release Date: 2023</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/The Lord of the Rings.jpg" alt="Movie 3" />
-        <div className="movie-details">
-          <h4>The Lord of the Rings</h4>
-          <p>Release Date: 2022</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Werewolves.jpg" alt="Movie 4" />
-        <div className="movie-details">
-          <h4>Werewolves</h4>
-          <p>Release Date: 2024</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Your Fault.jpg" alt="Movie 5" />
-        <div className="movie-details">
-          <h4>Your Fault</h4>
-          <p>Release Date: 2022</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="features" className="features-section-1">
-  <div className="features-container-1">
-    <h2>Top Rated</h2> <br />
-  </div>
-</section>
-
-<section id="movie-gallery" className="movie-gallery-section">
-  <div className="movie-gallery-container">
-    <div className="movie-gallery">
-      <div className="movie-item">
-        <img src="/movies/Spirited Away.jpg" alt="Movie 1" width="220px" height="330px" />
-        <div className="movie-details">
-          <h4>Spirited Away</h4>
-          <p>Release Date: 2023</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Your Name.jpg" alt="Movie 2" />
-        <div className="movie-details">
-          <h4>Your Name</h4>
-          <p>Release Date: 2024</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/The Green Mile.jpg" alt="Movie 3" />
-        <div className="movie-details">
-          <h4>The Green Mile</h4>
-          <p>Release Date: 2022</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/The Dark Knight.jpg" alt="Movie 4" />
-        <div className="movie-details">
-          <h4>The Dark Knight</h4>
-          <p>Release Date: 2025</p>
-        </div>
-      </div>
-      <div className="movie-item">
-        <img src="/movies/Grave of the Fireflies.jpg" alt="Movie 5" />
-        <div className="movie-details">
-          <h4>Grave of the Fireflies</h4>
-          <p>Release Date: 2024</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      <br /><br />  <br /><br />
-
+      <br /><br />  
     </div>
   );
 };

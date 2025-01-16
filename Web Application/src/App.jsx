@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
+import ScrollToTop from "./components/ScrollToTop"; 
+
 import Header from "./components/Header/Header.jsx";
 import HeroSection from './components/Hero/Hero.jsx';
 import AboutSection from './components/About/About.jsx';
@@ -22,6 +24,7 @@ function App() {
   return (
     
     <Router>
+      <ScrollToTop />
       <Header/>
       <Routes>
       <Route path="/" element={<HeroSection />} />
