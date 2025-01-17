@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 
-// Movie data
+
 const trendingMovies = [
   { id: 1, title: 'Wicked', releaseDate: '2023', image: '/movies/Wicked.jpg' },
   { id: 4, title: 'Moana 2', releaseDate: '2024', image: '/movies/Moana 2.jpg' },

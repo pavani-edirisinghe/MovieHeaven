@@ -72,7 +72,7 @@ const MovieGallery = () => {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "10px", // Space between "Select Genre" and dropdown
+        gap: "10px", 
       }}
     >
 
