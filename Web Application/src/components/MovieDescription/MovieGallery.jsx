@@ -32,13 +32,13 @@ const movies = [
 const genres = ["All Movies", "Adventure", "Animation", "Family", "Romance"];
 
 const MovieGallery = () => {
-  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [selectedGenre, setSelectedGenre] = useState("All Movies");
 
   const handleGenreChange = (event) => {
     setSelectedGenre(event.target.value);
   };
 
-  const filteredMovies = selectedGenre === "All" 
+  const filteredMovies = selectedGenre === "All Movies" 
     ? movies 
     : movies.filter((movie) => movie.genre === selectedGenre);
 
