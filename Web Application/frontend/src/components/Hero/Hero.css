@@ -1,0 +1,245 @@
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/img/Copy1.jpg") no-repeat top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+#hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(4,21,45,0) 0%, #280000 90%);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 ;
+}
+
+#hero h3 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 88px;
+  color: #fff;
+}
+
+#hero h1 {
+  margin: 0 0 0 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 30px;
+  font-size: 24px;
+  margin-top: 80px;
+}
+
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 9px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #e43c5c;
+  border: 2px solid #e43c5c;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h3 {
+    font-size: 22px;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  #hero {
+    height: 150vh;
+  }
+}
+
+.features-section {
+  padding-top: -50px; 
+  margin-top: -50px; 
+  background-color: #280000;
+  z-index: 10; 
+  position: relative;  
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: -50px; 
+  margin-top: -50px; 
+  
+}
+
+.features-container h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  padding-top: -90px; 
+  margin-top: -90px; 
+  text-align: left;
+  font-weight: 450;
+}
+
+/*--------------------------------------------------------------
+# Movie Gallery Section
+--------------------------------------------------------------*/
+.movie-gallery-section {
+  padding-top: -10px; 
+  margin-top: -10px; 
+  background-color: #280000;
+  z-index: 10; 
+  position: relative;  
+}
+
+.movie-gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-gallery-container h2 {
+  font-size: 36px;
+  color: #280000;
+  margin-bottom: 20px;
+}
+
+.movie-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.movie-item {
+  width: 18%; /* Sets the width of each image item */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.movie-item img:hover {
+  transform: scale(1.05); /* Adds a zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+  .movie-gallery {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .movie-item {
+    width: 45%; /* Adjusts to 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-item {
+    width: 90%; /* Adjusts to 1 column on very small screens */
+  }
+}
+
+
+.movie-item {
+  text-align: left;
+  margin-bottom: 20px; /* Space between items */
+}
+
+.movie-details {
+  margin-top: 5px;
+}
+
+.movie-details h4 {
+  font-size: 21px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  font-size: 17px;
+  color: #666;
+  margin-top: 0px;
+}
+
+
+.features-section-1 {
+  padding-top: 0px; 
+  margin-top: 20px; 
+  background-color: #280000;
+  z-index: 10; 
+  position: relative;  
+}
+
+.features-container-1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 0px; 
+  margin-top: 0px; 
+  
+}
+
+.features-container-1 h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  padding-top: 0px; 
+  margin-top: 0px; 
+  text-align: left;
+  font-weight: 450;
+}
