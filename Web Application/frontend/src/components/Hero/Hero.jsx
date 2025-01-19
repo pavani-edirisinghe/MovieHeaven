@@ -57,7 +57,7 @@ const HeroSection = () => {
                 </Link>
                 <div className="movie-details">
                   <h4>{movie.title}</h4>
-                  <p>Release Date: {movie.releaseDate}</p>
+                  <p>Release Year: {movie.releaseDate}</p>
                 </div>
               </div>
             ))}
@@ -65,7 +65,7 @@ const HeroSection = () => {
         </div>
       </section>
           
-          <br /><br /><br /> <br /> <br /><br />
+          <br /><br /><br /> <br /> <br /><br /><br />
 
       <section id="popular-movies" className="features-section"> 
         <div className="features-container">
@@ -84,7 +84,7 @@ const HeroSection = () => {
                 </Link>
                 <div className="movie-details">
                   <h4>{movie.title}</h4>
-                  <p>Release Date: {movie.releaseDate}</p>
+                  <p>Release Year: {movie.releaseDate}</p>
                 </div>
               </div>
             ))}
@@ -93,7 +93,8 @@ const HeroSection = () => {
       </section>
 
          
-      <br /><br /><br /> <br /> <br />
+      <br /><br /><br /> <br /> <br /><br />
+      <br /> 
 
 <section id="popular-movies" className="features-section"> 
   <div className="features-container">
@@ -112,7 +113,7 @@ const HeroSection = () => {
           </Link>
           <div className="movie-details">
             <h4>{movie.title}</h4>
-            <p>Release Date: {movie.releaseDate}</p>
+            <p>Release Year: {movie.releaseDate}</p>
           </div>
         </div>
       ))}

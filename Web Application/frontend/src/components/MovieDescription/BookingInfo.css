@@ -1,0 +1,104 @@
+.booking-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .seat-selection {
+    margin-top: 20px;
+  }
+  
+  .seats-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .seat-row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  .seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .selected {
+    background-color: #4caf50;
+  }
+  
+  .sofa-icon {
+    font-size: 20px;
+  }
+  
+  /* Specific styles for rows 3 through 8 */
+  .seat-row-split {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seat-row-split .left-column,
+  .seat-row-split .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seat-row-split .left-column {
+    margin-right: 15px; /* Space between the left and right columns */
+  }
+  
+  .seat-row-split .right-column {
+    margin-left: 15px; /* Space between the left and right columns */
+  }
+  
+  /* Styling for the seats inside each column */
+  .seat-row-split .left-column .seat,
+  .seat-row-split .right-column .seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* For rows 9 and 10, split with a 3-square gap */
+  .seat-row-split-wide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seat-row-split-wide .left-column,
+  .seat-row-split-wide .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seat-row-split-wide .left-column {
+    margin-right: 15px;
+  }
+  
+  .seat-row-split-wide .right-column {
+    margin-left: 15px;
+  }
+  
+  .seat-row-split-wide .middle-space {
+    width: 90px; /* This is the 3-square space in the middle */
+    background-color: transparent;
+  }
+  

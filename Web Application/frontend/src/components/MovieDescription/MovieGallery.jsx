@@ -115,11 +115,12 @@ const MovieGallery = () => {
                   alt={movie.title}
                   width="220px"
                   height="330px"
-                  style={{
-                    objectFit: "cover",
-                    borderRadius: "10px",
-                    transition: "transform 0.3s ease",
-                  }}
+                  
+                    objectFit= "cover"
+                    borderRadius= "20px"
+                    transition= "transform 0.3s ease"
+                 
+                 
                 />
               </Link>
               <div
@@ -160,6 +161,7 @@ const MovieGallery = () => {
             </div>
           ))}
         </div>
+        <br /><br />
       </div>
     </section>
   );

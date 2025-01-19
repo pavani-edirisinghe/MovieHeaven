@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./MovieDetails.css";
+import BookingInfo from "./BookingInfo";
 
 const MovieDescription = () => {
   const { movieId } = useParams();
   const [isPlaying, setIsPlaying] = useState(false); 
+  const [showBookingParagraph, setShowBookingParagraph] = useState(false); // New state for the paragraph
 
 
   const movieData = {
@@ -402,12 +404,12 @@ const MovieDescription = () => {
   };
 
   const handleBookSeatClick = () => {
-    alert("Booking a seat for " + movieDetails.title);
+    setShowBookingParagraph(true);
     // You can redirect or open a booking form here
   };
 
   return (
-   
+     <div>
     <div className="movie-container">
     <br />
     <div className="movie-background">
@@ -489,9 +491,11 @@ const MovieDescription = () => {
       </div>
     </div>
     </div>
+    </div>
+    {showBookingParagraph && <BookingInfo movieTitle={movieDetails.title} />}
 
-</div>
-
+    </div>
+   
   );
 };
 export default MovieDescription;  

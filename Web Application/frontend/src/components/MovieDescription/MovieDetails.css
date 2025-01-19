@@ -123,7 +123,7 @@
   );
   position: absolute;
   bottom: 0;
-  right: 10;  
+  right: 10; 
 }
 
 .movie-left {
@@ -188,9 +188,9 @@
 .play-button i {
   font-size: 28px; 
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 0;
-  width: 100%;
+  width: 110%;
   height: 100%;
 
 }
@@ -200,6 +200,36 @@
 }
 
 .play-button:hover i {
+  color: #f55f7a;
+}
+
+
+.book-seat-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent; 
+  border: 3.3px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-seat-button i {
+  margin-right: 0px; 
+  font-size: 28px; 
+  
+}
+
+.book-seat-button:hover {
+  border-color: #f55f7a; 
+}
+
+.book-seat-button:hover i {
   color: #f55f7a;
 }
 
@@ -228,7 +258,7 @@
 
 .video-overlay iframe {
   z-index: 1001;
-  border-radius: 10px;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -271,28 +301,6 @@
   padding-right: 35px;
   padding-left: 10px;
 }
-
-
-.book-seat-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 16px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent; 
-  border: 3.3px solid white;
-  border-radius: 4px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.book-seat-button i {
-  margin-right: 8px; 
-  font-size: 28px; 
-}
-
 
 .description {
   background: none !important;
