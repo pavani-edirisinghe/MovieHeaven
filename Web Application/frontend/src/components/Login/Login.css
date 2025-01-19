@@ -1,0 +1,128 @@
+.login-page {
+    background: url("/img/login.jpg") no-repeat top center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper {
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid white;  
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.wrapper .input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.wrapper .input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 35px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.wrapper .input-box input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.wrapper .remeber-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.wrapper .remeber-forgot a {
+    text-decoration: none;
+    color: #ee0606;
+    font-weight: bold;
+}
+
+.wrapper .remeber-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper button {
+    background: #6b0202;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.wrapper button:hover {
+    background: #e43c5c;
+}
+
+.wrapper .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    padding-top: 30px;
+}
+
+.wrapper .register-link a {
+    text-decoration: none;
+    color: #ee0606;
+    font-weight: bold;
+}
+
+.wrapper .register-link a:hover {
+    text-decoration: underline;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-box .icon {
+    position: absolute;
+    top: 40%;
+    left: 10px; 
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #aaa; 
+    padding-right: 50px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    max-width: 350px; 
+    padding: 10px 10px 10px 30px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .input-box input:focus {
+    border-color: #6b0202;
+  }
+  

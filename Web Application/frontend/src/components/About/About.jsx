@@ -57,7 +57,7 @@ const AboutSection = () => {
           <div className="col-lg-3 col-md-6">
             <div className="count-box">
               <i className="bi bi-emoji-smile"></i>
-              <span>1450</span>
+              <span>8650</span>
               <p>Happy Clients</p>
             </div>
           </div>
@@ -65,7 +65,7 @@ const AboutSection = () => {
           <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div className="count-box">
               <i className="bi bi-clock"></i>
-              <span>18</span>
+              <span>12</span>
               <p>Years of experience</p>
             </div>
           </div>
@@ -73,7 +73,7 @@ const AboutSection = () => {
           <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div className="count-box">
               <i className="bi bi-award"></i>
-              <span>28</span>
+              <span>8</span>
               <p>Awards</p>
             </div>
           </div>
@@ -91,14 +91,27 @@ const AboutSection = () => {
                 Opening Times
                 <br />
                 <br />
-                Monday - Sunday: 9:00am - 7:00pm
+                Monday - Sunday: 7:00am - 11:00pm
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="image-row">
+        <img src="Hall/1.png" alt="Image 1" />
+        <img src="Hall/2.jpg" alt="Image 2" />
+      </div>
+
+      <div class="image-row">
+        <img src="Hall/4.jpeg" alt="Image 4" />
+        <img src="Hall/3.jpg" alt="Image 3" />
+      </div>
+
+
+
       <div className="map-container">
+
   <iframe
     title="Google Map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63480.8374898179!2d80.17697731341235!3d6.055975780910134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173bb6932fce3%3A0x4a35b903f9c64c03!2sGalle!5e0!3m2!1sen!2slk!4v1669952452895!5m2!1sen!2slk"

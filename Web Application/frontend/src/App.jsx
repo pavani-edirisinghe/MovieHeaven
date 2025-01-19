@@ -12,6 +12,8 @@ import MoviesSection from './components/MovieDescription/MovieGallery.jsx';
 import MovieDetails from './components/MovieDescription/MovieDetails.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
+import LoginForm from './components/Login/Login.jsx';
+
 import 'boxicons/css/boxicons.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'remixicon/fonts/remixicon.css';
@@ -29,9 +31,11 @@ function App() {
       <Routes>
       <Route path="/" element={<HeroSection />} />
         <Route path="/about-us" element={<AboutSection />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/contact" element={<ContactSection />} />
         <Route path="/movies" element={<MoviesSection />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
+        
 
      
       </Routes>

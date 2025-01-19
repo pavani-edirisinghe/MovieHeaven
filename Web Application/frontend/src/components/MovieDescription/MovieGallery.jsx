@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const movies = [
-  { id: 1, title: "Wicked", releaseDate: "2023", genre: "Adventure", imageUrl: "/movies/Wicked.jpg" },
+  { id: 1, title: "Wicked", releaseDate: "2024", genre: "Adventure", imageUrl: "/movies/Wicked.jpg" },
   { id: 2, title: "Gladiator II", releaseDate: "2025", genre: "Adventure", imageUrl: "/movies/Gladiator II.jpg" },
   { id: 3, title: "Survive", releaseDate: "2024", genre: "Adventure", imageUrl: "/movies/Survive.jpg"},
   { id: 4, title: "Moana", releaseDate: "2024", genre: "Animation", imageUrl: "/movies/Moana 2.jpg" },
@@ -122,10 +122,41 @@ const MovieGallery = () => {
                   }}
                 />
               </Link>
-              <div className="movie-details" style={{ marginTop: "10px", textAlign: "left" }}>
-                <h4 style={{ fontSize: "1.2rem", color: "white" }}>{movie.title}</h4>
-                <p style={{ color: "#ccc" }}>Release Year: {movie.releaseDate}</p>
-              </div>
+              <div
+  className="movie-details"
+  style={{
+    marginTop: "0px",
+    textAlign: "left",
+    display: "flex",
+    flexDirection: "column", 
+    alignItems: "flex-start", 
+    wordWrap: "break-word", 
+    width: "100%", 
+    maxWidth: "400px", 
+  }}
+>
+  <h4
+    style={{
+      fontSize: "1.2rem",
+      color: "white",
+      textAlign: "left",
+      margin: "0 0 5px 0",
+      lineHeight: "1.5", 
+    }}
+  >
+    {movie.title}
+  </h4>
+  <p
+    style={{
+      color: "#666",
+      margin: "0",
+      fontSize: "0.9rem", 
+    }}
+  >
+    Release Year: {movie.releaseDate}
+  </p>
+</div>
+
             </div>
           ))}
         </div>

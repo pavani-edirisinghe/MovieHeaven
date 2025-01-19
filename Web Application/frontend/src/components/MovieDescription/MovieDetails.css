@@ -32,7 +32,7 @@
 }
 
 .movie-poster {
-  max-width: 450px;
+  max-width: 500px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -135,14 +135,14 @@
 }
 
 .movie-poster {
-  width: 100%;
+  width: 107%;
   height: auto;
   border-radius: 20px;
 }
 
 .movie-right {
   flex: 1; 
-  padding-left: 150px; 
+  padding-left: 160px; 
   max-width: calc(100% - 350px);
   text-align: left;
 }
@@ -177,7 +177,7 @@
   padding: 25px;
   border: 3.3px solid white;
   border-radius: 50%; 
-  font-size: 10px;
+  font-size: 25px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -186,7 +186,7 @@
 }
 
 .play-button i {
-  font-size: 25px; 
+  font-size: 28px; 
   position: absolute;
   top: 12px;
   left: 0;
@@ -252,14 +252,76 @@
 
 
 .play-trailer-container {
-  display: flex; /* Align items horizontally */
-  align-items: center; /* Center vertically */
-  gap: 10px; /* Add spacing between the text and the button */
+  display: flex; 
+  align-items: center; 
+  gap: 10px;
+}
+
+.watch-trailer-text-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .watch-trailer-text {
-  font-size: 20px; /* Adjust text size */
+  font-size: 18px; 
   font-weight: bold;
-  color: #ffffff; /* Text color */
-  margin: 0; /* Remove default margins */
+  color: #ffffff;
+  margin: 0; 
+  padding-right: 35px;
+  padding-left: 10px;
+}
+
+
+.book-seat-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent; 
+  border: 3.3px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-seat-button i {
+  margin-right: 8px; 
+  font-size: 28px; 
+}
+
+
+.description {
+  background: none !important;
+  margin: 0; 
+  padding-right: 150px;
+  font-size: 20px;
+}
+
+.common-styles {
+  display: flex;
+  gap: 20px;
+  width: 100%; 
+  max-width: calc(100% - 120px); 
+  padding-top: 8px;
+}
+
+.details {
+  border-bottom: 0.3px solid gray;
+  padding-bottom: 13px; 
+}
+
+.details p,
+.writer p {
+  margin: 0; 
+  font-size: 17px;
+}
+
+
+.release-date-value {
+  color: gray;
+  font-weight: bolder;
 }

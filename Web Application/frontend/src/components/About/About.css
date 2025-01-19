@@ -232,4 +232,22 @@ i {
     margin: 0; 
     padding: 0; 
   }
+
+  .image-row {
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+    align-items: center; 
+    padding-bottom: 60px;
+  }
+  
+  .image-row img {
+    max-width: 100%; 
+    height: auto; 
+    width: 600px; 
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 10%;
+  }
+  
   
