@@ -43,10 +43,6 @@
     transition: 0.3s;
 }
 
-.wrapper .input-box input:focus {
-    border-color: #6c63ff;
-    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
-}
 
 .wrapper .remeber-forgot {
     display: flex;
@@ -125,4 +121,16 @@
   .input-box input:focus {
     border-color: #6b0202;
   }
+
+  .input-box span.icon {
+    font-size: 20px;
+    color: #000; 
+    top: 45%;
+  }
+  
+  .input-box span.icon.email-icon {
+    color: #ff6600;
+    
+  }
+  
   

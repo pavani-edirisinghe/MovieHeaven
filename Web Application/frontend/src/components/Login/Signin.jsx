@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom"; 
 import "./Login.css";
 
-const LoginForm = () => {
+const SigninForm = () => {
   return (
     <div className="login-page">
       <div className="wrapper">
         <form action="">
-          <h1>Login</h1>
+          <h1>Sign Up</h1>
           <div className="input-box">
             <span className="icon">&#128100;</span>
             <input type="text" placeholder="  Username" required />
@@ -16,17 +16,15 @@ const LoginForm = () => {
             <span className="icon">&#128274;</span>
             <input type="password" placeholder="  Password" required />
           </div>
-          <div className="remeber-forgot">
-              <label>
-                <input type="checkbox" /> Remember me
-             </label>
-             <Link to="/forgot-password">Forgot Password?</Link> 
-        </div>
-          <button type="submit">Login</button>
+          <div className="input-box">
+            <span className="icon">&#x2709;</span>
+            <input type="email" placeholder="  Email" required />
+          </div>
+          <button type="submit">Sign Up</button>
           <div className="register-link">
             <p>
-              Don't have an account?{" "}
-              <Link to="/sign-up">Register Here</Link> 
+              Already have an account?{" "}
+              <Link to="/login">Login Here</Link> 
             </p>
           </div>
         </form>
@@ -35,4 +33,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SigninForm;
