@@ -6,13 +6,15 @@ const BookingInfo = ({ movieTitle }) => {
   const [selectedSeats, setSelectedSeats] = useState([]);
 
   // Function to handle seat selection
-  const toggleSeatSelection = (seat) => {
-    setSelectedSeats((prevSeats) =>
-      prevSeats.includes(seat)
-        ? prevSeats.filter((s) => s !== seat) // Remove seat if already selected
-        : [...prevSeats, seat] // Add seat to selected seats
-    );
-  };
+const toggleSeatSelection = (seat) => {
+  console.log("Toggling seat:", seat);
+  setSelectedSeats((prevSeats) =>
+    prevSeats.includes(seat)
+      ? prevSeats.filter((s) => s !== seat) // Deselect seat
+      : [...prevSeats, seat] // Select seat
+  );
+};
+
 
   // Define the number of seats in each row
   const seatLayout = [
@@ -49,88 +51,91 @@ const BookingInfo = ({ movieTitle }) => {
       <div className="seat-selection">
         <h3>Select Your Seat</h3>
         <div className="seats-grid">
-          {seats.map((row, rowIndex) => {
-            // For rows 3 through 8 (indexes 2 through 7), split into two columns
-            if (rowIndex >= 2 && rowIndex <= 7) {
-              return (
-                <div className="seat-row seat-row-split" key={rowIndex}>
-                  <div className="left-column">
-                    {row.slice(0, Math.floor(row.length / 2)).map((seat) => (
-                      <div
-                        key={seat}
-                        className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                        onClick={() => toggleSeatSelection(seat)}
-                      >
-                        <FaCouch className="sofa-icon" />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="right-column">
-                    {row.slice(Math.floor(row.length / 2)).map((seat) => (
-                      <div
-                        key={seat}
-                        className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                        onClick={() => toggleSeatSelection(seat)}
-                      >
-                        <FaCouch className="sofa-icon" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            }
-
-            // For rows 9 and 10, split with a 3-square gap in the center
-            if (rowIndex >= 8) {
-              return (
-                <div className="seat-row seat-row-split-wide" key={rowIndex}>
-                  <div className="left-column">
-                    {row.slice(0, Math.floor(row.length / 2) - 1).map((seat) => (
-                      <div
-                        key={seat}
-                        className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                        onClick={() => toggleSeatSelection(seat)}
-                      >
-                        <FaCouch className="sofa-icon" />
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Middle space */}
-                  <div className="middle-space"></div>
-
-                  <div className="right-column">
-                    {row.slice(Math.floor(row.length / 2) + 1).map((seat) => (
-                      <div
-                        key={seat}
-                        className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                        onClick={() => toggleSeatSelection(seat)}
-                      >
-                        <FaCouch className="sofa-icon" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            }
-
-            // For other rows, render normally
-            return (
-              <div className="seat-row" key={rowIndex}>
-                {row.map((seat) => (
-                  <div
-                    key={seat}
-                    className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                    onClick={() => toggleSeatSelection(seat)}
-                  >
-                    <FaCouch className="sofa-icon" />
-                  </div>
-                ))}
-              </div>
-            );
-          })}
+        {seats.map((row, rowIndex) => {
+  // For rows 3 through 8 (indexes 2 through 7), split into two columns
+  if (rowIndex >= 2 && rowIndex <= 7) {
+    const midIndex = Math.floor(row.length / 2); // Split the row into two halves
+    return (
+      <div className="seat-row seat-row-split" key={`row-${rowIndex}`}>
+        <div className="left-column">
+          {row.slice(0, midIndex).map((seat) => (
+            <div
+            key={seat}
+            className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+            onClick={() => toggleSeatSelection(seat)}
+          >
+            <FaCouch className="sofa-icon" />
+          </div>
+          
+          ))}
+        </div>
+        <div className="right-column">
+          {row.slice(midIndex).map((seat) => (
+            <div
+              key={seat}
+              className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+              onClick={() => toggleSeatSelection(seat)}
+            >
+              <FaCouch className="sofa-icon" />
+            </div>
+          ))}
         </div>
       </div>
+    );
+  }
+// For rows 9 and 10, split with a middle gap
+if (rowIndex >= 8) {
+  const midIndex = Math.floor(row.length / 2);  // Remove the -1 here
+  return (
+    <div className="seat-row seat-row-split-wide" key={`row-${rowIndex}`}>
+      <div className="left-column">
+        {row.slice(0, midIndex).map((seat) => (
+          <div
+            key={seat}
+            className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+            onClick={() => toggleSeatSelection(seat)}
+          >
+            <FaCouch className="sofa-icon" />
+          </div>
+        ))}
+      </div>
+      <div className="middle-space"></div>
+      <div className="right-column">
+        {row.slice(midIndex).map((seat) => (  // Adjust to include the midIndex seat
+          <div
+            key={seat}
+            className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+            onClick={() => toggleSeatSelection(seat)}
+          >
+            <FaCouch className="sofa-icon" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+  // For all other rows, render normally
+  return (
+    <div className="seat-row" key={`row-${rowIndex}`}>
+      {row.map((seat) => (
+        <div
+          key={seat}
+          className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+          onClick={() => toggleSeatSelection(seat)}
+        >
+          <FaCouch className="sofa-icon" />
+        </div>
+      ))}
+    </div>
+  );
+})}
+
+        </div>
+       
+      </div>
+      <div class ="curve" />
+      <div class="screen-text">SCREEN</div> 
     </div>
   );
 };

@@ -493,7 +493,7 @@ const MovieDescription = () => {
     </div>
     </div>
     {showBookingParagraph && <BookingInfo movieTitle={movieDetails.title} />}
-
+<br /><br /><br /><br />
     </div>
    
   );
