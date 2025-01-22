@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import "./MovieDetails.css";
 import BookingInfo from "./BookingInfo";
+import "./MovieDetails.css";
 
 const MovieDescription = () => {
   const { movieId } = useParams();
-  const [isPlaying, setIsPlaying] = useState(false); 
-  const [showBookingParagraph, setShowBookingParagraph] = useState(false); // New state for the paragraph
-
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showBookingParagraph, setShowBookingParagraph] = useState(false);
+  const bookingSectionRef = useRef(null); 
 
   const movieData = {
     1: { 
@@ -405,9 +405,19 @@ const MovieDescription = () => {
 
   const handleBookSeatClick = () => {
     setShowBookingParagraph(true);
-    // You can redirect or open a booking form here
-  };
+  
+    if (bookingSectionRef.current) {
 
+      bookingSectionRef.current.scrollIntoView({ behavior: "smooth" });
+
+      setTimeout(() => {
+        const headerHeight = document.querySelector("header").offsetHeight; 
+        window.scrollBy(0, -(headerHeight+10));
+      }, 500); 
+    }
+  };
+  
+  
   return (
      <div>
     <div className="movie-container">
@@ -492,8 +502,13 @@ const MovieDescription = () => {
     </div>
     </div>
     </div>
-    {showBookingParagraph && <BookingInfo movieTitle={movieDetails.title} />}
-<br /><br /><br /><br />
+    {showBookingParagraph && (
+        <div ref={bookingSectionRef}>
+          <BookingInfo movieTitle={movieDetails.title} />
+        </div>
+      )}
+
+      <br /><br/>
     </div>
    
   );

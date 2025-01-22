@@ -2,21 +2,21 @@
   text-align: center;
   font-family: Arial, sans-serif;
   position: relative;
-  padding-top: 20px; /* Space for the curve */
+  padding-top: -10px; 
 }
 
 .curve {
-  position: relative; /* Use relative or absolute depending on the container */
-  left: 50%; /* Moves the element to the center */
-  transform: translateX(-50%); /* Adjusts the element back by 50% of its width */
+  position: relative;
+  left: 50%; 
+  transform: translateX(-50%); 
   border-radius: 50%;
   margin-top: 0px;
-  margin-bottom: 0px; /* Space between the curve and the screen text */
-  width: 550px; /* Width of the semi-circle */
-  height: 90px; /* Height of the semi-circle */
-  border-bottom: 5px solid #a53518; /* Border color and thickness */
-  border-bottom-left-radius: -650px; /* Create the left curve */
-  border-bottom-right-radius: -550px; /* Create the right curve */
+  margin-bottom: 0px; 
+  width: 550px;
+  height: 90px; 
+  border-bottom: 5px solid #a53518; 
+  border-bottom-left-radius: -650px; 
+  border-bottom-right-radius: -550px; 
 }
 
 
@@ -30,7 +30,7 @@
 
 
 .seat-selection {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .seats-grid {
@@ -42,7 +42,7 @@
 .seat-row {
   display: flex;
   justify-content: center;
-  margin: 0px 0; /* Reduced margin to reduce space between rows */
+  margin: 0px 0; 
 }
 
 .seat {
@@ -62,10 +62,9 @@
 }
 
 .sofa-icon {
-  font-size: 50px;
+  font-size: 40px;
 }
 
-/* Specific styles for rows 3 through 8 */
 .seat-row-split {
   display: flex;
   justify-content: center;
@@ -80,19 +79,20 @@
 }
 
 .seat-row-split .left-column {
-  margin-right: 15px; /* Space between the left and right columns */
+  margin-right: 15px; 
+  margin-bottom: 0px;
+  
 }
 
 .seat-row-split .right-column {
-  margin-left: 15px; /* Space between the left and right columns */
+  margin-left: 20px; 
 }
 
-/* Styling for the seats inside each column */
 .seat-row-split .left-column .seat,
 .seat-row-split .right-column .seat {
   width: 30px;
-  height: 30px;
-  margin: 5px;
+  height: 20px;
+  margin: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,11 +101,15 @@
   border-radius: 5px;
 }
 
-/* For rows 9 and 10, split with a 3-square gap */
 .seat-row-split-wide {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.seat-row-split-wide .sofa-icon {
+  width: 55px;
+  font-size: 50px;
 }
 
 .seat-row-split-wide .left-column,
@@ -113,6 +117,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 55px; 
+  margin-left: 55px;
 }
 
 .seat-row-split-wide .left-column {
@@ -124,11 +130,10 @@
 }
 
 .seat-row-split-wide .middle-space {
-  width: 90px; /* This is the 3-square space in the middle */
+  width: 100px; 
   background-color: transparent;
 }
 
-/* Remove background color for the seat container */
 .seat {
   width: 30px;
   height: 30px;
@@ -140,13 +145,41 @@
   border-radius: 5px;
 }
 
-/* Change icon color for selected seats */
 .seat.selected .sofa-icon {
-  color: #b15513; /* Selected seat color */
+  color: #b15513; 
 }
 
-/* Optional: Adjust color of unselected seats */
 .seat .sofa-icon {
-  color: white; /* Default color for unselected seats */
+  color: white; 
 }
 
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px; 
+}
+
+.sofa-icon.gray-seat {
+  color: white; 
+  width: 30px;
+}
+
+.sofa-icon.white-seat {
+  color: gray; 
+  width: 30px;
+}
+
+.sofa-icon.brown-seat {
+  color: #b15513; 
+  width: 30px;
+}

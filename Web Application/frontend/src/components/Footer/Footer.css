@@ -78,7 +78,7 @@
   line-height: 1;
 }
 .footer-links ul li {
-  margin-bottom: 5px; /* Adjust this value to reduce vertical spacing */
+  margin-bottom: 5px; 
 }
 
 
@@ -89,7 +89,7 @@
 }
 
 .footer-links ul li .nav-link {
-  padding-left: 0; /* Ensure no extra padding on the NavLink */
+  padding-left: 0;
 }
 
 #footer .footer-top .footer-links ul li:first-child {

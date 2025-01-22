@@ -131,9 +131,6 @@
   font-weight: 450;
 }
 
-/*--------------------------------------------------------------
-# Movie Gallery Section
---------------------------------------------------------------*/
 .movie-gallery-section {
   padding-top: -10px; 
   margin-top: -10px; 
@@ -157,11 +154,11 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .movie-item {
-  width: 18%; /* Sets the width of each image item */
+  width: 18%; 
   border-radius: 10px;
   overflow: hidden;
 }
@@ -174,7 +171,7 @@
 }
 
 .movie-item img:hover {
-  transform: scale(1.05); /* Adds a zoom effect on hover */
+  transform: scale(1.05); 
 }
 
 @media (max-width: 768px) {
@@ -184,20 +181,20 @@
   }
 
   .movie-item {
-    width: 45%; /* Adjusts to 2 columns on smaller screens */
+    width: 45%; 
   }
 }
 
 @media (max-width: 480px) {
   .movie-item {
-    width: 90%; /* Adjusts to 1 column on very small screens */
+    width: 90%; 
   }
 }
 
 
 .movie-item {
   text-align: left;
-  margin-bottom: 10px; /* Space between items */
+  margin-bottom: 10px; 
 }
 
 .movie-details {

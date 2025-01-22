@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import 'remixicon/fonts/remixicon.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import ReviewSection from './Review.jsx';
 
 const AboutSection = () => {
   return (
@@ -107,9 +108,9 @@ const AboutSection = () => {
         <img src="Hall/4.jpeg" alt="Image 4" />
         <img src="Hall/3.jpg" alt="Image 3" />
       </div>
-
-
-
+<section className="Review">
+      <ReviewSection />
+</section>
       <div className="map-container">
 
   <iframe

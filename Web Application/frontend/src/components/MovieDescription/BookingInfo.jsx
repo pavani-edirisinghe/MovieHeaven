@@ -1,36 +1,32 @@
 import React, { useState } from "react";
-import { FaCouch } from "react-icons/fa"; // FontAwesome Sofa Icon
+import { FaCouch } from "react-icons/fa"; 
 import "./BookingInfo.css";
 
 const BookingInfo = ({ movieTitle }) => {
   const [selectedSeats, setSelectedSeats] = useState([]);
 
-  // Function to handle seat selection
 const toggleSeatSelection = (seat) => {
   console.log("Toggling seat:", seat);
   setSelectedSeats((prevSeats) =>
     prevSeats.includes(seat)
-      ? prevSeats.filter((s) => s !== seat) // Deselect seat
-      : [...prevSeats, seat] // Select seat
+      ? prevSeats.filter((s) => s !== seat) 
+      : [...prevSeats, seat] 
   );
 };
 
-
-  // Define the number of seats in each row
   const seatLayout = [
-    9,  // Row 1 (10 seats)
-    9,  // Row 2 (10 seats)
-    14, // Row 3 (14 seats)
-    14, // Row 4 (14 seats)
-    14, // Row 5 (14 seats)
-    14, // Row 6 (14 seats)
-    14, // Row 7 (14 seats)
-    14, // Row 8 (14 seats)
-    12, // Row 9 (12 seats)
-    12  // Row 10 (12 seats)
+    9,  
+    9,  
+    14, 
+    14, 
+    14,
+    14, 
+    14, 
+    14,
+    12, 
+    12 
   ];
 
-  // Create seats based on the layout
   const seats = seatLayout.map((numSeats, rowIndex) => {
     const rowSeats = [];
     for (let i = 0; i < numSeats; i++) {
@@ -42,19 +38,32 @@ const toggleSeatSelection = (seat) => {
 
   return (
     <div className="booking-section">
-      <h2>Booking Information</h2>
+      <h1>Book Your Seat</h1>
       <p>
         You can now proceed to book your seat for the movie{" "}
         <strong>{movieTitle}</strong>. Thank you for choosing us!
       </p>
 
       <div className="seat-selection">
-        <h3>Select Your Seat</h3>
+  <div className="seat-legend">
+    <div className="legend-item">
+      <FaCouch className="sofa-icon gray-seat" />
+      <span>Available</span>
+    </div>
+    <div className="legend-item">
+      <FaCouch className="sofa-icon white-seat" />
+      <span>Taken</span>
+    </div>
+    <div className="legend-item">
+      <FaCouch className="sofa-icon brown-seat" />
+      <span>Selected</span>
+    </div>
+  </div>
+
         <div className="seats-grid">
         {seats.map((row, rowIndex) => {
-  // For rows 3 through 8 (indexes 2 through 7), split into two columns
   if (rowIndex >= 2 && rowIndex <= 7) {
-    const midIndex = Math.floor(row.length / 2); // Split the row into two halves
+    const midIndex = Math.floor(row.length / 2); 
     return (
       <div className="seat-row seat-row-split" key={`row-${rowIndex}`}>
         <div className="left-column">
@@ -83,9 +92,9 @@ const toggleSeatSelection = (seat) => {
       </div>
     );
   }
-// For rows 9 and 10, split with a middle gap
+
 if (rowIndex >= 8) {
-  const midIndex = Math.floor(row.length / 2);  // Remove the -1 here
+  const midIndex = Math.floor(row.length / 2);  
   return (
     <div className="seat-row seat-row-split-wide" key={`row-${rowIndex}`}>
       <div className="left-column">
@@ -101,7 +110,7 @@ if (rowIndex >= 8) {
       </div>
       <div className="middle-space"></div>
       <div className="right-column">
-        {row.slice(midIndex).map((seat) => (  // Adjust to include the midIndex seat
+        {row.slice(midIndex).map((seat) => ( 
           <div
             key={seat}
             className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
@@ -115,7 +124,6 @@ if (rowIndex >= 8) {
   );
 }
 
-  // For all other rows, render normally
   return (
     <div className="seat-row" key={`row-${rowIndex}`}>
       {row.map((seat) => (
@@ -137,6 +145,7 @@ if (rowIndex >= 8) {
       <div class ="curve" />
       <div class="screen-text">SCREEN</div> 
     </div>
+    
   );
 };
 
