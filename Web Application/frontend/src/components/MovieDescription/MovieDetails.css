@@ -4,14 +4,13 @@
   align-items: center;
   text-align: center;
   padding: 20px;
-  padding-bottom: 0px;
 }
 
 .movie-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 .movie-header img {
@@ -73,7 +72,6 @@
   display: flex;
   padding-top: 50px;
   align-items: flex-start;
-  padding-bottom: 0px;
 }
 
 .movie-background {
@@ -125,7 +123,7 @@
   );
   position: absolute;
   bottom: 0;
-  right: 10; 
+  right: 10;  
 }
 
 .movie-left {
@@ -134,7 +132,6 @@
   padding: 0; 
   width: 350px;
   text-align: left;
-  padding-bottom: 0px;
 }
 
 .movie-poster {
@@ -148,7 +145,6 @@
   padding-left: 160px; 
   max-width: calc(100% - 350px);
   text-align: left;
-  padding-bottom: 0px;
 }
 
 .movie-right h1 {
@@ -192,9 +188,9 @@
 .play-button i {
   font-size: 28px; 
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 0;
-  width: 110%;
+  width: 100%;
   height: 100%;
 
 }
@@ -204,36 +200,6 @@
 }
 
 .play-button:hover i {
-  color: #f55f7a;
-}
-
-
-.book-seat-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 16px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent; 
-  border: 3.3px solid white;
-  border-radius: 4px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.book-seat-button i {
-  margin-right: 0px; 
-  font-size: 28px; 
-  
-}
-
-.book-seat-button:hover {
-  border-color: #f55f7a; 
-}
-
-.book-seat-button:hover i {
   color: #f55f7a;
 }
 
@@ -262,7 +228,7 @@
 
 .video-overlay iframe {
   z-index: 1001;
-  border-radius: 20px;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -306,34 +272,56 @@
   padding-left: 10px;
 }
 
+
+.book-seat-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent; /* Different color for Book Seat button */
+  border: 3.3px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-seat-button i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 28px; 
+}
+
+
 .description {
-  background: none !important;
-  margin: 0; 
+  background: none !important; /* Removes any background */
+  
+  margin: 0; /* Adjust margins if necessary */
   padding-right: 150px;
   font-size: 20px;
 }
+/* Container for the details section */
 
-.common-styles {
+.details {
   display: flex;
-  gap: 20px;
-  width: 100%; 
-  max-width: calc(100% - 120px); 
+  gap: 20px; /* Space between the items */
+  border-bottom: 0.3px solid gray;
+  padding-bottom: 13px; /* Add some space between the text and the line */
+  width: 100%; /* Ensure it doesn't exceed the available space */
+  max-width: calc(100% - 120px); /* Ensure it doesn't go beyond the padding */
   padding-top: 8px;
 }
 
-.details {
-  border-bottom: 0.3px solid gray;
-  padding-bottom: 13px; 
-}
-
-.details p,
-.writer p {
-  margin: 0; 
+.details p {
+  margin: 0; /* Remove any margin */
   font-size: 17px;
 }
 
-
 .release-date-value {
-  color: gray;
+  color: gray; /* Set the value color to gray */
   font-weight: bolder;
+}
+.writer {
+  padding-top: 0; /* Adjust the padding value as needed */
 }
