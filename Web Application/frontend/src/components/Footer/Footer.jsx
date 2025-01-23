@@ -23,7 +23,7 @@ const Footer = () => {
                 Wakwella Road,<br />
                 Galle. <br /><br />
                 <strong>Phone:</strong> +94771234657<br />
-                <strong>Email:</strong> movieHeaven.com<br />
+                <strong>Email:</strong> movieHeaven@gmail.com<br />
               </p>
             </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                               </NavLink></li>  
                               
                                <li><i className="bx bx-chevron-right"></i>  <NavLink 
-                                to="/" 
+                                to="/term-of-service" 
                                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                               >
                                 Term of Service

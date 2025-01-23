@@ -12,6 +12,7 @@ import MovieDetails from './components/MovieDescription/MovieDetails.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
 import PrivacyPolicy from './components/Security/Privacy.jsx';
+import TermofService from './components/Security/Term of Service.jsx';
 
 import LoginForm from './components/Login/Login.jsx';
 import SigninForm from './components/Login/Signin.jsx';
@@ -46,6 +47,8 @@ function App() {
         <Route path="/movies/:movieId" element={<MovieDetails />} />
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        
+        <Route path="/term-of-service" element={<TermofService />} />
 
       </Routes>
       <Footer />
