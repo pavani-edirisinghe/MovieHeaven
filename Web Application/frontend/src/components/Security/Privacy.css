@@ -1,0 +1,27 @@
+.privacy-policy {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 50px; /* Space from the top */
+    margin-left: 150px; /* Align left, remove margin */
+    margin-right: 150px; /* Remove margin-right */
+    text-align: left; /* Ensure text is aligned left */
+  }
+  
+  .privacy-policy h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .privacy-policy h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  .privacy-policy p {
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: 100px;
+  }
+  
+  

@@ -11,6 +11,8 @@ import MoviesSection from './components/MovieDescription/MovieGallery.jsx';
 import MovieDetails from './components/MovieDescription/MovieDetails.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
+import PrivacyPolicy from './components/Security/Privacy.jsx';
+
 import LoginForm from './components/Login/Login.jsx';
 import SigninForm from './components/Login/Signin.jsx';
 import ForgotPassword from './components/Login/ForgotPassword.jsx'; 
@@ -42,6 +44,8 @@ function App() {
         <Route path="/movies" element={<MoviesSection />} />
         
         <Route path="/movies/:movieId" element={<MovieDetails />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
       </Routes>
       <Footer />

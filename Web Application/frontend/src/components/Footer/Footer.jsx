@@ -51,7 +51,7 @@ const Footer = () => {
                                 Term of Service
                               </NavLink></li>
                 <li><i className="bx bx-chevron-right"></i>  <NavLink 
-                                to="/about-us" 
+                                to="/privacy-policy" 
                                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                               >
                                 Privacy Policy
