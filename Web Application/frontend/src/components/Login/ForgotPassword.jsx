@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const response = await fetch("/api/reset-password", {
+      const response = await fetch("http://localhost:5148/api/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +30,8 @@ const ForgotPassword = () => {
       if (response.ok) {
         setSuccessMessage("Your password has been reset successfully.");
       } else {
-        setErrorMessage("Failed to reset password. Please try again.");
+        const data = await response.json();
+        setErrorMessage(data.message || "Failed to reset password. Please try again.");
       }
     } catch (error) {
       setErrorMessage("An error occurred. Please try again later.");

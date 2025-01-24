@@ -1,32 +1,70 @@
-import React from "react";
-import { Link } from "react-router-dom"; 
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
+import axios from "axios";
 
 const LoginForm = () => {
+  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5148/login', formData);
+      setSuccessMessage(response.data.message);
+      setErrorMessage('');
+    } catch (error) {
+      setErrorMessage(error.response?.data?.message || 'Login failed');
+      setSuccessMessage('');
+    }
+  };
+
   return (
     <div className="login-page">
       <div className="wrapper">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <h1>Login</h1>
           <div className="input-box">
             <span className="icon">&#128100;</span>
-            <input type="text" placeholder="  Username" required />
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={formData.username}
+              onChange={handleInputChange}
+              required
+            />
           </div>
           <div className="input-box">
             <span className="icon">&#128274;</span>
-            <input type="password" placeholder="  Password" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleInputChange}
+              required
+            />
           </div>
           <div className="remeber-forgot">
-              <label>
-                <input type="checkbox" /> Remember me
-             </label>
-             <Link to="/forgot-password">Forgot Password?</Link> 
-        </div>
+            <label>
+              <input type="checkbox" /> Remember me
+            </label>
+            <Link to="/forgot-password">Forgot Password?</Link>
+          </div>
           <button type="submit">Login</button>
+          {errorMessage && <p className="error">{errorMessage}</p>}
+          {successMessage && <p className="success">{successMessage}</p>}
           <div className="register-link">
             <p>
               Don't have an account?{" "}
-              <Link to="/sign-up">Register Here</Link> 
+              <Link to="/sign-up">Register Here</Link>
             </p>
           </div>
         </form>
