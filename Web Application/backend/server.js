@@ -75,6 +75,8 @@ app.post("/api/reset-password", (req, res) => {
   });
 });
 
+app.use('/api/booking', bookingRoutes);
+
 // Start the server
 app.listen(5148, () => {
   console.log("Server is running on port 5148");

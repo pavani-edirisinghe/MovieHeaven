@@ -1,3 +1,33 @@
+
+.content-container {
+  display: flex; 
+  justify-content: space-between; 
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.left-column1 {
+  flex: 1; 
+  padding-right: 20px;
+  padding-left: 80px;
+}
+
+.right-column1 {
+  flex: 1; 
+  padding-left: 20px; 
+  padding-right: 80px;
+}
+
+.left-column1 .seat-selection {
+  margin-bottom: 20px;
+}
+
+
+.content-container > div {
+  box-sizing: border-box;
+}
+
+
 .booking-section {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -10,8 +40,9 @@
   left: 50%; 
   transform: translateX(-50%); 
   border-radius: 50%;
-  margin-top: 0px;
+  margin-top: -40px;
   margin-bottom: 0px; 
+  padding-top: 0px;
   width: 550px;
   height: 90px; 
   border-bottom: 5px solid #a53518; 
@@ -182,4 +213,144 @@
 .sofa-icon.brown-seat {
   color: #b15513; 
   width: 30px;
+}
+.showtime-selection {
+  margin-bottom: 20px;
+  padding: 10px 0; 
+}
+
+.showtime-label {
+  display: block; 
+  font-size: 23px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.showtime-label::after {
+  content: ''; 
+  display: block;
+  height: 1px;
+  background-color: #a53518; 
+  margin-top: 20px; 
+}
+
+.showtime-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+
+.showtime-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.showtime-button:hover {
+  background-color: gray;
+}
+
+.showtime-button.selected {
+  background-color: #a53518;
+  color: white;
+}
+
+.showtime-selection::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #a53518; 
+  margin-top: 20px; 
+}
+
+.booking-summary {
+  text-align: left; 
+}
+
+.booking-summary h2 {
+  margin-bottom: 20px; 
+}
+
+.booking-summary p {
+  margin: 5px 0;
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+.booking-summary strong {
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.action-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.action-button.confirm {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-button.update {
+  background-color: #ffc107;
+  color: black;
+}
+
+.action-button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.message-box p {
+  margin: 0 0 10px;
+  color: black;
+}
+
+.message-box button {
+  background: #690202;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.message-box button:hover {
+  background: #da0303;
 }
