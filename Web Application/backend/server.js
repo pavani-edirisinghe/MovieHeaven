@@ -75,6 +75,41 @@ app.post("/api/reset-password", (req, res) => {
   });
 });
 
+app.post("/book-seat", (req, res) => {
+  const { userId, seatId } = req.body;
+
+  // Check if seat is available
+  const checkSeat = "SELECT status FROM seats WHERE id = ?";
+  db.query(checkSeat, [seatId], (err, result) => {
+      if (err) return res.status(500).json({ message: "Database error" });
+
+      if (result.length === 0 || result[0].status !== "available") {
+          return res.status(400).json({ message: "Seat already booked" });
+      }
+
+      // Book the seat
+      const bookSeat = "INSERT INTO bookings (user_id, seat_id) VALUES (?, ?)";
+      db.query(bookSeat, [userId, seatId], (err, data) => {
+          if (err) return res.status(500).json({ message: "Booking failed" });
+
+          // Update seat status to 'booked'
+          const updateSeat = "UPDATE seats SET status = 'booked' WHERE id = ?";
+          db.query(updateSeat, [seatId]);
+
+          return res.status(201).json({ message: "Seat booked successfully" });
+      });
+  });
+});
+app.get("/available-seats/:showtimeId", (req, res) => {
+  const { showtimeId } = req.params;
+  
+  const sql = "SELECT * FROM seats WHERE showtime_id = ? AND status = 'available'";
+  db.query(sql, [showtimeId], (err, data) => {
+      if (err) return res.status(500).json({ message: "Database error" });
+      return res.status(200).json(data);
+  });
+});
+
 
 // Start the server
 app.listen(5148, () => {
