@@ -14,24 +14,45 @@ const BookingInfo = ({ movieTitle }) => {
   const [showDeleteConfirmationModal, setShowDeleteConfirmationModal] = useState(false);
   const [showUpdateConfirmationModal, setShowUpdateConfirmationModal] = useState(false);
   const [paymentConfirmed, setPaymentConfirmed] = useState(false);
+  const [bookedSeats, setBookedSeats] = useState([]);
+  const [showPaymentConfirmationModal, setShowPaymentConfirmationModal] = useState(false);
 
-  const toggleSeatSelection = (seat) => {
-    if (!showtimeSelected) {
-      setShowMessage(true);
-      return;
-    }
+const toggleSeatSelection = (seat) => {
+  if (!showtimeSelected) {
+    setShowMessage(true);
+    return;
+  }
 
-    setSelectedSeats((prevSeats) =>
-      prevSeats.includes(seat)
-        ? prevSeats.filter((s) => s !== seat)
-        : [...prevSeats, seat]
-    );
-  };
+  if (bookedSeats.includes(seat)) {
+    alert("This seat is already booked. Please select another seat.");
+    return;
+  }
 
-  const handleShowtimeSelection = (time) => {
-    setSelectedTime(time);
-    setShowtimeSelected(true);
-  };
+  setSelectedSeats((prevSeats) =>
+    prevSeats.includes(seat)
+      ? prevSeats.filter((s) => s !== seat)
+      : [...prevSeats, seat]
+  );
+};
+
+const handleShowtimeSelection = (time) => {
+  setSelectedTime(time);
+  setShowtimeSelected(true);
+
+  fetch(`http://localhost:5148/api/booked-seats?movieTitle=${movieTitle}&showtime=${time}`)
+    .then(response => response.json())
+    .then(data => {
+      setBookedSeats(data.bookedSeats); 
+    })
+    .catch(error => {
+      console.error("Error fetching booked seats:", error);
+    });
+};
+
+const isSeatAvailable = (seat) => {
+  return !bookedSeats.includes(seat);
+};
+
 
   const handleConfirmBooking = () => {
     if (selectedSeats.length === 0) {
@@ -113,12 +134,35 @@ const BookingInfo = ({ movieTitle }) => {
   };
 
   const handlePayNow = () => {
-    setPaymentConfirmed(true); // Mark payment as confirmed
-    setTimeout(() => {
-      alert("Payment successful! Thank you for your purchase.");
-    }, 0);
+    setShowPaymentConfirmationModal(true); 
   };
 
+  const handlePaymentConfirmation = () => {
+    setShowPaymentConfirmationModal(false); 
+  
+    const bookingData = {
+      movieTitle: movieTitle,
+      showtime: selectedTime,
+      seats: selectedSeats,
+      totalPrice: selectedSeats.length * 400,
+    };
+  
+    fetch('http://localhost:5148/api/bookings', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(bookingData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        setPaymentConfirmed(true); 
+        alert("Payment successful! Thank you for your purchase.");
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
   const closeMessageBox = () => {
     setShowMessage(false);
   };
@@ -181,8 +225,10 @@ const BookingInfo = ({ movieTitle }) => {
                             key={seat}
                             className={`seat 
                               ${confirmedSeats.includes(seat) ? "gray-seat1" : ""}
+                              ${bookedSeats.includes(seat) ? "gray-seat1" : ""}
                               ${selectedSeats.includes(seat) ? "selected" : ""}`}
                             onClick={() => toggleSeatSelection(seat)}
+                            style={{ cursor: bookedSeats.includes(seat) ? "not-allowed" : "pointer" }}
                           >
                             <FaCouch className="sofa-icon" />
                           </div>
@@ -195,8 +241,10 @@ const BookingInfo = ({ movieTitle }) => {
                             key={seat}
                             className={`seat 
                               ${confirmedSeats.includes(seat) ? "gray-seat1" : ""}
+                              ${bookedSeats.includes(seat) ? "gray-seat1" : ""}
                               ${selectedSeats.includes(seat) ? "selected" : ""}`}
                             onClick={() => toggleSeatSelection(seat)}
+                            style={{ cursor: bookedSeats.includes(seat) ? "not-allowed" : "pointer" }}
                           >
                             <FaCouch className="sofa-icon" />
                           </div>
@@ -216,8 +264,10 @@ const BookingInfo = ({ movieTitle }) => {
                             key={seat}
                             className={`seat 
                               ${confirmedSeats.includes(seat) ? "gray-seat1" : ""}
+                              ${bookedSeats.includes(seat) ? "gray-seat1" : ""}
                               ${selectedSeats.includes(seat) ? "selected" : ""}`}
                             onClick={() => toggleSeatSelection(seat)}
+                            style={{ cursor: bookedSeats.includes(seat) ? "not-allowed" : "pointer" }}
                           >
                             <FaCouch className="sofa-icon" />
                           </div>
@@ -230,8 +280,10 @@ const BookingInfo = ({ movieTitle }) => {
                             key={seat}
                             className={`seat 
                               ${confirmedSeats.includes(seat) ? "gray-seat1" : ""}
+                              ${bookedSeats.includes(seat) ? "gray-seat1" : ""}
                               ${selectedSeats.includes(seat) ? "selected" : ""}`}
                             onClick={() => toggleSeatSelection(seat)}
+                            style={{ cursor: bookedSeats.includes(seat) ? "not-allowed" : "pointer" }}
                           >
                             <FaCouch className="sofa-icon" />
                           </div>
@@ -248,8 +300,10 @@ const BookingInfo = ({ movieTitle }) => {
                         key={seat}
                         className={`seat 
                           ${confirmedSeats.includes(seat) ? "gray-seat1" : ""}
-                          ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                        onClick={() => toggleSeatSelection(seat)}
+                              ${bookedSeats.includes(seat) ? "gray-seat1" : ""}
+                              ${selectedSeats.includes(seat) ? "selected" : ""}`}
+                            onClick={() => toggleSeatSelection(seat)}
+                            style={{ cursor: bookedSeats.includes(seat) ? "not-allowed" : "pointer" }}
                       >
                         <FaCouch className="sofa-icon" />
                       </div>
@@ -280,30 +334,34 @@ const BookingInfo = ({ movieTitle }) => {
             </div>
           </div>
 
-          {/* Conditionally render booking summary */}
-          {!paymentConfirmed && (
-            <div className="booking-summary">
-              <h2>Booking Summary</h2>
-              <p>
-                Movie: <strong>{movieTitle}</strong>
-              </p>
-              <p>
-                Showtime: <strong>{selectedTime || "Not selected"}</strong>
-              </p>
-              <p>
-                Selected Seats: <strong>
-                  {selectedSeats.length > 0
-                    ? selectedSeats.map((seat) => convertSeatToLabel(seat)).join(", ")
-                    : "None"}
-                </strong>
-              </p>
-              <p>
-                Price: <strong>Rs. 400 * {selectedSeats.length} = Rs. {selectedSeats.length * 400}</strong>
-              </p>
-            </div>
-          )}
+          {!paymentConfirmed ? (
+                  <div className="booking-summary">
+                        <h2>Booking Summary</h2>
+                         <p>
+                             Movie: <strong>{movieTitle}</strong>
+                         </p>
+                          <p>
+                             Showtime: <strong>{selectedTime || "Not selected"}</strong>
+                          </p>
+                          <p>
+                             Selected Seats: <strong>
+                 {selectedSeats.length > 0
+                         ? selectedSeats.map((seat) => convertSeatToLabel(seat)).join(", ")
+                          : "None"}
+                      </strong>
+                  </p>
+                      <p>
+                           Price: <strong>Rs. 400 * {selectedSeats.length} = Rs. {selectedSeats.length * 400}</strong>
+                     </p>
+                   </div>
+            ) : (
+        
+        <div className="payment-success-message">
+              <h2>Payment Successful!</h2>
+                 <p>Thank you for your purchase. Enjoy the movie!</p>
+         </div>
+             )}
 
-          {/* Conditionally render action buttons */}
           {!paymentConfirmed && (
             <div className="action-buttons">
               {showtimeSelected && selectedSeats.length > 0 && !bookingConfirmed && (
@@ -323,13 +381,7 @@ const BookingInfo = ({ movieTitle }) => {
             </div>
           )}
 
-          {/* Show a message after payment is confirmed */}
-          {paymentConfirmed && (
-            <div className="payment-success-message">
-              <h2>Payment Successful!</h2>
-              <p>Thank you for your purchase. Enjoy the movie!</p>
-            </div>
-          )}
+          
         </div>
       </div>
 
@@ -343,42 +395,76 @@ const BookingInfo = ({ movieTitle }) => {
       {showConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
-            <p>Are you sure you want to confirm your booking?</p>
-            <button className="yes-button" onClick={() => handleConfirmation(true)}>
-              Yes
-            </button>
-            <button className="no-button" onClick={() => handleConfirmation(false)}>
-              No
-            </button>
-          </div>
+              <div className="modal-text">
+                <h3>Confirm Booking?</h3>
+                    <p>Are you sure you want to confirm your booking?</p>
+              </div>
+          <div className="modal-buttons">
+               <button className="no-button" onClick={() => handleConfirmation(false)}>
+                 No
+               </button>
+               <button className="yes-button" onClick={() => handleConfirmation(true)}>
+                 Yes
+               </button>
+           </div>
+           </div>
         </div>
       )}
 
       {showDeleteConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
+          <div className="modal-text">
+          <h3>Delete Booking?</h3>
             <p>Are you sure you want to delete your booking?</p>
-            <button className="yes-button" onClick={() => handleDeleteConfirmation(true)}>
-              Yes
-            </button>
+            </div>
+            <div className="modal-buttons">
             <button className="no-button" onClick={() => handleDeleteConfirmation(false)}>
               No
             </button>
+            <button className="yes-button" onClick={() => handleDeleteConfirmation(true)}>
+              Yes
+            </button>
           </div>
         </div>
+        </div>
       )}
+
+      {showPaymentConfirmationModal && (
+            <div className="confirmation-modal">
+                <div className="confirmation-modal-content">
+                  <div className="modal-text">
+                    <h3>Confirm Payment?</h3>
+                    <p>Are you sure you want to proceed with the payment?</p>
+                  </div>
+                <div className="modal-buttons">
+                   <button className="no-button" onClick={() => setShowPaymentConfirmationModal(false)}>
+                        No
+                    </button>
+                    <button className="yes-button" onClick={handlePaymentConfirmation}>
+                        Yes
+                     </button>
+                 </div>
+             </div>
+          </div> 
+        )}
 
       {showUpdateConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
+          <div className="modal-text">
+          <h3>Update Booking?</h3>
             <p>Are you sure you want to update your booking?</p>
-            <button className="yes-button" onClick={() => handleUpdateConfirmation(true)}>
-              Yes
-            </button>
+            </div>
+            <div className="modal-buttons">
             <button className="no-button" onClick={() => handleUpdateConfirmation(false)}>
               No
             </button>
+            <button className="yes-button" onClick={() => handleUpdateConfirmation(true)}>
+              Yes
+            </button>
           </div>
+        </div>
         </div>
       )}
     </div>

@@ -80,7 +80,7 @@
 .wrapper .register-link {
     margin-top: 20px;
     font-size: 14px;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .wrapper .register-link a {
@@ -145,3 +145,28 @@
     margin-top: 10px;
   }
   
+.input-box.file-input {
+  display: flex;
+  align-items: center;
+  width: 900px;
+}
+
+.input-box.file-input input[type="file"] {
+  display: none;
+}
+
+.input-box.file-input .custom-file-input {
+  background-color: white; 
+  border: 1px solid white; 
+  padding: 8px 12px;
+  padding-left: 20px;
+  border-radius: 4px; 
+  cursor: pointer;
+  font-size: 14px; 
+  color: #333; 
+  width: 120px;
+}
+
+.input-box.file-input .custom-file-input:hover {
+  background-color: #e0e0e0; 
+}

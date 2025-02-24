@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import axios from "axios";
+import { useAuth } from "../../context/AuthContext";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const { login } = useAuth(); // Use the login function from AuthContext
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -17,8 +20,11 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5148/login', formData);
+      login(response.data.user); // Update the AuthContext with the logged-in user
+      localStorage.setItem("isLoggedIn", "true"); // Store login status in localStorage
       setSuccessMessage(response.data.message);
       setErrorMessage('');
+      navigate('/'); // Redirect to home page after successful login
     } catch (error) {
       setErrorMessage(error.response?.data?.message || 'Login failed');
       setSuccessMessage('');

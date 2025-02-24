@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from "../../context/AuthContext";
 import "./Header.css";
 
 function Header() {
-  const [isActive, setIsActive] = useState(false);
+  const { user, logout } = useAuth();
 
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
+  // Debugging: Log the user object and profile picture
+  console.log("User Object:", user);
+  console.log("Profile Picture Path:", user?.picture);
 
   return (
     <header id="header" className="fixed-top header-inner-pages">
@@ -57,6 +58,18 @@ function Header() {
             </li>
           </ul>
         </nav>
+        {user && ( 
+          <div className="user-profile">
+            <img 
+              src={user.picture || "/default-profile.png"} 
+              alt="Profile" 
+              width="40" 
+              height="40" 
+             
+            />
+            <button onClick={logout}>Logout</button>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -23,36 +23,29 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'remixicon/fonts/remixicon.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+import { AuthProvider } from './context/AuthContext.jsx';
+
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Header />
-      <Routes>
-
-        <Route path="/" element={<HeroSection />} />
-  
-        <Route path="/about-us" element={<AboutSection />} />
-       
-        <Route path="/login" element={<LoginForm />} />
-
-        <Route path="/sign-up" element={<SigninForm />} />
-
-        <Route path="/forgot-password" element={<ForgotPassword />} /> 
-
-        <Route path="/contact" element={<ContactSection />} />
-       
-        <Route path="/movies" element={<MoviesSection />} />
-        
-        <Route path="/movies/:movieId" element={<MovieDetails />} />
-
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        
-        <Route path="/term-of-service" element={<TermofService />} />
-
-      </Routes>
-      <Footer />
-    </Router>
+    <AuthProvider> 
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about-us" element={<AboutSection />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/sign-up" element={<SigninForm />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/movies" element={<MoviesSection />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/term-of-service" element={<TermofService />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
 }
 

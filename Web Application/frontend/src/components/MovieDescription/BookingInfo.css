@@ -333,7 +333,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: #350000;
   border: 1px solid #ccc;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -344,7 +344,7 @@
 
 .message-box p {
   margin: 0 0 10px;
-  color: black;
+  color: white;
 }
 
 .message-box button {
@@ -394,46 +394,63 @@
   align-items: center;
 }
 
-.confirmation-modal p {
-  color: black;
+.confirmation-modal-content {
+  background-color: #350000;
+  padding: 20px;
+  border-radius: 25px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+  border: 1px solid #ccc;
 }
 
-.confirmation-modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+.modal-text {
+  text-align: left; 
+}
+
+.modal-text h3 {
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.modal-text p {
+  color: white;
+  margin: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; 
 }
 
 .confirmation-modal-content button {
-  margin: 10px;
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
 }
 
 .yes-button {
-  background-color: #690202; 
-  color: white; 
-  border: none; 
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #690202;
+  color: white;
+  width: 80px;
+  border-radius: 25px;
 }
 
 .yes-button:hover {
-  background-color: #da0303; 
+  background-color: #da0303;
 }
 
 .no-button {
-  background-color: gray; 
+  background-color: gray;
   color: white;
+  width: 80px;
+  border-radius: 25px;
 }
 
 .no-button:hover {
-  background-color: #da0303; 
+  background-color: rgb(162, 161, 161);
 }
-
