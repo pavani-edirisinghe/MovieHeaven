@@ -20,11 +20,10 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5148/login', formData);
-      login(response.data.user);
-      localStorage.setItem("isLoggedIn", "true");
+      login(response.data.user); // Pass the user data to the login function
       setSuccessMessage(response.data.message);
       setErrorMessage('');
-      navigate('/'); 
+      navigate('/');
     } catch (error) {
       setErrorMessage(error.response?.data?.message || 'Login failed');
       setSuccessMessage('');
