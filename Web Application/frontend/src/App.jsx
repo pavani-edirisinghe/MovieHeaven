@@ -23,6 +23,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'remixicon/fonts/remixicon.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+import ParentComponent from "./components/ParentComponent";
 import { AuthProvider } from './context/AuthContext.jsx';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<HeroSection />} />
           <Route path="/about-us" element={<AboutSection />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/booking" element={<ParentComponent />} />       
           <Route path="/sign-up" element={<SigninForm />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/contact" element={<ContactSection />} />

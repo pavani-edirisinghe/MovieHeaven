@@ -55,7 +55,6 @@ app.post('/signup', upload.single('picture'), (req, res) => {
   });
 });
 
-// Serve static files from the "uploads" directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.post("/login", (req, res) => {

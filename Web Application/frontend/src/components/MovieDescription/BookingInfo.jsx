@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaCouch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext"; 
 import "./BookingInfo.css";
 
 const BookingInfo = ({ movieTitle }) => {
@@ -17,44 +19,52 @@ const BookingInfo = ({ movieTitle }) => {
   const [bookedSeats, setBookedSeats] = useState([]);
   const [showPaymentConfirmationModal, setShowPaymentConfirmationModal] = useState(false);
 
-const toggleSeatSelection = (seat) => {
-  if (!showtimeSelected) {
-    setShowMessage(true);
-    return;
-  }
+  const { isLoggedIn } = useAuth(); 
+  const navigate = useNavigate();
 
-  if (bookedSeats.includes(seat)) {
-    alert("This seat is already booked. Please select another seat.");
-    return;
-  }
+  const toggleSeatSelection = (seat) => {
+    if (!showtimeSelected) {
+      setShowMessage(true);
+      return;
+    }
 
-  setSelectedSeats((prevSeats) =>
-    prevSeats.includes(seat)
-      ? prevSeats.filter((s) => s !== seat)
-      : [...prevSeats, seat]
-  );
-};
+    if (bookedSeats.includes(seat)) {
+      alert("This seat is already booked. Please select another seat.");
+      return;
+    }
 
-const handleShowtimeSelection = (time) => {
-  setSelectedTime(time);
-  setShowtimeSelected(true);
+    setSelectedSeats((prevSeats) =>
+      prevSeats.includes(seat)
+        ? prevSeats.filter((s) => s !== seat)
+        : [...prevSeats, seat]
+    );
+  };
 
-  fetch(`http://localhost:5148/api/booked-seats?movieTitle=${movieTitle}&showtime=${time}`)
-    .then(response => response.json())
-    .then(data => {
-      setBookedSeats(data.bookedSeats); 
-    })
-    .catch(error => {
-      console.error("Error fetching booked seats:", error);
-    });
-};
+  const handleShowtimeSelection = (time) => {
+    setSelectedTime(time);
+    setShowtimeSelected(true);
 
-const isSeatAvailable = (seat) => {
-  return !bookedSeats.includes(seat);
-};
+    fetch(`http://localhost:5148/api/booked-seats?movieTitle=${movieTitle}&showtime=${time}`)
+      .then(response => response.json())
+      .then(data => {
+        setBookedSeats(data.bookedSeats); 
+      })
+      .catch(error => {
+        console.error("Error fetching booked seats:", error);
+      });
+  };
 
+  const isSeatAvailable = (seat) => {
+    return !bookedSeats.includes(seat);
+  };
 
   const handleConfirmBooking = () => {
+    if (!isLoggedIn) {
+      alert("You need to log in first.");
+      navigate("/login"); 
+      return;
+    }
+
     if (selectedSeats.length === 0) {
       alert("Please select at least one seat.");
       return;
@@ -163,6 +173,7 @@ const isSeatAvailable = (seat) => {
         console.error('Error:', error);
       });
   };
+
   const closeMessageBox = () => {
     setShowMessage(false);
   };
