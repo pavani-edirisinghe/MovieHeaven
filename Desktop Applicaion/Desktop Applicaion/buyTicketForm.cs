@@ -186,7 +186,7 @@ namespace Desktop_Applicaion
             buyTicket_genre.Text = "";
             buyTicket_showTime.Text = "";
             buyTicket_regularPrice.Text = "";
-
+            buyTicket_capacity.Text = "";
             pictureBox1.ImageLocation = null;
         }
         private void buyTicket_clear_Click(object sender, EventArgs e)
@@ -482,6 +482,11 @@ namespace Desktop_Applicaion
         }
 
         private void buyTicket_capacity_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

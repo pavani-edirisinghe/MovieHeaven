@@ -165,7 +165,7 @@
             buyTicket_capacity.AutoSize = true;
             buyTicket_capacity.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_capacity.ForeColor = Color.Black;
-            buyTicket_capacity.Location = new Point(344, 204);
+            buyTicket_capacity.Location = new Point(354, 206);
             buyTicket_capacity.Name = "buyTicket_capacity";
             buyTicket_capacity.Size = new Size(40, 22);
             buyTicket_capacity.TabIndex = 28;
@@ -177,7 +177,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(259, 204);
+            label6.Location = new Point(269, 206);
             label6.Name = "label6";
             label6.Size = new Size(84, 24);
             label6.TabIndex = 27;
@@ -188,7 +188,7 @@
             buyTicket_showTime.AutoSize = true;
             buyTicket_showTime.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_showTime.ForeColor = Color.Black;
-            buyTicket_showTime.Location = new Point(344, 162);
+            buyTicket_showTime.Location = new Point(354, 164);
             buyTicket_showTime.Name = "buyTicket_showTime";
             buyTicket_showTime.Size = new Size(40, 22);
             buyTicket_showTime.TabIndex = 26;
@@ -199,7 +199,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(239, 162);
+            label3.Location = new Point(249, 164);
             label3.Name = "label3";
             label3.Size = new Size(104, 24);
             label3.TabIndex = 25;
@@ -214,7 +214,7 @@
             buyTicket_clear.FlatStyle = FlatStyle.Flat;
             buyTicket_clear.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_clear.ForeColor = Color.White;
-            buyTicket_clear.Location = new Point(451, 293);
+            buyTicket_clear.Location = new Point(477, 293);
             buyTicket_clear.Name = "buyTicket_clear";
             buyTicket_clear.Size = new Size(157, 48);
             buyTicket_clear.TabIndex = 24;
@@ -231,7 +231,7 @@
             buyTicket_selectMovie.FlatStyle = FlatStyle.Flat;
             buyTicket_selectMovie.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_selectMovie.ForeColor = Color.White;
-            buyTicket_selectMovie.Location = new Point(239, 293);
+            buyTicket_selectMovie.Location = new Point(230, 293);
             buyTicket_selectMovie.Name = "buyTicket_selectMovie";
             buyTicket_selectMovie.Size = new Size(164, 48);
             buyTicket_selectMovie.TabIndex = 23;
@@ -244,7 +244,7 @@
             buyTicket_regularPrice.AutoSize = true;
             buyTicket_regularPrice.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_regularPrice.ForeColor = Color.Black;
-            buyTicket_regularPrice.Location = new Point(344, 241);
+            buyTicket_regularPrice.Location = new Point(354, 243);
             buyTicket_regularPrice.Name = "buyTicket_regularPrice";
             buyTicket_regularPrice.Size = new Size(40, 22);
             buyTicket_regularPrice.TabIndex = 18;
@@ -256,7 +256,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(226, 239);
+            label9.Location = new Point(236, 241);
             label9.Name = "label9";
             label9.Size = new Size(117, 24);
             label9.TabIndex = 17;
@@ -268,7 +268,7 @@
             buyTicket_genre.AutoSize = true;
             buyTicket_genre.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_genre.ForeColor = Color.Black;
-            buyTicket_genre.Location = new Point(344, 120);
+            buyTicket_genre.Location = new Point(354, 122);
             buyTicket_genre.Name = "buyTicket_genre";
             buyTicket_genre.Size = new Size(40, 22);
             buyTicket_genre.TabIndex = 16;
@@ -279,7 +279,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(278, 118);
+            label7.Location = new Point(288, 120);
             label7.Name = "label7";
             label7.Size = new Size(65, 24);
             label7.TabIndex = 15;
@@ -290,7 +290,7 @@
             buyTicket_movieName.AutoSize = true;
             buyTicket_movieName.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_movieName.ForeColor = Color.Black;
-            buyTicket_movieName.Location = new Point(344, 78);
+            buyTicket_movieName.Location = new Point(354, 80);
             buyTicket_movieName.Name = "buyTicket_movieName";
             buyTicket_movieName.Size = new Size(40, 22);
             buyTicket_movieName.TabIndex = 14;
@@ -302,7 +302,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(228, 78);
+            label5.Location = new Point(238, 80);
             label5.Name = "label5";
             label5.Size = new Size(115, 24);
             label5.TabIndex = 13;
@@ -313,7 +313,7 @@
             buyTicket_movieID.AutoSize = true;
             buyTicket_movieID.Font = new Font("Arial Narrow", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buyTicket_movieID.ForeColor = Color.Black;
-            buyTicket_movieID.Location = new Point(344, 32);
+            buyTicket_movieID.Location = new Point(354, 34);
             buyTicket_movieID.Name = "buyTicket_movieID";
             buyTicket_movieID.Size = new Size(40, 22);
             buyTicket_movieID.TabIndex = 12;
@@ -324,7 +324,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(256, 32);
+            label2.Location = new Point(266, 34);
             label2.Name = "label2";
             label2.Size = new Size(87, 24);
             label2.TabIndex = 11;
@@ -334,9 +334,9 @@
             // 
             panel4.BackColor = SystemColors.Control;
             panel4.Controls.Add(pictureBox1);
-            panel4.Location = new Point(22, 43);
+            panel4.Location = new Point(42, 34);
             panel4.Name = "panel4";
-            panel4.Size = new Size(171, 207);
+            panel4.Size = new Size(153, 230);
             panel4.TabIndex = 0;
             // 
             // pictureBox1
@@ -344,10 +344,11 @@
             pictureBox1.BackColor = SystemColors.AppWorkspace;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(171, 207);
+            pictureBox1.Size = new Size(153, 230);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // panel3
             // 

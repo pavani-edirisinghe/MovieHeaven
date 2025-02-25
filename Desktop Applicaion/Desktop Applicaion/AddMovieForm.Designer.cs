@@ -193,9 +193,9 @@
             // panel3
             // 
             panel3.Controls.Add(pictureBox1);
-            panel3.Location = new Point(906, 41);
+            panel3.Location = new Point(898, 27);
             panel3.Name = "panel3";
-            panel3.Size = new Size(150, 150);
+            panel3.Size = new Size(140, 210);
             panel3.TabIndex = 26;
             // 
             // pictureBox1
@@ -203,7 +203,7 @@
             pictureBox1.BackColor = SystemColors.AppWorkspace;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 150);
+            pictureBox1.Size = new Size(140, 210);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
@@ -217,9 +217,9 @@
             addMovie_clearBtn.FlatStyle = FlatStyle.Flat;
             addMovie_clearBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_clearBtn.ForeColor = Color.White;
-            addMovie_clearBtn.Location = new Point(704, 291);
+            addMovie_clearBtn.Location = new Point(679, 298);
             addMovie_clearBtn.Name = "addMovie_clearBtn";
-            addMovie_clearBtn.Size = new Size(120, 47);
+            addMovie_clearBtn.Size = new Size(125, 47);
             addMovie_clearBtn.TabIndex = 25;
             addMovie_clearBtn.Text = "CLEAR";
             addMovie_clearBtn.UseVisualStyleBackColor = false;
@@ -234,7 +234,7 @@
             addMovie_deleteBtn.FlatStyle = FlatStyle.Flat;
             addMovie_deleteBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_deleteBtn.ForeColor = Color.White;
-            addMovie_deleteBtn.Location = new Point(514, 292);
+            addMovie_deleteBtn.Location = new Point(496, 297);
             addMovie_deleteBtn.Name = "addMovie_deleteBtn";
             addMovie_deleteBtn.Size = new Size(125, 46);
             addMovie_deleteBtn.TabIndex = 24;
@@ -251,7 +251,7 @@
             addMovie_updateBtn.FlatStyle = FlatStyle.Flat;
             addMovie_updateBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_updateBtn.ForeColor = Color.White;
-            addMovie_updateBtn.Location = new Point(323, 292);
+            addMovie_updateBtn.Location = new Point(305, 297);
             addMovie_updateBtn.Name = "addMovie_updateBtn";
             addMovie_updateBtn.Size = new Size(120, 47);
             addMovie_updateBtn.TabIndex = 23;
@@ -268,7 +268,7 @@
             addMovie_addBtn.FlatStyle = FlatStyle.Flat;
             addMovie_addBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_addBtn.ForeColor = Color.White;
-            addMovie_addBtn.Location = new Point(132, 293);
+            addMovie_addBtn.Location = new Point(114, 298);
             addMovie_addBtn.Name = "addMovie_addBtn";
             addMovie_addBtn.Size = new Size(120, 47);
             addMovie_addBtn.TabIndex = 22;
@@ -303,9 +303,9 @@
             addMovie_importBtn.FlatStyle = FlatStyle.Flat;
             addMovie_importBtn.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             addMovie_importBtn.ForeColor = Color.White;
-            addMovie_importBtn.Location = new Point(906, 208);
+            addMovie_importBtn.Location = new Point(898, 253);
             addMovie_importBtn.Name = "addMovie_importBtn";
-            addMovie_importBtn.Size = new Size(150, 42);
+            addMovie_importBtn.Size = new Size(140, 42);
             addMovie_importBtn.TabIndex = 19;
             addMovie_importBtn.Text = "IMPORT";
             addMovie_importBtn.UseVisualStyleBackColor = false;
@@ -314,7 +314,7 @@
             // addMovie_price
             // 
             addMovie_price.BorderStyle = BorderStyle.FixedSingle;
-            addMovie_price.Location = new Point(577, 41);
+            addMovie_price.Location = new Point(577, 42);
             addMovie_price.Name = "addMovie_price";
             addMovie_price.Size = new Size(207, 27);
             addMovie_price.TabIndex = 17;
