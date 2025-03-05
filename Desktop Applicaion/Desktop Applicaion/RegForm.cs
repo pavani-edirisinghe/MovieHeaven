@@ -37,9 +37,9 @@ namespace Desktop_Applicaion
             {
                 MessageBox.Show("Password does not match", "Error Messeage", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (reg_password.Text.Length < 8)
+            else if (reg_password.Text.Length < 4)
             {
-                MessageBox.Show("Invalid Password", "Error Messeage", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Password must be at least 4 characters long", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

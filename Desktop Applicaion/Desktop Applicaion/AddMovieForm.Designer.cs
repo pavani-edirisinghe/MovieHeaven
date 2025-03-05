@@ -333,7 +333,7 @@
             // addMovie_genre
             // 
             addMovie_genre.FormattingEnabled = true;
-            addMovie_genre.Items.AddRange(new object[] { "Educational", "Comedy", "Drama", "Action", "Horror" });
+            addMovie_genre.Items.AddRange(new object[] { "Advanture", "Animation", "Family", "Romance", "Fantasy" });
             addMovie_genre.Location = new Point(164, 198);
             addMovie_genre.Name = "addMovie_genre";
             addMovie_genre.Size = new Size(207, 28);
