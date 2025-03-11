@@ -215,6 +215,47 @@
   color: #b15513; 
   width: 30px;
 }
+.date-selection {
+  display: flex;
+  align-items: center;
+}
+
+.date-label {
+  font-size: 23px;
+  margin-right: 15px; 
+  text-align: left;
+  padding-top: 20px;
+}
+
+.custom-date-picker-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.date-picker-input {
+  flex: 1;
+  padding: 3px 10px 3px 10px;
+  font-size: 14px;
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 14px;
+  width: 100px; 
+  max-width: 100%;
+}
+
+.calendar-icon {
+  position: absolute; 
+  right: 10px; 
+  top:62%; 
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #a53518; 
+  pointer-events: none; 
+}
+
 .showtime-selection {
   margin-bottom: 20px;
   padding: 10px 0; 
@@ -225,7 +266,7 @@
   font-size: 23px;
   margin-bottom: 20px;
   text-align: left;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .showtime-label::after {
@@ -362,8 +403,10 @@
 
 .gray-seat1 {
   color: gray !important; 
-  pointer-events: none; /
+  pointer-events: none; 
+  cursor: not-allowed;
 }
+
 .selected {
   color: brown; 
 }
@@ -454,3 +497,4 @@
 .no-button:hover {
   background-color: rgb(162, 161, 161);
 }
+

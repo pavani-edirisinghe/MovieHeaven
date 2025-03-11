@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCouch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext"; 
+import { useAuth } from "../../context/AuthContext";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import "./BookingInfo.css";
+import { FaCalendarAlt } from "react-icons/fa";
+import "react-datepicker/dist/react-datepicker.css";
+import { format } from "date-fns";
 
 const BookingInfo = ({ movieTitle }) => {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [selectedTime, setSelectedTime] = useState("");
+  const [selectedDate, setSelectedDate] = useState(null);
   const [showtimeSelected, setShowtimeSelected] = useState(false);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
@@ -19,12 +25,17 @@ const BookingInfo = ({ movieTitle }) => {
   const [bookedSeats, setBookedSeats] = useState([]);
   const [showPaymentConfirmationModal, setShowPaymentConfirmationModal] = useState(false);
 
-  const { isLoggedIn } = useAuth(); 
+  const { isLoggedIn } = useAuth();
   const navigate = useNavigate();
 
   const toggleSeatSelection = (seat) => {
-    if (!showtimeSelected) {
-      setShowMessage(true);
+    if (!selectedDate) {
+      setShowMessage("Please select a date first!");
+      return;
+    }
+
+    if (!selectedTime) {
+      setShowMessage("Please select a showtime!");
       return;
     }
 
@@ -40,18 +51,40 @@ const BookingInfo = ({ movieTitle }) => {
     );
   };
 
+  const CustomDatePickerInput = ({ value, onClick }) => (
+    <div className="custom-date-picker-input" onClick={onClick}>
+      <input
+        type="text"
+        value={value}
+        readOnly
+        className="date-picker-input"
+        placeholder="Select a date"
+      />
+      <FaCalendarAlt className="calendar-icon" />
+    </div>
+  );
+
   const handleShowtimeSelection = (time) => {
     setSelectedTime(time);
     setShowtimeSelected(true);
-
-    fetch(`http://localhost:5148/api/booked-seats?movieTitle=${movieTitle}&showtime=${time}`)
+  
+    const formattedDate = format(selectedDate, "yyyy-MM-dd"); 
+  
+    fetch(`http://localhost:5148/api/booked-seats?movieTitle=${movieTitle}&showtime=${time}&selectedDate=${formattedDate}`)
       .then(response => response.json())
       .then(data => {
-        setBookedSeats(data.bookedSeats); 
+        setBookedSeats(data.bookedSeats);
       })
       .catch(error => {
         console.error("Error fetching booked seats:", error);
       });
+  };
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+    setSelectedTime("");
+    setShowtimeSelected(false);
+    setSelectedSeats([]);
   };
 
   const isSeatAvailable = (seat) => {
@@ -61,7 +94,7 @@ const BookingInfo = ({ movieTitle }) => {
   const handleConfirmBooking = () => {
     if (!isLoggedIn) {
       alert("You need to log in first.");
-      navigate("/login"); 
+      navigate("/login");
       return;
     }
 
@@ -80,13 +113,14 @@ const BookingInfo = ({ movieTitle }) => {
       const newBooking = {
         movie: movieTitle,
         showtime: selectedTime,
+        date: selectedDate,
         seats: selectedSeats,
         totalPrice: selectedSeats.length * 400,
       };
 
       setBookingDetails(newBooking);
       setBookingConfirmed(true);
-      setConfirmedSeats((prev) => [...prev, ...selectedSeats]); 
+      setConfirmedSeats((prev) => [...prev, ...selectedSeats]);
 
       console.log("Booking confirmed:", newBooking);
 
@@ -106,11 +140,12 @@ const BookingInfo = ({ movieTitle }) => {
     if (confirmed) {
       setSelectedSeats([]);
       setSelectedTime("");
+      setSelectedDate(null);
       setShowtimeSelected(false);
       setBookingConfirmed(false);
       setBookingDetails(null);
       setConfirmedSeats([]);
-      setPaymentConfirmed(false); 
+      setPaymentConfirmed(false);
 
       setTimeout(() => {
         alert("Your booking has been deleted.");
@@ -144,18 +179,23 @@ const BookingInfo = ({ movieTitle }) => {
   };
 
   const handlePayNow = () => {
-    setShowPaymentConfirmationModal(true); 
+    setShowPaymentConfirmationModal(true);
   };
 
   const handlePaymentConfirmation = () => {
-    setShowPaymentConfirmationModal(false); 
+    setShowPaymentConfirmationModal(false);
+  
+    const formattedDate = format(selectedDate, "yyyy-MM-dd"); 
   
     const bookingData = {
       movieTitle: movieTitle,
       showtime: selectedTime,
+      selectedDate: formattedDate, 
       seats: selectedSeats,
       totalPrice: selectedSeats.length * 400,
     };
+  
+    console.log("Sending to backend:", bookingData); 
   
     fetch('http://localhost:5148/api/bookings', {
       method: 'POST',
@@ -166,7 +206,8 @@ const BookingInfo = ({ movieTitle }) => {
     })
       .then(response => response.json())
       .then(data => {
-        setPaymentConfirmed(true); 
+        setPaymentConfirmed(true);
+        setBookedSeats((prev) => [...prev, ...selectedSeats]);
         alert("Payment successful! Thank you for your purchase.");
       })
       .catch((error) => {
@@ -330,8 +371,20 @@ const BookingInfo = ({ movieTitle }) => {
         </div>
 
         <div className="right-column1">
+          <div className="date-selection">
+           <label htmlFor="date" className="date-label">Select a Date:</label>
+              <DatePicker
+                 selected={selectedDate}
+                 onChange={handleDateChange}
+                 minDate={new Date()}
+                 maxDate={new Date(new Date().setDate(new Date().getDate() + 5))}
+                 dateFormat="yyyy-MM-dd"
+                 customInput={<CustomDatePickerInput />}
+               />
+           </div>
+
           <div className="showtime-selection">
-            <label htmlFor="showtime" className="showtime-label">Select a ShowTime:</label>
+            <label htmlFor="showtime" className="showtime-label">Select a Show Time:</label>
             <div className="showtime-buttons">
               {availableTimes.map((time) => (
                 <button
@@ -346,32 +399,34 @@ const BookingInfo = ({ movieTitle }) => {
           </div>
 
           {!paymentConfirmed ? (
-                  <div className="booking-summary">
-                        <h2>Booking Summary</h2>
-                         <p>
-                             Movie: <strong>{movieTitle}</strong>
-                         </p>
-                          <p>
-                             Showtime: <strong>{selectedTime || "Not selected"}</strong>
-                          </p>
-                          <p>
-                             Selected Seats: <strong>
-                 {selectedSeats.length > 0
-                         ? selectedSeats.map((seat) => convertSeatToLabel(seat)).join(", ")
-                          : "None"}
-                      </strong>
-                  </p>
-                      <p>
-                           Price: <strong>Rs. 400 * {selectedSeats.length} = Rs. {selectedSeats.length * 400}</strong>
-                     </p>
-                   </div>
-            ) : (
-        
-        <div className="payment-success-message">
+            <div className="booking-summary">
+              <h2>Booking Summary</h2>
+              <p>
+                Movie: <strong>{movieTitle}</strong>
+              </p>
+              <p>
+                Date: <strong>{selectedDate ? selectedDate.toDateString() : "Not selected"}</strong>
+              </p>
+              <p>
+                Show Time: <strong>{selectedTime || "Not selected"}</strong>
+              </p>
+              <p>
+                Selected Seats: <strong>
+                  {selectedSeats.length > 0
+                    ? selectedSeats.map((seat) => convertSeatToLabel(seat)).join(", ")
+                    : "None"}
+                </strong>
+              </p>
+              <p>
+                Price: <strong>Rs. 400 * {selectedSeats.length} = Rs. {selectedSeats.length * 400}</strong>
+              </p>
+            </div>
+          ) : (
+            <div className="payment-success-message">
               <h2>Payment Successful!</h2>
-                 <p>Thank you for your purchase. Enjoy the movie!</p>
-         </div>
-             )}
+              <p>Thank you for your purchase. Enjoy the movie!</p>
+            </div>
+          )}
 
           {!paymentConfirmed && (
             <div className="action-buttons">
@@ -391,14 +446,12 @@ const BookingInfo = ({ movieTitle }) => {
               )}
             </div>
           )}
-
-          
         </div>
       </div>
 
       {showMessage && (
         <div className="message-box">
-          <p>Please select a showtime first!</p><br />
+          <p>{showMessage}</p><br />
           <button onClick={closeMessageBox}>OK</button>
         </div>
       )}
@@ -406,76 +459,77 @@ const BookingInfo = ({ movieTitle }) => {
       {showConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
-              <div className="modal-text">
-                <h3>Confirm Booking?</h3>
-                    <p>Are you sure you want to confirm your booking?</p>
-              </div>
-          <div className="modal-buttons">
-               <button className="no-button" onClick={() => handleConfirmation(false)}>
-                 No
-               </button>
-               <button className="yes-button" onClick={() => handleConfirmation(true)}>
-                 Yes
-               </button>
-           </div>
-           </div>
+            <div className="modal-text">
+              <h3>Confirm Booking?</h3>
+              <p>Are you sure you want to confirm your booking?</p>
+            </div>
+            <div className="modal-buttons">
+              <button className="no-button" onClick={() => handleConfirmation(false)}>
+                No
+              </button>
+              <button className="yes-button" onClick={() => handleConfirmation(true)}>
+                Yes
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
       {showDeleteConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
-          <div className="modal-text">
-          <h3>Delete Booking?</h3>
-            <p>Are you sure you want to delete your booking?</p>
+            <div className="modal-text">
+              <h3>Delete Booking?</h3>
+              <p>Are you sure you want to delete your booking?</p>
             </div>
             <div className="modal-buttons">
-            <button className="no-button" onClick={() => handleDeleteConfirmation(false)}>
-              No
-            </button>
-            <button className="yes-button" onClick={() => handleDeleteConfirmation(true)}>
-              Yes
-            </button>
+              <button className="no-button" onClick={() => handleDeleteConfirmation(false)}>
+                No
+              </button>
+              <button className="yes-button" onClick={() => handleDeleteConfirmation(true)}>
+                Yes
+              </button>
+            </div>
           </div>
-        </div>
         </div>
       )}
 
       {showPaymentConfirmationModal && (
-            <div className="confirmation-modal">
-                <div className="confirmation-modal-content">
-                  <div className="modal-text">
-                    <h3>Confirm Payment?</h3>
-                    <p>Are you sure you want to proceed with the payment?</p>
-                  </div>
-                <div className="modal-buttons">
-                   <button className="no-button" onClick={() => setShowPaymentConfirmationModal(false)}>
-                        No
-                    </button>
-                    <button className="yes-button" onClick={handlePaymentConfirmation}>
-                        Yes
-                     </button>
-                 </div>
-             </div>
-          </div> 
-        )}
+        <div className="confirmation-modal">
+          <div className="confirmation-modal-content">
+            <div className="modal-text">
+              <h3>Confirm Payment?</h3>
+              <p>Are you sure you want to proceed with the payment?</p>
+            </div>
+            <div className="modal-buttons">
+              <button className="no-button" onClick={() => setShowPaymentConfirmationModal(false)}>
+                No
+              </button>
+              <button className="yes-button" onClick={handlePaymentConfirmation}>
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
+     
       {showUpdateConfirmationModal && (
         <div className="confirmation-modal">
           <div className="confirmation-modal-content">
-          <div className="modal-text">
-          <h3>Update Booking?</h3>
-            <p>Are you sure you want to update your booking?</p>
+            <div className="modal-text">
+              <h3>Update Booking?</h3>
+              <p>Are you sure you want to update your booking?</p>
             </div>
             <div className="modal-buttons">
-            <button className="no-button" onClick={() => handleUpdateConfirmation(false)}>
-              No
-            </button>
-            <button className="yes-button" onClick={() => handleUpdateConfirmation(true)}>
-              Yes
-            </button>
+              <button className="no-button" onClick={() => handleUpdateConfirmation(false)}>
+                No
+              </button>
+              <button className="yes-button" onClick={() => handleUpdateConfirmation(true)}>
+                Yes
+              </button>
+            </div>
           </div>
-        </div>
         </div>
       )}
     </div>

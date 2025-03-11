@@ -99,10 +99,17 @@ app.post("/api/reset-password", (req, res) => {
 });
 
 app.get("/api/booked-seats", (req, res) => {
-  const { movieTitle, showtime } = req.query;
+  const { movieTitle, showtime, selectedDate } = req.query;
 
-  const sql = "SELECT seats FROM movie_booking.bookings WHERE movie_title = ? AND showtime = ? AND payment_status = 'paid'";
-  db.query(sql, [movieTitle, showtime], (err, results) => {
+  const sql = `
+    SELECT seats 
+    FROM movie_booking.bookings 
+    WHERE movie_title = ? 
+      AND showtime = ? 
+      AND selected_date = ? 
+      AND payment_status = 'paid'
+  `;
+  db.query(sql, [movieTitle, showtime, selectedDate], (err, results) => {
     if (err) {
       console.error(err);
       return res.status(500).json({ message: "Database error" });
@@ -114,10 +121,21 @@ app.get("/api/booked-seats", (req, res) => {
 });
 
 app.post("/api/bookings", (req, res) => {
-  const { movieTitle, showtime, seats, totalPrice } = req.body;
+  const { movieTitle, showtime, selectedDate, seats, totalPrice } = req.body;
 
-  const sql = "INSERT INTO movie_booking.bookings (movie_title, showtime, seats, total_price, payment_status) VALUES (?, ?, ?, ?, 'paid')";
-  const values = [movieTitle, showtime, JSON.stringify(seats), totalPrice];
+  console.log("Received Date (Backend):", selectedDate);
+
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!dateRegex.test(selectedDate)) {
+    return res.status(400).json({ message: "Invalid date format. Use YYYY-MM-DD." });
+  }
+
+  const sql = `
+    INSERT INTO movie_booking.bookings 
+      (movie_title, showtime, selected_date, seats, total_price, payment_status) 
+    VALUES (?, ?, ?, ?, ?, 'paid')
+  `;
+  const values = [movieTitle, showtime, selectedDate, JSON.stringify(seats), totalPrice];
 
   db.query(sql, values, (err, result) => {
     if (err) {
@@ -127,7 +145,6 @@ app.post("/api/bookings", (req, res) => {
     return res.status(201).json({ message: "Booking created successfully", bookingId: result.insertId });
   });
 });
-
 
 app.listen(5148, () => {
   console.log("Server is running on port 5148");

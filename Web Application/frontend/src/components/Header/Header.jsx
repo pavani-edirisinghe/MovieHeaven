@@ -5,15 +5,19 @@ import "./Header.css";
 
 function Header() {
   const { user, logout } = useAuth();
-
-  // Debugging: Log the user object and profile picture
   console.log("User Object:", user);
   console.log("Profile Picture Path:", user?.picture);
 
   return (
     <header id="header" className="fixed-top header-inner-pages">
       <div className="container d-flex align-items-center justify-content-between">
-        <img src="movieHeaven.png" alt="Logo" width="60" height="60" style={{ paddingLeft: "30px" }} />
+        <img 
+          src="/movieHeaven.png" 
+          alt="Logo" 
+          width="60" 
+          height="60" 
+          style={{ paddingLeft: "30px"}} 
+        />
         <nav id="navbar" className="navbar">
           <ul>
             <li>
@@ -65,7 +69,6 @@ function Header() {
               alt="Profile" 
               width="40" 
               height="40" 
-             
             />
             <button onClick={logout}>Logout</button>
           </div>
