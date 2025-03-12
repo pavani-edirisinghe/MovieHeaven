@@ -12,7 +12,12 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-6 footer-contact">
-              <img src="movieHeaven.png" alt="Movie Logo" width="120px" />
+              <img 
+                 src="/movieHeaven.png" 
+                 alt="Logo" 
+                 width="120px" 
+                 style={{ paddingLeft: "30px"}} 
+              />
             </div>
             </div>
 
