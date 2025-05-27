@@ -29,45 +29,6 @@ This is the **desktop interface** of the MovieHeaven Movie Ticket Management Sys
 
 ---
 
-## 📁 Folder Structure
-
-Desktop Application/<br>
-├── README.md<br>
-├──  📁 screenshots/<br>
-│   ├── admin-login.png<br>
-│   ├── buy-tickets.png<br>
-│   ├── issue-ticket.png<br>
-│   ├── movie-management.png<br>
-│   ├── signin.png<br>
-│   ├── staff-management.png<br>
-├──  📁 Desktop Application/<br>
-│   ├──  📁 Assets<br>
-│   ├──  📁 bin<br>
-│   ├──  📁 Movie_Directory<br>
-│   ├──  📁 obj<br>
-│   ├──  📁 Properties<br>
-│   ├──  📁 Resources<br>
-│   ├──  📄 AddMovieForm.cs<br>
-│   ├──  📄 AddMovieForm.Designer.cs<br>
-│   ├──  📄 AddMovieForm.resx<br>
-│   ├──  📄 AddStaffForm.cs<br>
-│   ├──  📄 AddStaffForm.Designer.cs<br>
-│   ├──  📄 AddStaffForm.resx<br>
-│   ├──  📄 AdminForm.cs<br>
-│   ├──  📄 AdminForm.Designer.cs<br>
-│   ├──  📄 AdminForm.resx<br>
-│   ├──  📄 buyTicketForm.cs<br>
-│   ├──  📄 buyTicketForm.Designer.cs<br>
-│   ├──  📄 dashboardForm.cs<br>
-│   ├──  📄 dashboardForm.Designer.cs<br>
-│   ├──  📄 dashboardForm.resx<br>
-│   ├──  📄 SQLQuery1.sql<br>
-│   ├──  📄 SQLQuery1.1.sql<br>
-│   ├──  📄 SQLQuery1.2.sql<br>
-│   ├──  📄 SQLQuery1.3.sql<br>
-
----
-
 ## ▶️ Run the Application
 
  1. Clone the repository
@@ -107,23 +68,23 @@ dotnet run
 ---
 ## 📸 Screenshots
 
-### 🔐 Signin
+### 🔑 Sign In
 ![signin](screenshots/signin.png)
 
-### 🔐 Admin Login
+### 🛡️ Admin Login
 ![Admin Login](screenshots/admin-login.png)
 
-### 👥 Staff Management
+### 👨‍💼 Staff Management
 ![Staff Management](screenshots/staff-management.png)
 
-### 👥 Movie Management
+### 🎬 Movie Management
 ![Movie Management](screenshots/movie-management.png)
 
-### 👥 Buy Tickets
-![Staff Management](screenshots/buy-tickets.png)
+### 🛒 Buy Tickets
+![Buy Tickets](screenshots/buy-tickets.png)
 
 ### 🎟️ Issue Ticket
-![Seat Booking](screenshots/issue-ticket.png)
+![Issue Ticket](screenshots/issue-ticket.png)
 
 ---
 
