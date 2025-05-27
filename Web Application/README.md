@@ -1,6 +1,6 @@
 # MovieHeaven 🎬
 
-MovieHeaven is a full-stack web application built to explore and manage movies. It consists of a Node.js/Express backend and a modern frontend (React/Vite). MySQL is used as the database, managed via XAMPP.
+MovieHeaven is a full-stack web application built to explore and manage movies. It consists of a Node.js/Express backend and a modern frontend (Reactjs). MySQL is used as the database, managed via XAMPP.
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Follow these steps to run the project locally.
 
 - [XAMPP](https://www.apachefriends.org/index.html) (Start Apache and MySQL)
 - [Node.js & npm](https://nodejs.org/)
-- Code Editor (e.g., Visual Studio Code)
+- Code Editor (Visual Studio Code)
 
 ---
 
