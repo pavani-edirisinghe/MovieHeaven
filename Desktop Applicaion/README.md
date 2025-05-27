@@ -24,8 +24,8 @@ This is the **desktop interface** of the MovieHeaven Movie Ticket Management Sys
 
 - **Language**: C#
 - **UI Framework**: WPF (.NET Core / .NET Framework)
-- **Database**: SQLite
-- **IDE**: Visual Studio
+- **Database**: MYSQL
+- **IDE**: Visual Studio 2022
 
 ---
 
@@ -59,7 +59,7 @@ dotnet run
 ---
 
 ## ▶️ Run the Application
-- A local SQLite database **(movieheaven.db)** is created automatically on first run.
+- A local MYSQL database **(movieheaven.db)** is created automatically on first run.
 
 - Admin credentials must be manually added or seeded initially if none exist.
 
