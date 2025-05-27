@@ -79,9 +79,9 @@ http://localhost:5173
 
 ## 📂 Project Status
 
-- ✔️ Frontend and backend are connected<br>
-- ✔️ Local MySQL database working via XAMPP<br>
-- ✔️ App ready for development and testing
+✔️ Frontend and backend are connected<br>
+✔️ Local MySQL database working via XAMPP<br>
+✔️ App ready for development and testing
 
 ---
 
