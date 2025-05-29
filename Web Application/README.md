@@ -65,6 +65,17 @@ Open your browser and go to:
 http://localhost:5173
 ```
 ---
+## 🌟 Features
+
+- Browse a collection of movies with details
+
+- User can select a movie, choose a date and time, and book a seat
+
+- Interactive seat selection interface showing the seating structure (e.g., available, selected, and booked seats)
+
+- Fully integrated frontend and backend for seamless booking experience
+
+---
 ## 🛠️ Tech Stack
 
 - Frontend: React + Vite + CSS
