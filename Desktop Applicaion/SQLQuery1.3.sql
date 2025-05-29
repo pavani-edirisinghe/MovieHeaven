@@ -12,6 +12,7 @@
 )
 
 SELECT * FROM buy_tickets
+TRUNCATE TABLE buy_tickets;
 
 SELECT capacity FROM movies WHERE delete_date IS NULL and status != 'Deleted'
 
