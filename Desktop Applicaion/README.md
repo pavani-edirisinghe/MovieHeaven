@@ -24,8 +24,8 @@ This is the **desktop interface** of the MovieHeaven Movie Ticket Management Sys
 
 - **Language**: C#
 - **UI Framework**: WPF (.NET Core / .NET Framework)
-- **Database**: SQLite
-- **IDE**: Visual Studio
+- **Database**: MYSQL
+- **IDE**: Visual Studio 2022
 
 ---
 
@@ -58,14 +58,6 @@ dotnet run
 
 ---
 
-## ▶️ Run the Application
-- A local SQLite database **(movieheaven.db)** is created automatically on first run.
-
-- Admin credentials must be manually added or seeded initially if none exist.
-
-- Cashiers must register using the desktop app before logging in.
-
----
 ## 📸 Screenshots
 
 ### 🔑 Sign In
@@ -91,7 +83,6 @@ dotnet run
 ## 📄 License
 
 - This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
-- You are free to use, modify, and distribute this software with proper attribution.
 ---
 
 
