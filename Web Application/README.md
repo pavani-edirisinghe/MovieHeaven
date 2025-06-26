@@ -96,6 +96,45 @@ http://localhost:5173
 
 ---
 
+## 📸 Screenshots
+
+<h3>🏠 Home Page</h3>
+<img src="./Screenshots/Home-page.png" alt="Home Page" width="500"/>
+
+<h3>🔥 Trending Movies</h3>
+<img src="./Screenshots/Trending.png" alt="Trending Movies" width="500"/>
+
+<h3>🎬 Movies Page</h3>
+<img src="./Screenshots/Movie.png" alt="Movies Page" width="500"/>
+
+<h3>ℹ️ About Page</h3>
+<img src="./Screenshots/About.png" alt="About Page" width="500"/>
+
+<h3>🧾 Theater Images and Reviews</h3>
+<img src="./Screenshots/About1.png" alt="Theater and Reviews" width="500"/>
+
+<h3>🔐 Log In</h3>
+<img src="./Screenshots/Login.png" alt="Login Page" width="500"/>
+
+<h3>📝 Sign Up</h3>
+<img src="./Screenshots/SignUp.png" alt="Sign Up Page" width="500"/>
+
+<h3>📞 Contact Us Page</h3>
+<img src="./Screenshots/Contact.png" alt="Contact Page" width="500"/>
+
+<h3>📍 Location</h3>
+<img src="./Screenshots/Location.png" alt="Location" width="500"/>
+
+<h3>🎥 Selected Movie Details</h3>
+<img src="./Screenshots/Movie1.png" alt="Selected Movie 1" width="500"/>
+<img src="./Screenshots/Movie2.png" alt="Selected Movie 2" width="500"/>
+
+<h3>🎫 Booking Seats</h3>
+<img src="./Screenshots/Movie3.png" alt="Booking Seats" width="500"/>
+
+
+---
+
 ## 🙋‍♀️ Author
 
 - Name: [Pavani Edirisinghe] <br>
