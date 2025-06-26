@@ -62,3 +62,6 @@ git clone https://github.com/pavani-edirisinghe/MovieHeaven.git
 - LinkedIn:[Pavani Edirisinghe](www.linkedin.com/in/PavaniEdirisinghe)<br>
 
 ---
+
+## 📜 License
+- This project is licensed under the MIT License.
