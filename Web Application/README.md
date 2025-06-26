@@ -140,6 +140,7 @@ http://localhost:5173
 - Name: [Pavani Edirisinghe] <br>
 - University: University of Ruhuna <br>
 - GitHub:[pavani-edirisinghe](https://github.com/pavani-edirisinghe)<br>
+- LinkedIn:[Pavani Edirisinghe](www.linkedin.com/in/PavaniEdirisinghe)<br>
 
 ---
 
