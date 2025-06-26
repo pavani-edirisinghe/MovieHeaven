@@ -80,6 +80,15 @@ dotnet run
 
 ---
 
+## 🙋‍♀️ Author
+
+- Name: [Pavani Edirisinghe] <br>
+- University: University of Ruhuna <br>
+- GitHub:[pavani-edirisinghe](https://github.com/pavani-edirisinghe)<br>
+- LinkedIn:[Pavani Edirisinghe](www.linkedin.com/in/PavaniEdirisinghe)<br>
+
+---
+
 ## 📄 License
 
 - This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
