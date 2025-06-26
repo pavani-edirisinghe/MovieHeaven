@@ -51,3 +51,14 @@ A **REST API** ensures seamless data synchronization between applications, with 
 ```sh
 git clone https://github.com/pavani-edirisinghe/MovieHeaven.git
 ```
+
+---
+
+## 🙋‍♀️ Author
+
+- Name: [Pavani Edirisinghe] <br>
+- University: University of Ruhuna <br>
+- GitHub:[pavani-edirisinghe](https://github.com/pavani-edirisinghe)<br>
+- LinkedIn:[Pavani Edirisinghe](www.linkedin.com/in/PavaniEdirisinghe)<br>
+
+---
